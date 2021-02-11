@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de import CSS</title>
+    <!-- CSS externo -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS interno -->
+    <style>
+        h1{
+            color:chocolate;
+        }
+
+        strong{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CSS inline (menos recomendado)-->
+    <h1 style="color: red">Bom <strong style="color: blue;"> Dia</strong></h1>
+    
+    <h1>Bom <strong> Dia</strong></h1>
+
+    <h2> Bom <em>Dia</em></h2>
+
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+# Veja o que são os Headers (cabeçaçlhos) em HTTP:
+* acesse: https://whimsical.com/01-conceitos-do-http-Xs4fFccMXTnTkhg3A6wWc5
+* Dica de app/site: "DevDocs" (aplicativo para saber mais detalhes sobre as funcionalidades do HTTP no geral, como Headers, Body, Methods, ...

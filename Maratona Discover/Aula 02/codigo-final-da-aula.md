@@ -1,0 +1,1 @@
+* acesse: https://github.com/rocketseat-education/maratona-discover-01

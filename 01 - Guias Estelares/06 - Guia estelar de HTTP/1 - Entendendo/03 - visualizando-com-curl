@@ -1,0 +1,3 @@
+Outra maneira de observar essa comunicação Browser (navegador/cliente) com o Servidor
+com mais detalhes é utilizando o cURL (Mac, Linux,...) ou o Git Bash (Windows)
+* Obs: ao instalar o Git no windows o Git Bash vem junto.
