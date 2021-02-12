@@ -1,0 +1,40 @@
+<!--
+    <video>
+
+    - src
+    - controls (aparecer controles do video)
+    - se não funcionar?
+        - fallback content (coloque uma opção de baixar o video com a tag "a")
+    - source
+        - src
+        - type
+
+    - Outros atributos da tag video:
+        - width (largura)
+        - height (altura)
+        - autoplay (dependendo do browser, vai iniciar o video automaticamente)
+        - preload (carrega ou não pre dados do video)
+            * auto/ metadata / none
+        - loop (dependendo do browser, ao chegar no final o video roda de novo)
+        - muted (video deve começar mutado)
+        - poster (imagem de fundo no video antes dele começar)
+
+    - sobre serviços de terceiros (pesquise na internet)
+
+    * Saiba mais a respeito em: https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Multimedia_and_embedding/Video_and_audio_content
+-->
+
+<!-- 1ª Maneira de declaração -->
+
+<video src="./assets-exemplo/Projeto_01-23_Full HD 1080p.mp4" width="400" controls poster="./assets-exemplo/logo-rocketseat.jpg">
+    <p>Este browser não suporta video? baixe-o <a href="#">aqui</a></p><!-- caso o browser não suporte o vídeo -->
+</video>
+
+
+<br>
+<!-- 2ª Maneira de declaração -->
+
+<video width="400" controls autoplay preload="none" loop muted>
+    <source src="./assets-exemplo/Projeto_01-23_Full HD 1080p.mp4" type="video/mp4">
+</video>
+
