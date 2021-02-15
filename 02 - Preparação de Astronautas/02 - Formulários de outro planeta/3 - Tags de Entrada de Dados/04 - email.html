@@ -1,0 +1,63 @@
+<!--
+    <input type="emial"/>
+
+    - Espera que o usuário digite um email
+    - Irá validar se o valor digitado é um email
+
+    # Atributos
+
+    - placeholder
+    - readonly / disabled
+    - value
+    - required
+
+    - multiple
+        * o campo irá receber 1 ou mais emails, separado por vírgulas
+
+    - minlength / maxlength
+        * o mínimo e/ou máximo valor que o campo irá conter
+
+    - size
+        * Valor numérico indicando quantos caracteres esse campo deveria conter, modificando o tamanho do campo para o usuário
+
+    - patter
+        * Uso de expressão regular para validar campo
+        * exemplo: o usuário só poderá colocar email do domínio rocketseat.com.br
+            * patter=".+rocketseat\.com\.br"
+
+    - list
+        * o id de uma tag<datalist> que está no mesmo documento
+        * <datalist> irá conter uma lista de valores pré definidos a fim de sugerir ao usuário, quais valores estão disponíveis
+            * Os valores do <datalist> que não forem compatíveis com o campo, não serão apresentados como sugestão 
+-->
+
+<form action="" method="">
+    <!-- <input type="email"
+    placeholder="Email"
+    multiple> -->
+
+    <!-- <input type="emial"
+    placeholder="Email"
+    minlength="8"
+    maxlength="255"
+    size="25"> -->
+
+    <!-- <input type="emial"
+    placeholder="Email"
+    pattern=".+rocketseat\.com\.br"
+    title="Somente emails rocketseat.com.br serão aceitos"> -->
+
+    <!-- <datalist id="emaillist">
+        <option>a@gmail.com</option>
+        <option>b@gmail.com</option>
+        <option>c@gmail.com</option>
+    </datalist>
+    <input type="email"
+    placeholder="Email"
+    list="emaillist"
+    required> -->
+
+    <input type="email" placeholder="Email" required>
+    
+    <button type="submit">Enviar</button>
+</form>
