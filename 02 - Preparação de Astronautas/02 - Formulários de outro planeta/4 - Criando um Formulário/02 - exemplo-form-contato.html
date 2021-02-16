@@ -49,6 +49,7 @@
         background: rgb(68, 163, 240);
         border-radius: 0.4rem;
         padding: 1rem;
+        color: white;
 
     }
 
@@ -72,9 +73,9 @@
         margin-top: -1rem;
     }
 
-    input{
+    #inp{
         display: inline-block;
-        width: 97%;
+        width: 100%;
         margin: 0;
         padding: 0;
         border: none;
@@ -117,13 +118,13 @@
     <fieldset form="novidades" id="fld">
         <label for="email">Email*</label>
         <br>
-        <input type="email" >
+        <input type="email" id="inp">
 
         <br><br>
 
         <label for="verification">7 + 1 = ?</label>
         <br>
-        <input type="number" min="0" max="10">
+        <input id="inp" type="number" min="0" max="10">
 
         <br><br>
 
