@@ -1,0 +1,135 @@
+<!--
+    Crie um formulário de Contato
+
+    1. O formulário deverá conter um título de nome Contato. Usar fieldset e legend para essa finalidade
+
+    2. O formulário conterá 3 campos
+        - nome (input text)
+        - email (input email)
+        - mensagem (textarea)
+
+    3. O formulário deverá conter um botão para enviar
+
+    Atenção: O formulário deverá conter regras de acessibilidade, como label para cada campo, por exemplo
+-->
+
+<form action="#" method="" id="contact">
+    <fieldset form="contact">
+        <legend>Contato</legend>
+
+        <label for="name">Nome</label>
+        <br>
+        <input type="text" name="name" id="name" size="20" placeholder="Digite seu nome" required>
+
+        <br><br>
+
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="email" id="email" size="20" placeholder="Digite seu email" required>
+
+        <br><br>
+
+        <label for="message">Mensagem</label>
+        <br>
+        <textarea id="message" name="message" rows="10" cols="20" placeholder="Deixe sua mensagem" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </fieldset>
+</form>
+
+
+<!-- Estilos -->
+<style>
+
+/*=== Form====*/
+
+    #novidades{
+        background: rgb(68, 163, 240);
+        border-radius: 0.4rem;
+        padding: 1rem;
+
+    }
+
+    #fld{
+        border: none;
+        margin: 0;
+        padding: 1;
+        box-sizing: border-box;
+        
+    }
+
+    h2, p{
+        text-align: center;
+    }
+    h2 {
+        margin-top: 0;
+        margin-bottom: none;
+        color: rgb(11, 26, 39);
+    }
+    p {
+        margin-top: -1rem;
+    }
+
+    input{
+        display: inline-block;
+        width: 97%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0.15rem;;
+        padding: 0.2rem;
+
+    }
+    label{
+        display: inline-block;
+        margin: 0;
+        margin-bottom: 0.2rem;
+        padding: 0;
+    }
+
+    #bt{
+        width: 100%;
+        padding: 0.5rem 0rem;
+        color: white;
+        border: none;
+        border-radius: 0.25rem;
+        background: rgb(241, 111, 4);
+    }
+    #bt:hover{
+        cursor: pointer;
+        background: rgb(161, 76, 5);
+    }
+
+    
+
+</style>
+
+
+
+<!-- Outro formulário -->
+<br>
+
+<form action="" method="" id="novidades">
+    <h2>Inscreva-se</h2>
+    <p>e receba novidades por email</p>
+    <fieldset form="novidades" id="fld">
+        <label for="email">Email*</label>
+        <br>
+        <input type="email" >
+
+        <br><br>
+
+        <label for="verification">7 + 1 = ?</label>
+        <br>
+        <input type="number" min="0" max="10">
+
+        <br><br>
+
+        <button type="submit" id="bt">Enviar</button>
+    </fieldset>
+</form>
+
+
+<br><br><br>
