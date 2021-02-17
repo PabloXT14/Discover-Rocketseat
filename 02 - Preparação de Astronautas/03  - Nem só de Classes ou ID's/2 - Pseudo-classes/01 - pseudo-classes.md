@@ -26,7 +26,7 @@ ul li:first-child {
 }
 ```
 
-* nth-of-type()
+* :nth-of-type()
 ```html
 <article>
     <h2></h2>
@@ -39,5 +39,43 @@ ul li:first-child {
 article p:nth-of-type(2) {
     font-weight: bold;
     /*seleciona o segundo parágrafo dentro de article*/
+}
+```
+
+* :nth-child() 
+```html
+<article>
+    <h3>Titulo</h3>
+    <p>P1</p>
+    <p>P2</p>
+    <p>P3</p>
+</article>
+```
+```css
+article p:nth-child(2) {
+    color: blue;
+    /*seleciona o segundo filho do article que o P1, mas colocar p:nth-child(1) não irá alterar nada pois o primeiro filho do article não é um <p> */
+}
+
+```
+    - :nth-child(odd) = seleciona os filhos ímpares  
+    - :nth-child(even) = seleciona os filhos pares
+    * Obs: também funciona com o :nth-of-type()
+
+## Ações do usuário
+
+* :hover (quando o usuário passa o mouse por cima de um elemento)
+```css
+a:hover {
+    color: red;
+    /*deixa o link de outra cor*/
+}
+```
+* :focus (quando um elemento ganhou o focu do usuário)
+```css
+input:focus {
+    border-color: blue;
+    /*a borda do input ao clicar sobre ele fica azul*/
+    outline: none;/*tira a bordinha preta padrão, recomenda-se deixar esta parta acessibilidade*/
 }
 ```
