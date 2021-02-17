@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 3</title>
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: Poppins, sans-serif;
+    }
+
+    .formulario {
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 3rem;
+        background: rgb(72, 76, 136);
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .sub-t {
+        text-align: center;
+        font-size: 0.8rem;
+        margin-bottom: 0.7rem;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="formulario">
+        <form action="#" method="">
+            <h2>Nos dê seu feedback</h2>
+            <p class="sub-t">Ele é muito importante para melhorarmos a sua experiência</p>
+
+            <label for="email">Email*</label>
+            <br>
+            <input type="emial" name="email" id="email" required>
+
+            <br>
+
+            <label for="avaliation">O que você achou do nosso serviço?</label>
+            <br>
+
+            <input type="radio" name="avaliation" id="MB" value="MB" checked>
+            <label for="MB">Muito bom</label>
+            <br>
+
+            <input type="radio" name="avaliation" id="B" value="B">
+            <label for="B">Bom</label>
+            <br>
+
+            <input type="radio" name="avaliation" id="I" value="I">
+            <label for="I">Indiferente</label>
+            <br>
+
+            <input type="radio" name="avaliation" id="R" value="R">
+            <label for="R">Ruim</label>
+            <br>
+
+            <input type="radio" name="avaliation" id="MR" value="MR">
+            <label for="MR">Muito ruim</label>
+
+            <br>
+
+            <button>Dar Feedback</button>
+
+            <p class="inform">Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM</p>
+        </form>
+
+    </div>
+    
+    <!-- <script>
+        let n = document.getElementById("banana");
+
+        if(n === 8){
+            alert('Usuário Inscrito!');
+        }
+        else{
+            alert('Dado de preenchimento do formulário incorreto!');
+        }
+    </script> -->
+
+    
+
+</body>
+</html>
