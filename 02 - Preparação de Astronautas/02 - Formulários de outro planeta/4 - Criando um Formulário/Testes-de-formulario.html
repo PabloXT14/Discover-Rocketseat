@@ -15,7 +15,7 @@
     }
 
     .formulario {
-        max-width: 500px;
+        max-width: 300px;
         display: flex;
         align-items: center;
         margin: auto;
@@ -24,6 +24,7 @@
         box-sizing: border-box;
         border-radius: 0.5rem;
         padding: 1rem;
+        box-shadow: 1px 1px 2px black;
     }
 
     form {
@@ -40,20 +41,69 @@
         margin-bottom: 0.7rem;
     }
 
+    label {
+        display: inline-block;
+        font-size: 0.75rem;
+    }
+
+    input[type="email"] {
+
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 0.1rem;
+        display: block;
+        margin-top: -0.2rem;
+        margin-bottom: 0.3rem;
+        padding: 0.2rem;
+        outline: none;
+        color: black;
+    }
+
+    input[type="radio"] {
+        border: none;
+        border-radius: 0;
+    }
+
+    input[type="radio"]:focus {
+        border: none;
+    }
+
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem 0;
+        background: rgb(248, 90, 214);
+        border: none;
+        border-radius: 0.1rem;
+        font-size: 1rem;
+        text-shadow: 1px 1px 1px black;
+        box-shadow: 1px 1px 2px rgb(46, 45, 45);
+        margin: 1rem 0;
+    }
+
+    button:hover {
+        background: rgb(224, 78, 193);
+        cursor: pointer;
+    }
+
+    .inform {
+        font-size: 0.5rem;
+    }
+
     </style>
 </head>
 <body>
 
     <div class="formulario">
         <form action="#" method="">
-            <h2>Nos dê seu feedback</h2>
+            <h2>Nos dê seu feedback!</h2>
             <p class="sub-t">Ele é muito importante para melhorarmos a sua experiência</p>
 
             <label for="email">Email*</label>
             <br>
-            <input type="emial" name="email" id="email" required>
+            <input type="email" name="email" id="email" required>
 
-            <br>
 
             <label for="avaliation">O que você achou do nosso serviço?</label>
             <br>
@@ -79,23 +129,25 @@
 
             <br>
 
-            <button>Dar Feedback</button>
+            <button onclick="agradecimento();">Dar Feedback</button>
 
             <p class="inform">Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM</p>
         </form>
 
     </div>
     
-    <!-- <script>
-        let n = document.getElementById("banana");
+    <script>
+        
+        function agradecimento(){
+            let vemail = document.getElementById("email").value;
 
-        if(n === 8){
-            alert('Usuário Inscrito!');
+            if(vemail !== ''){
+                alert('Obrigado pelo feedback!');
+            }
+            
         }
-        else{
-            alert('Dado de preenchimento do formulário incorreto!');
-        }
-    </script> -->
+
+    </script>
 
     
 
