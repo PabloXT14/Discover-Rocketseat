@@ -15,7 +15,7 @@ Conecta um elemento HTML com o CSS a fim de alterar o elemento.
 * Attribute selector
     - Um elemento que tenha um atributo específico.(ex: [title])
 * Pseudo-class selector
-    - Elementos em um estado específico (ex: p:hover, p:active, p:visited)
+    - Elementos em um estado específico (ex: p:hover, p:active, p:visited, input:focus)
 
 ## Múltiplos
 

@@ -61,6 +61,7 @@ article p:nth-child(2) {
     - :nth-child(odd) = seleciona os filhos ímpares  
     - :nth-child(even) = seleciona os filhos pares
     * Obs: também funciona com o :nth-of-type()
+    * Obs: também funciona da mesma maneira/semelhante a pseudo-classe :last-child, :last-of-type.
 
 ## Ações do usuário
 
@@ -76,6 +77,34 @@ a:hover {
 input:focus {
     border-color: blue;
     /*a borda do input ao clicar sobre ele fica azul*/
-    outline: none;/*tira a bordinha preta padrão, recomenda-se deixar esta parta acessibilidade*/
+    outline: none;/*tira a bordinha preta padrão, recomenda-se deixar o outline para acessibilidade*/
 }
 ```
+
+## Atributos
+
+* :disabled
+* :required
+* outros: :checked, 
+
+```html
+<input type="text" disabled>
+
+<input type="text" required>
+```
+```css
+
+input:disabled {
+    background: red;
+}
+
+input:required {
+    background: blue;
+}
+```
+
+## Referência
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+* Dica :root (para criar variáveis em CSS)
