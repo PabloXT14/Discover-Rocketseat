@@ -11,4 +11,4 @@ console.log(33);
 console.log(12.5 * 3);
 console.log(12 / "abc");
 console.log(Infinity);
-console.log(12/0);
+console.log(12/0);//Infinity

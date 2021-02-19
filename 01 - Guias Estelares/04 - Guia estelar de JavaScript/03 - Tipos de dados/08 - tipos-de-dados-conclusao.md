@@ -1,6 +1,6 @@
 # Tipos de dados
 
-Conforme o ECMAScript Standard (Padrão ECMAScript - Orgão responsável pela linguagem JavaScriot) temos 9 tipos de dados:
+Conforme o ECMAScript Standard (Padrão ECMAScript - Orgão responsável pela linguagem JavaScript) temos 9 tipos de dados:
 
 * Data types
     * Primitive / Primitive value
