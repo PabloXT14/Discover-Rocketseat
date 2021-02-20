@@ -161,10 +161,19 @@ const App = {
 
 App.init()
 
+//Novas transações
+
 Transaction.add({
     id: 5,
     description: 'Água',
     amount: -120,
+    date: '23/01/2021'
+})
+
+Transaction.add({
+    id: 6,
+    description: 'Viagem',
+    amount: -13000,
     date: '23/01/2021'
 })
 
