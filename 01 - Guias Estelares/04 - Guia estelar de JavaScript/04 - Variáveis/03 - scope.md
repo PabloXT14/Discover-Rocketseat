@@ -19,7 +19,7 @@ O bloco, também criará um novo escopo. Chamamos de
 // Mas também pode agir de maneira local, através da propriedade Hoisting (Elevação)
 //Demonstração:
 
-console.log('> existe x antes do bloco', );
+console.log('> existe x antes do bloco', x);
 
 {
     var x = true;
@@ -40,7 +40,7 @@ console.log('> existe y antes do bloco', y);//vai dar erro pois y não pertence 
     console.log('existe y neste bloco', y);//funciona pois y pertence a este scope
 }
 
-console.log('> existe x depois do bloco?', y);//vai dar erro pois y não pertence a este scope
+console.log('> existe y depois do bloco?', y);//vai dar erro pois y não pertence a este scope
 ```
 
-* Obs: é por conta deste flexibilidade que o var tem que não se recomenda utilizá-lo, mas sim o let e const, pois este vão pertencer ao escopo de origem. 
+* Obs: é por conta deste flexibilidade que o var tem, que não se recomenda utilizá-lo, mas sim o let e const, pois este vão pertencer ao escopo de origem. 

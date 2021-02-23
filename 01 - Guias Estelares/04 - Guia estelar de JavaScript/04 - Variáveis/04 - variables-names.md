@@ -1,7 +1,7 @@
 # Para criar nomes
 
 * JS é case-sensitive (sensível ao caso - letras maiúsculas e minúsculas fazem diferença)
-* JS aceita a cadeia de caracteres Unicode
+* JS aceita a cadeia de caracteres Unicode (padrão que permite aos computadores representar e manipular, texto de qualquer sistema de escrita existente)
 
 ## Posso:
     * Iniciar com esses caracteres especiais: $ _

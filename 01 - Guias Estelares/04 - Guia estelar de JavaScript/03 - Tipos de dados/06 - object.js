@@ -16,5 +16,8 @@ console.log({
     sexo: "masculino",
     andar: function(){
         console.log('andou');
+    },
+    comer() {
+        console.log('comeu');
     }
 });
