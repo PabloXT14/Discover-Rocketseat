@@ -1,7 +1,7 @@
 // Criar um aplicativo de frases motivacionais
 
-// Declaration - declaração da função
-// Function Statement
+// Declaration - Declaração da função
+// Function Statement - Declaração de Função
 function createPhrases() {
     console.log('Estudar é muito bom');
     console.log('Paciência e persistência');

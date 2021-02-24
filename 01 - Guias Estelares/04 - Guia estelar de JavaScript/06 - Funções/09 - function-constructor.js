@@ -26,6 +26,3 @@ console.log(mayk.walk());
 
 // let date = new Date('2021-02-24')
 // console.log(date);
-
-
-
