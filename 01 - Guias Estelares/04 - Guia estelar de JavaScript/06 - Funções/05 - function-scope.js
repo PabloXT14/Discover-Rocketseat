@@ -9,3 +9,12 @@ function createThink() {
 console.log(subject)
 console.log(createThink())
 console.log(subject)
+
+
+/* + exemplos/testes */
+
+// const coming = (name, country) => {
+//     console.log(`Well Coming ${name} to ${country}`);
+// }
+
+// coming('Pablo','EUA');

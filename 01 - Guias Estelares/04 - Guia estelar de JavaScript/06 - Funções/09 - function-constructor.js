@@ -26,3 +26,18 @@ console.log(mayk.walk());
 
 // let date = new Date('2021-02-24')
 // console.log(date);
+
+
+/* +exemplos */
+
+// function Escola(name){
+//     this.name = name;
+//     this.df = name;
+//     this.apresentatio = () =>{
+//         return name + ' é top de mais';
+//     }
+// }
+
+// const bayeux = new Escola('BYX');
+
+// console.log(bayeux.apresentatio());
