@@ -11,3 +11,7 @@ let phrase = "Eu vou ser um programador top!"
 let myArray = phrase.split(" ");
 let phraseWithUnderscore = myArray.join("_");
 console.log(phraseWithUnderscore);
+
+// Outro modo de resolver
+// let phrase = "Eu vou conseguir alcançar minhas metas!"
+// console.log(phrase.split(" ").join("_"));

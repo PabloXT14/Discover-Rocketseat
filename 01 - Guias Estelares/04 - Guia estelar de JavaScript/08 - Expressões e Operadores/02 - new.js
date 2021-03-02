@@ -15,3 +15,5 @@ console.log(name);
 // console.log(name.surName);
 console.log(age);
 console.log(date);
+
+console.log();

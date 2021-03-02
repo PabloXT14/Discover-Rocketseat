@@ -27,6 +27,7 @@ techs.shift();
 // techs.splice(1, 1);
 
 // Encontrar a posição de um elemento no array
+// * Obs: quando o array não possui um elemento procurado, o indexOf retorna -1
 let index = techs.indexOf('css');
 // console.log(index);
 // techs.splice(index, 1);

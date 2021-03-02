@@ -8,12 +8,12 @@ console.log([
 ].length)
 
 // Outros teste
-// let myArray = [
-//     'a',
-//     {type: 'array'},
-//     () => { return 'blz'},
-// ]
+let myArray = [
+    'a',
+    {type: 'array'},
+    () => { return 'blz'},
+]
 
-// console.log(myArray[2]());
+console.log(myArray[2]());
 
 
