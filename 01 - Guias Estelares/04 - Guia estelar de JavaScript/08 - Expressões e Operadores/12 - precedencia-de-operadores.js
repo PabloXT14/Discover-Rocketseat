@@ -16,4 +16,4 @@
 console.log((3 + 4) * 10)
 console.log(3 > 2 && 2 > 1)
 let x = 1;
-console.log(++x == '2')
+console.log(++x == '2')// coloque === veja o resultado

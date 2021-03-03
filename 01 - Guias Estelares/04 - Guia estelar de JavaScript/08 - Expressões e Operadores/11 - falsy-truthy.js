@@ -16,7 +16,7 @@
     undefined
     NaN
 
-    * Obs: todos este valores citados retornaram em uma condição o valor false/falsy
+    * Obs: todos este valores citados retornaram em uma condição o valor false/falsy (devido ao Type Coersion)
 */
 
 // console.log(NaN ? 'verdadeiro' : 'falso')
@@ -37,6 +37,8 @@
     -1
     Infinity
     -Infinity
+
+    * Obs: todos este valores citados retornaram em uma condição o valor true/truthy (devido ao Type Coersion)
 */
 
 console.log([] ? 'verdadeiro' : 'falso')

@@ -4,3 +4,4 @@
 
 let word = 'manipulação'
 console.log(Array.from(word));
+// console.log(word.split(''));
