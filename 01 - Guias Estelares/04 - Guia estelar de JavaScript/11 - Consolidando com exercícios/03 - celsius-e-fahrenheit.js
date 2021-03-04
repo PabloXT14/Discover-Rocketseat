@@ -18,7 +18,6 @@ function transformTemperature(temperature) {
         throw new Error('Grau não identificado!')
     }
 
-
     // Fluxo ideal C -> F
     let newTemp = Number(temperature.toUpperCase().replace("°C", ""))
     let formula = (celsius) => celsius * 9/5 + 32
@@ -38,7 +37,7 @@ function transformTemperature(temperature) {
 
 try {
 
-    console.log(transformTemperature('50°f'))
+    console.log(transformTemperature('50°c'))
 
 }catch(error) {
     // console.log(error)//mostra mais detalhes sobre o erro
