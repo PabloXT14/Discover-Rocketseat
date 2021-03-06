@@ -9,7 +9,7 @@
 
 let spending = {
     incomes: [349.99, 200, 49.99, 2999.99],
-    expenses: [100, 100, 100, 120],
+    expenses: [100, 300, 100, 120],
 }
 
 function sum(array) {

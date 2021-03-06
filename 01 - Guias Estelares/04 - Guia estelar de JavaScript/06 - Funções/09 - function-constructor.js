@@ -8,7 +8,7 @@
 
 function Person(name){
     this.name = name;
-    this.walk = function() {
+    this.walk = () => {
         return this.name + ' está andando'
     }
 }

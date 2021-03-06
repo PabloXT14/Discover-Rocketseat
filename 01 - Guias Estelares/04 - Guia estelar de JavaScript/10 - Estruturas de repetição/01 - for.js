@@ -11,7 +11,7 @@ for(let i=1; i <= 10; i++ ) {
     // }
 
     //pulando execução do momento
-    // if(i === 6) {
+    // if(i === 7) {
     //     continue;
     // }
     
