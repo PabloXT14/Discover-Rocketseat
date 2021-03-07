@@ -10,6 +10,7 @@
 */
 
 const regExp = /9999-9999/
+// const regExp = new RegExp("9999-9999")
 const telefone = "9999-9999"
 
 // Com exec
