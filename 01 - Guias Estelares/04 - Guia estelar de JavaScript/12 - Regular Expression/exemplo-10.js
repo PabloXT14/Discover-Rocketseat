@@ -14,3 +14,11 @@ const regExp = /\(\d{2}\)\s\d{4,5}-?\d{4}/ // => retorna só o primeiro telefone
 const telefone = `<table><tr><td>(19) 12345-1234</td><td>(21) 9999-9999</td><td>(24) 987654321</td></tr></table>`
 
 console.log(telefone.match(regExp))
+
+/* Outros Testes */
+// const tel1 = "(19) 12345-6789"
+// const tel2 = "(21)12345-6789"
+// const regExp2 = /^\(\d{2}\)\s?\d{4,5}-?\d{4}$/
+
+// console.log(regExp2.test(tel1))
+// console.log(regExp2.test(tel2))

@@ -113,9 +113,6 @@ function contAuthor(category) {
 function booksByAuthor(name) {
     let books = []
 
-    // Retirando caracteres indevidos do nome do autor
-    name = (name).replace("","")
-
     console.log(`Livros do(a) autor(a) ${name}:`)
 
     // Salvando quais livros o autor tem

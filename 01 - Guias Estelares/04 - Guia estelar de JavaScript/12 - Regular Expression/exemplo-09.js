@@ -21,3 +21,10 @@ const regExp = /<table><tr>(<td>\(\d{2}\)\s\d{4,5}-?\d{4}<\/td>)+<\/tr><\/table>
 const telefone = `<table><tr><td>(19) 12345-1234</td><td>(21) 9999-9999</td><td>(24) 987654321</td></tr></table>`
 
 console.log(regExp.test(telefone))
+
+
+/* Outros Testes */
+// const string = "abcdefghi"
+// const reInterval = /[^b-g]/
+// console.log(string.replace(reInterval, ""))
+// console.log(string)

@@ -1,6 +1,6 @@
 /*
     # RegExp API
-    * exec - Executa a RedExp, retornando os detalhes
+    * exec - Executa a RegExp, retornando os detalhes
     * test - Testa a RegExp, retornando true ou false
 */
 

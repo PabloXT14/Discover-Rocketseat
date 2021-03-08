@@ -15,5 +15,3 @@ const regExp = /^\([0-9]{2}\) [0-9]{4}-[0-9]{4}$/ // com quantificador
 const telefone = "(21) 9876-1234"
 
 console.log(regExp.test(telefone))
-
-

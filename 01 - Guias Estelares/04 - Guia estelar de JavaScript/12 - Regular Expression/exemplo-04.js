@@ -16,3 +16,4 @@ const regExp = /^\([0-9][0-9]\) [0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$/ // =
 const telefone = "(21) 9876-1234"
 
 console.log(regExp.test(telefone))
+

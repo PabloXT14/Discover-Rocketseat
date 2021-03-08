@@ -9,6 +9,10 @@ F = C * 9/5 + 32
 */
 
 function transformTemperature(temperature) {
+
+    // Retirando caracteres indevidos da temp (Relembre: expressões regulares)
+    temperature = temperature.replace(/\D+[^°C]/gi, "")
+
     const celsiusExist = temperature.toUpperCase().includes("°C")
     const fahrenheitExist = temperature.toUpperCase().includes("°F")
 
@@ -37,7 +41,7 @@ function transformTemperature(temperature) {
 
 try {
 
-    console.log(transformTemperature('50°c'))
+    console.log(transformTemperature('50safasfafadfdf°c'))
 
 }catch(error) {
     // console.log(error)//mostra mais detalhes sobre o erro
