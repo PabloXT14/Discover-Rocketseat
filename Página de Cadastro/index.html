@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes de Letra -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icone da Pagina -->
+    <link rel="icon" href="./assets/icone_page.png" type="image/x-icon">
+
+    <title>Sing Up Form</title>
+</head>
+<body>
+    <main>
+        <h1>Create Account</h1>
+        <div class="social-media">
+            <a href="#">
+                <img src="./assets/google.png" alt="Google">
+            </a>
+            <a href="#">
+                <img src="./assets/facebook.png" alt="Facebook">
+            </a>
+            <a href="#">
+                <img src="./assets/linkedin.png" alt="Linkedin">
+            </a>
+        </div>
+
+        <div class="alternative">
+            <span>OR</span>
+        </div>
+
+        <form action="">
+            <label for="name">
+                <span>Name</span>
+                <input type="text" id="name" name="name" pattern="[^\d]+" title="Digite apenas nomes" required>
+            </label>
+
+            <label for="email">
+                <span>E-mail</span>
+                <input type="email" id="email" name="email" required>
+            </label>
+
+            <label for="password">
+                <span>Password</span>
+                <input type="password" id="password" name="password" pattern="[\w]*[@#$%&*]+[\w]*" title="Senha precisa conter um caracter especial (ex:@#$%&*)" required>
+            </label>
+
+            <input type="submit" value="Sing Up">
+        </form>
+    </main>
+    <section class="images">
+        <img src="assets/mobile.svg" alt="Mobile">
+        <div class="circle"></div>
+    </section>
+</body>
+</html>
