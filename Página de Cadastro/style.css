@@ -16,6 +16,7 @@ body {
     font-weight: 500;
     display: flex;
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 /* ==== Icones ==== */
@@ -32,6 +33,7 @@ main h1 {
     color: #8880FE;
     font-size: 3rem;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 main .social-media {
@@ -95,8 +97,9 @@ main form label span {
 }
 
 main form label:first-child span {
-    margin-top: rem;
+    margin-top: 0.7rem;
 }
+
 main form input {
     background: #161923;
     width: 300px;
@@ -114,7 +117,7 @@ main form input[type="submit"] {
     cursor: pointer;
     width: 50%;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 3rem;
     border: none;
     border-radius: 32px;
     background: #6C63FF;
@@ -129,13 +132,15 @@ main form input[type="submit"]:hover {
 
 /* ==== Background Mobile ==== */
 section.images {
+    width: 50vw;
     display: flex;
     align-items: flex-end;
-    padding: 1rem;
+    justify-content: flex-end;
+    padding: 2rem 4rem;
 }
 
 section.images img {
-    width: 90%;
+    width: 100%;
 }
 
 section.images .circle {
@@ -147,4 +152,47 @@ section.images .circle {
     background: linear-gradient(45deg, #E8CBC0, #636FA4);
     clip-path: circle(40% at right 80%);
     z-index: -1;
+}
+
+
+/* ===== Responsividade ===== */
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    /*alterando tamanho da img mobile*/
+    section.images img {
+        width: 110%;
+    }
+    /*diminuindo tamanho do circulo*/
+    section.images .circle {
+        clip-path: circle(35% at right 80%)
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /*escondendo a img e o circle*/
+    section.images {
+        display: none;
+        visibility: hidden;
+    }
+
+    /*aumentando largurad do main*/
+    main {
+        width: 100vw;
+    }
+}
+
+/*ajustando estilzações para celular*/
+@media only screen and (max-width: 450px) {
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main .alternative span {
+        font-size: 0.8rem;
+    }
+
+    main form label span, main form input[type="submit"] {
+        font-size: 1rem;
+    }
+
 }
