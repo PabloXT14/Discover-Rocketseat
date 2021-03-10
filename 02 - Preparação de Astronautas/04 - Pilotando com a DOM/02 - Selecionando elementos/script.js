@@ -4,7 +4,7 @@
 // console.log(element)
 
 
-/* getElementByClassName() */
+/* getElementsByClassName() */
 // document.getElementsByClassName('nome-da-classe') => seleciona todos os objetos que possuem tal classe
 // const element = document.getElementsByClassName('paragraph')
 // console.log(element)
