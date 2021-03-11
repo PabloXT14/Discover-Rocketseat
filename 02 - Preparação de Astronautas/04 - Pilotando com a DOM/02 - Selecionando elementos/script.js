@@ -1,3 +1,5 @@
+/* ========= Selecionando Elementos ========= */
+
 /* getElementById() */ 
 // document.getElementById('nome-do-id')
 // const element = document.getElementById('blog-title')
