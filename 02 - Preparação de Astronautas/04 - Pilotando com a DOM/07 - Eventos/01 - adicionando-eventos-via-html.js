@@ -5,6 +5,7 @@
         - onclick(um click)
         - ondblclick(duplo click)
         - onmouseover(ao mouse passar por cima)
+        - onkeydown(ao preciosar uma tecla)
 */
 function print() {
     console.log('print')
