@@ -21,6 +21,8 @@ document.onkeydown = function(event) {
     console.log(event.key)
 }
 
+
+
 /* Outra modo para criar o modal na tela */
 // document.addEventListener('keydown', function(event) {
 //     const teclaEnter = event.key === 'Enter'
@@ -28,3 +30,16 @@ document.onkeydown = function(event) {
 //         createModal()
 //     }
 // })
+
+
+/* Adicionando mais uma opção de verificação */
+// function verifyClassInvisible() {
+//     const classInvisible = modal.getAttribute('class')
+//     if(classInvisible.indexOf('invisible') !== -1) {
+//         console.log('existe')
+//     }
+//     else {
+//         console.log('não existe')
+//     }
+// }
+// verifyClassInvisible()
