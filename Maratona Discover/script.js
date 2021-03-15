@@ -169,9 +169,9 @@ const Utils = {
     },
 
     formatAmount(value) {
-        value = Number(value) * 100 // formato correto para a array guardar 
+        value = value * 100 // formato correto para a array guardar 
 
-        return value
+        return Math.round(value)
     },
 
     formatDate(date) {
