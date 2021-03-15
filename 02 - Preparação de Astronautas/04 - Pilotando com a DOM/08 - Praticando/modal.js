@@ -9,7 +9,6 @@ function removeModal() {
     modal.classList.add('invisible')
 }
 
-
 button.addEventListener('click', createModal)
 
 document.onkeydown = function(event) {

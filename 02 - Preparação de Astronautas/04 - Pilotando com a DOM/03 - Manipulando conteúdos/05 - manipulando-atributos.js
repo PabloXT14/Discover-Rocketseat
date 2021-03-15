@@ -12,5 +12,5 @@ console.log(divContent)
 const divContentID = document.querySelector('#estilo')
 console.log(divContentID.getAttribute('id'))
 
-divContent.removeAttribute('id')
+divContent.removeAttribute('id')// comente essa linha e veja o que acontece
 console.log(divContent)
