@@ -36,7 +36,7 @@
 * Você poderá **não estar pronto** em 2 meses
 * Se você está com a corda no pescoço, poderá se decepcionar
 * Se você acelerar demais, você vai capotar
-* Vai vai precisar ter foco pra chegar lá!
+* Você vai precisar ter foco pra chegar lá!
 * Você vai chegar lá, mas dependerá da fórmula TEMPO * ESFORÇO
 
 > Já prepare seu Linkedin
@@ -228,6 +228,7 @@ Comece a introduzir algumas ferramentas mais avançadas
 - SASS
 - Babel
 - Webpack
+- Bootstrap
 
 ### Fundamentos de comunicação com Back end: 50h
 - APIs
