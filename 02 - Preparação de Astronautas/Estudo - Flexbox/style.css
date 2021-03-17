@@ -1,0 +1,45 @@
+.container {
+    height: 80vh;
+    background: #a695dd;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* align-content: space-around; */
+    /* flex-flow: wrap; */
+   
+    
+}
+
+.container div {
+    border: 1px solid black;
+    padding: 10px;
+    /* width: 200px; */
+}
+
+.container .box-1 {
+    /* order: 4; */
+    /* flex: 7; */
+    /* flex-basis: 10%; */
+    align-self: flex-end;
+}
+.container .box-2 {
+    /* order: 2; */
+    /* flex: 1; */
+    /* flex-basis: 10%; */
+    align-self: flex-start;
+}
+.container .box-3 {
+    /* order: 3; */
+    /* flex: 1; */
+    /* flex-basis: 10%; */
+    align-self: flex-end;
+}
+.container .box-4 {
+    /* order: 1; */
+    /* flex: 1; */
+    /* flex-basis: 10%; */
+    align-self: flex-start;
+}
