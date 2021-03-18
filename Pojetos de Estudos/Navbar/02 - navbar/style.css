@@ -1,0 +1,192 @@
+html {
+    font-size: 62.5%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    color: #f2f2f2;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+  }
+  
+  
+  
+  nav {
+    background: #222222;
+    padding: 1rem 4rem 1rem 7rem;
+    border: 0.1rem solid #000;
+    border-left: none;
+    border-right: none;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* ===== Logo ===== */
+
+  nav ul li.logo{
+    flex: 1;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  nav ul li.logo:hover {
+    color: cyan;
+  }
+
+/* ===== Menu ===== */
+  
+  nav ul div.items {
+    display: inline-flex;
+    padding: 0 2.5rem;
+  }
+  
+  nav ul div.items a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0 1.2rem;
+  }
+  
+  nav ul div.items a:hover {
+    color: cyan;
+  }
+  
+/* ===== Search Menu ===== */
+  nav ul .search-icon {
+    height: 4rem;
+    width: 24rem;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 0.5rem;
+  }
+  
+  nav ul .search-icon input {
+    height: 100%;
+    width: 20rem;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    color: #000;
+    font-size: 1.6rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  
+  nav ul .search-icon .icon {
+    height: 100%;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+  /*   background: #000; */
+    border: 0.1rem solid #cccccc;
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  nav ul .search-icon .icon:hover {
+    background: #e6e6e6;
+  }
+  
+  nav ul .search-icon .icon span {
+    font-size: 1.8rem;
+    color: #222222;
+  }
+  
+/* ==== Menu Mobile =====*/
+  nav ul li.btn {
+    flex: 1;
+    padding: 0 2rem;
+    display: none;
+  }
+  
+  nav ul li.btn span {
+    font-size: 2.9rem;
+    width: 4.2rem;
+    height: 4.2rem;
+    text-align: center;
+    line-height: 4.2rem;
+    border: 0.1rem solid #151515;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  nav ul li.btn span.show:before {
+    content: '\f00d';
+  }
+  
+  /* =============== Responsividade =============== */
+  @media screen and (max-width: 955px) {
+    nav {
+      padding: 1rem 4rem 1rem 0;
+    }
+  
+    nav ul li.logo {
+      display: none;
+    }
+    
+    nav ul div.items {
+      flex: 4;
+    }
+    
+  }
+  
+  /*add icon for mobile*/
+  @media screen and (max-width: 683px) {
+    nav ul li.btn {
+      display: block;
+    }
+    
+    nav {
+      z-index: 1;
+      padding: 0.9rem 4rem 0.9rem 0;
+    }
+    
+    nav ul div.items {
+      z-index: -1;
+      position: fixed;
+      top: -22rem;
+      right: 0;
+      width: 100%;
+      background: #222222;
+      display: inline-block;
+      transition: top .4s;
+    }
+    
+    nav ul div.items.show {
+      top: 6rem;
+    }
+    
+    nav ul div.items li{
+      text-align: center;
+      line-height: 3rem;
+      margin: 3rem 0;
+    }
+    
+    nav ul div.items li a {
+      font-size: 1.9rem;
+    }
+  }
+  
+  /* Ajustando menu de busca */
+  @media screen and (max-width: 365px) {
+
+      nav {
+          padding: 1rem;
+      }
+
+      nav ul .search-icon {
+          width: 20rem;
+      } 
+
+      nav ul .search-icon input{
+          width: 16rem;
+      }
+  }
+  
+  
