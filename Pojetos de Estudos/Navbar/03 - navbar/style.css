@@ -1,0 +1,300 @@
+html {
+    font-size: 62.5%;/* 1rem = 10px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* ========== Styling Navigation Bar ========== */
+.wrapper {
+    background: #171c24;
+    position: fixed;
+    width: 100%;
+}
+
+.wrapper nav {
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    /* background: red; */
+    margin: 0 auto;
+    height: 7rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .content {
+    display: flex;
+    align-items: center;
+}
+
+nav .content .links {
+    margin-left: 8rem;
+    display: flex;
+}
+
+.content .logo a {
+    color: #FFF;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.content .links li {
+    list-style: none;
+    line-height: 7rem;
+}
+
+.content .links li a,
+.content .links li label {
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.9rem 1.7rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease; 
+}
+
+.content .links li label {
+    display: none;
+}
+
+.content .links li a:hover,
+.content .links li label:hover {
+    background: #323c4e;
+}
+
+.wrapper .search-icon, .wrapper .menu-icon {
+    color: #FFF;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 7rem;
+    width: 7rem;
+    text-align: center;
+}
+
+.wrapper .menu-icon {
+    display: none;
+}
+
+/* Mudar o icone da lupa ao clicar */
+.wrapper #show-search:checked ~ .search-icon i::before {
+    content: '\f00d';
+}
+
+
+/* ========== Styling Search Bar ========== */
+
+.wrapper .search-box {
+    position: absolute;
+    height: 100%;
+    max-width: calc(100% - 5rem);
+    width: 100%;
+    opacity: 0;/* só aparecer quando clicar na lupa */
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper #show-search:checked ~ .search-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+    color: #FFF;
+    background: #171c24; 
+    padding: 0 10rem 0 1.5rem;
+}
+
+.wrapper .search-box input::placeholder {
+    color: #f2f2f2;
+}
+
+.search-box .go-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 6rem;
+    width: 7rem;
+    background: #171c24;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.wrapper input[type="checkbox"] {
+    display: none;
+}
+
+/* ========== Styling Dropdown Menu ========== */
+.content .links ul {
+    position: absolute;
+    background: #171c24;
+    top: 8rem;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.content .links li:hover > ul {
+    top: 7rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.content .links ul li a {
+    display: block;
+    width: 100%;
+    line-height: 3rem;
+    border-radius: 0px!important;
+}
+
+.content .links ul ul {
+    position: absolute;
+    top: 0;
+    right: calc(-100% + 0.8rem);
+}
+
+.content .links ul li {
+    position: relative;
+}
+
+.content .links ul li:hover ul {
+    top: 0;
+}
+
+/* ========== Making Navigation Bar Responsive ========== */
+@media screen and (max-width: 1250px) {
+    .wrapper nav {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+
+    nav .content .links {
+        margin-left: 3rem;
+    }
+
+    .content .links li a {
+        padding: 0.8rem 1.3rem;
+    }
+
+    .wrapper .search-box {
+        max-width: calc(100% - 10rem);
+    }
+
+    .wrapper .search-box input {
+        padding: 0 10rem 0 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .menu-icon {
+        display: block;
+    }
+
+    .wrapper #show-menu:checked ~ .menu-icon i::before {
+        content: "\f00d";
+    }
+
+    nav .content .links {
+        display: block;
+        position: fixed;
+        background: #14181f;
+        height: 100%;
+        width: 100%;
+        top: 7rem;
+        left: -100%;
+        margin-left: 0;
+        max-width: 35rem;
+        padding-bottom: 10rem; 
+        transition: all 0.3s ease;
+        overflow-y: auto; 
+    }
+
+    nav #show-menu:checked ~ .content .links {
+        left: 0;
+    }
+
+    .content .links li {
+        margin: 1.5rem 2rem;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        line-height: 4rem;
+        font-size: 2rem;
+        display: block;
+        padding: 0.8rem 1.3rem;
+        cursor: pointer;
+    }
+
+    .content .links li a.desktop-link {
+        display: none;
+    }
+
+    /* ===== Dropdown responsive code start ===== */
+    .content .links ul,
+    .content .links ul ul {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: none;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .content .links #show-features:checked ~ ul,
+    .content .links #show-services:checked ~ ul,
+    .content .links #show-items:checked ~ ul {
+        max-height: 100vh;
+    }
+
+    .content .links ul li {
+        margin: 0.7rem 2rem;
+    }
+
+    .content .links ul li a {
+        font-size: 1.8rem;
+        line-height: 3rem;
+        border-radius: 0.5rem!important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper nav {
+        padding: 0 1rem;
+    }
+
+    .content .logo a {
+        font-size: 2rem;
+    }
+
+    .wrapper .search-box {
+        max-width: calc(100% - 7rem);
+    }
+
+    .wrapper .search-box .go-icon {
+        width: 3rem;
+        right: 0;
+    }
+
+    .wrapper .search-box input {
+        padding-right: 3rem; 
+    }
+}
