@@ -68,6 +68,7 @@ nav .content .links {
 .content .links li a:hover,
 .content .links li label:hover {
     background: #323c4e;
+    color: #e0380e;
 }
 
 .wrapper .search-icon, .wrapper .menu-icon {
