@@ -1,0 +1,127 @@
+html {
+    font-size: 62.5%;/* 1rem = 10px;*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: #000;
+}
+
+/* ===== Styling Content ===== */
+
+.center {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer {
+    position: relative;
+    margin: 0 5rem;
+    background: linear-gradient(#14FFE9, #FFEB3B, #FF00E0);
+}
+
+/* ===== Sttling Button ===== */
+.button {
+    height: 7rem;
+    width: 22rem;
+    border-radius: 5rem;
+}
+
+.circle {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.outer button, .outer span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outer button {
+    background: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.button button {
+    height: 6rem;
+    width: 21rem;
+    border-radius: 5rem;
+}
+
+.circle button {
+    height: 18rem;
+    width: 18rem;
+    border-radius: 50%;
+}
+
+.outer span {
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.button span {
+    border-radius: 5rem;
+}
+
+.circle span {
+    border-radius: 50%;
+}
+
+/* ===== Hover Effect Animation ===== */
+
+/* Efeito de expalhamento de luz externa */
+.outer:hover span:nth-child(1) {
+    filter: blur(7px);
+}
+
+.outer:hover span:nth-child(2) {
+    filter: blur(14px);
+}
+
+.outer:hover {
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .center {
+        flex-flow: wrap;
+        flex-direction: column; 
+    }
+
+    .outer {
+        margin: 5rem 0;
+    }
+}
