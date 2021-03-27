@@ -6,7 +6,7 @@
 [] Mentalidade Dev
 [] Praticar as tecnologias do Discover
 
-**#** O que você vai ganhar com isso?
+# O que você vai ganhar com isso?
 
 [] Clareza prática
 [] Entendimento da plataforma e comunidade
