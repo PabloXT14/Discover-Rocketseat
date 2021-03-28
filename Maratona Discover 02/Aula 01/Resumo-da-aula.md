@@ -111,7 +111,7 @@ leva tempo e mais conhecimento para que as coisas façam sentido.
 * [x] Instalar Express
     * [x] Dependencies
     * [x] node_modules
-* [x] Criar servidor
+* [ ] Criar servidor
     * [x] require()
     * [x] Iniciar o servidor (listen)
     * [x] Primeira rota
