@@ -111,7 +111,7 @@ leva tempo e mais conhecimento para que as coisas façam sentido.
 * [x] Instalar Express
     * [x] Dependencies
     * [x] node_modules
-* [ ] Criar servidor
+* [X] Criar servidor
     * [x] require()
     * [x] Iniciar o servidor (listen)
     * [x] Primeira rota
@@ -121,7 +121,7 @@ leva tempo e mais conhecimento para que as coisas façam sentido.
     * [x] dev dependencies
     * [x] configurar
     * [x] npm run dev
-* [x] mostrando index.html
+* [ ] mostrando index.html
 * [x] views directory
 * [x] public directory
 * [x] create routes.js

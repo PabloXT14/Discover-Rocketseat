@@ -9,5 +9,5 @@
 
 * <length>..........Representa um valor de distância: px, em, vw
 * <angle>...........Representa um valor: deg(graus), rad(radianos), turn(voltas)
-* <time>............Representa um tempo: s, sm
+* <time>............Representa um tempo: s, ms
 * <resolution>......Representa resoluções para dispositivos: dpi
