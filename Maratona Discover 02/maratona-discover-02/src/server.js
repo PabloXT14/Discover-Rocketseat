@@ -1,7 +1,21 @@
 // Require: é uma funcionalidade do pacote node_modules, que irá buscar o a biblioteca/função 'express' para criarmos nosso servidor
 const express = require("express")
-
 const server = express()
+// Buscando as rotas
+const routes = require("./routes")
+
+
+/* === Configurando Template Engine === */
+server.set("view engine", "ejs")// Maquina de visualização recebe o 'ejs'
+
+
+/* 
+    Habilitanto rota para todos os arquivos statics/public(que não se alteram com frequência), no caso, o CSS e as imagens 
+*/
+server.use(express.static("public"))
+/* Acessando as Rotas/Routes */
+server.use(routes)
+
 
 
 /*
@@ -20,9 +34,23 @@ server.get('/', (request, response) => {
     // console.log('entrei no index')
 
     // servirá para encerrar a função
-    return response.send('OIE')
-})
+    // return response.send('OIE GALERA')
 
+    /* == Enviando arquivo pelo servidor == */
+
+    //retorna a localização do diretorio do server.js
+    // console.log(__dirname)
+    //retorna localização do arquivo
+    // console.log(__dirname + "/views/index.html")
+
+
+    // ** Maneira complexa de enviar **
+    // return response.sendFile("/Users/pablo/Documents/Discover-Rocketseat/Maratona Discover 02/maratona-discover-02/index.html")
+
+    // ** Maneira sintetizada de enviar **
+    return response.sendFile(__dirname + "/views/index.html")
+    
+})
 
 /* 
 listen: propriedade/função do 'express' que cria o servidor, recebe como argumentos:
