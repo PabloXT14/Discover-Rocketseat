@@ -1,4 +1,4 @@
-// Require: é uma funcionalidade do pacote node_modules, que irá buscar o a biblioteca/função 'express' para criarmos nosso servidor
+// Require: é uma funcionalidade do pacote node_modules, que irá buscar a biblioteca/função 'express' para criarmos nosso servidor
 const express = require("express")
 const server = express()
 // Buscando as rotas
@@ -6,7 +6,7 @@ const routes = require("./routes")
 
 
 /* === Configurando Template Engine === */
-server.set("view engine", "ejs")// Maquina de visualização recebe o 'ejs'
+server.set("view engine", "ejs")// Maquina de visualização recebe o EJS
 
 
 /* 
