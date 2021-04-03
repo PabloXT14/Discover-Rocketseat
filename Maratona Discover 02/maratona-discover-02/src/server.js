@@ -37,7 +37,6 @@ server.get('/', (request, response) => {
     // return response.send('OIE GALERA')
 
     /* == Enviando arquivo pelo servidor == */
-
     //retorna a localização do diretorio do server.js
     // console.log(__dirname)
     //retorna localização do arquivo
