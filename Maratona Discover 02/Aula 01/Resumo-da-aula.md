@@ -121,7 +121,7 @@ leva tempo e mais conhecimento para que as coisas façam sentido.
     * [x] dev dependencies
     * [x] configurar
     * [x] npm run dev
-* [ ] mostrando index.html
+* [x] mostrando index.html
 * [x] views directory
 * [x] public directory
 * [x] create routes.js
