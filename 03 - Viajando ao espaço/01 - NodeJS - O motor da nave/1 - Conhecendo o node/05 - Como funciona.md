@@ -13,7 +13,7 @@ Qual terá o melhor atendimento?
     - Um garçon é direcionado até sua mesa
     - Pega o pedido e leva até a cozinha, para o chefe preparar
     - O chefe, por regra do restaurante, irá proibir e bloquear o garçon de voltar para o cliente, até que o pedido fique pronto
-    - O cliente queria muito fazer mais pedidos, mas não pode, pois o garçon está 
+    - O cliente queria muito fazer mais pedidos, mas não pode, pois o garçon está esperando o pedido ficar pronto
     - Após o pedido ficar pronto, o garçon leva de volta para o cliente
 * O cliente foi embora e por regra do restaurante, o garçon é despedido
 * Chegou 100 clientes numa noita
@@ -32,7 +32,7 @@ Qual terá o melhor atendimento?
     - Eveneto Lupin já pegou o pedido e levou para o Chef
 * O Chef tocou um sininho avisando que o pedido da mesa 1 já ficou pronto e Eveneto Lupin corre para pegar e fazer a entrega do pedido
 ```
-🏃‍♂️ O segredo de Eveneto é que ele sabe trabalhar de maneira assincrona, fazendo mais de 1 evento de cada vez e não tem nada que o bloqueie. Ele é muito solicitado efaz seu trabalho muito bem feito
+🏃‍♂️ O segredo de Eveneto é que ele sabe trabalhar de maneira assincrona, fazendo mais de 1 evento de cada vez e não tem nada que o bloqueie. Ele é muito solicitado e faz seu trabalho muito bem feito
 ```
 
 ## Decifrando...
