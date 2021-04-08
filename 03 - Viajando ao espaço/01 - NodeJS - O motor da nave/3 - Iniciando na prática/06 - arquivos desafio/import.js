@@ -1,3 +1,5 @@
-const getFlag = require('./function')
+const getFlagValue = require('./function')
 
-getFlag('ASFDFDFD')
+console.log(`Oi ${getFlagValue('--name')}. ${getFlagValue('--greeting')}`)
+
+
