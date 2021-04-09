@@ -3,7 +3,6 @@
 */
 
 console.log(global);
-
 /*
   # Variáveis Globais do Node 
     - console (executa algo no terminal)
