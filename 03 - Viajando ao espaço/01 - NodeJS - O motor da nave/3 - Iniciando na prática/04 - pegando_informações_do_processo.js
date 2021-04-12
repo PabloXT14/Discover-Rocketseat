@@ -4,6 +4,9 @@
         - possui várias propriedades que podem ser utilizadas:
             * 'argv' (um array que além de conter o nome da localização do arquivo executado, guarda outros carateres que digitamos no terminal, em sintexe o argv é 'uma lista de argumentos')
         ...
+
+        * explicação formal:
+            - O 'process' é um objeto 'global' que fornece informações e controle sobre o processo atual do Node.js. Como um global, está sempre disponível para aplicativos Node.js sem usar require(). Ele também pode ser acessado explicitamente usando require()
 */
 
 const firstName = process.argv[2]
