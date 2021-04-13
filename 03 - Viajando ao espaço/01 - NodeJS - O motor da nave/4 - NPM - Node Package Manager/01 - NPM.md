@@ -64,9 +64,9 @@ __Instalando Dependências Globais__
         * ex: `npm i moment@1.5.1`
     * Como saber dados sobre as versão dos pacotes instalados:
         * Execute: `npm outdated`
-    * Como atualizar as versão dos pacotes:
-        * Para atualizar todos os pacotes para a versão mais requisitada: `npm upgrade` 
+    * Como atualizar as versão dos pacotes para a versão mais requisitada:
+        * Execute: `npm upgrade` 
     * Como voltar pacote para a ultima versão que foi instalada: `npm i `+`nome do pacote`+`@latest`
         * ex: `npm i moment@latest`
-    * Obs: ao realizar alterações nas versão, caso a alteração não conste no arquivo `package.json` e talvez esteja no `package-lock.json`
+    * Obs: ao realizar alterações nas versões, caso a alteração não conste no arquivo `package.json` e talvez esteja no `package-lock.json`
     
