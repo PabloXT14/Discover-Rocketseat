@@ -1,0 +1,1 @@
+console.log("Rodando script com o npm!!!")
