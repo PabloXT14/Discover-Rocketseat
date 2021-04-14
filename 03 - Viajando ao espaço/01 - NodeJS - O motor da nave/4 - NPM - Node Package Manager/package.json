@@ -14,8 +14,7 @@
   "author": "Pablo A. F. Cardoso",
   "license": "MIT",
   "dependencies": {
-    "cfonts": "^2.9.1",
-    "moment": "^2.29.1"
+    "cfonts": "^2.9.1"
   },
   "devDependencies": {}
 }

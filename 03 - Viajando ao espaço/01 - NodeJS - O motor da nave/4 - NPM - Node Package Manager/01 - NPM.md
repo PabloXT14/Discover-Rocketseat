@@ -28,7 +28,7 @@ __Glossary: Dependencies, Packages, Modules__
 - [ ] O que é o diretório node_modules
     * é uma pasta que é criada pelo NodeJS para guardar os módulos de terceiros/baixados (obs: esses módulos também terão um package.json)
     * para o GitHub ignore e não salvar esta pasta basta adicionar no arquivo `.gitignore` a linha `node_modules/`
-    * Caso você tenha apagado sem querer a pasta `node_modules` e não tiver o arquivo `.gitignore` basta executar o comando `npm install` no terminal que tudo volta como estava.
+    * Caso você tenha apagado sem querer a pasta `node_modules`, e não tiver o arquivo `.gitignore`, basta executar o comando `npm install` no terminal que tudo volta como estava.
 - [ ] O que é o arquivo package-lock.json
     * Também é um arquivo .json que vai servir parar fazer um mapeamento das dependências que o seu projeto tem, deixando-o assim mais rápido.
     * Recomenda-se não mexer/alterar este arquivo para que o seu projeto não de erro e execute de forma rápida.
@@ -41,7 +41,7 @@ __Glossary: Dependencies, Packages, Modules__
     * Depois para rodar no terminal o comando `npm run`+`palavra-chave`
     * Obs: quando a palavra-chave é `start` só é preciso executar no terminal `nmp start`
 
-__Instalando Dependências Globais__
+__Instalando Dependências Globais & Mudando Versão do Pacote__
 - [ ] Instalar pacote de maneira global (ná sua máquina, não apenas no projeto)
     * Execute no terminal: `npm i` + `nome do pacote` + `-g`
     * Para saber onde estão os pacote na sua máquina execute:
@@ -69,4 +69,6 @@ __Instalando Dependências Globais__
     * Como voltar pacote para a ultima versão que foi instalada: `npm i `+`nome do pacote`+`@latest`
         * ex: `npm i moment@latest`
     * Obs: ao realizar alterações nas versões, caso a alteração não conste no arquivo `package.json` e talvez esteja no `package-lock.json`
-    
+__Como Remover Pacotes__
+-[ ] Desistalar pacotes
+    * Execute no terminal: `npm uninstall`+`nome do pacote a ser desistalado`

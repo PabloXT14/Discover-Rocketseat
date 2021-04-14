@@ -9,3 +9,4 @@
 */
 const myModule = require('./exports')
 console.log(myModule)
+// console.log(myModule.age)
