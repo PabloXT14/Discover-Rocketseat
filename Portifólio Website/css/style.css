@@ -1,0 +1,56 @@
+/* Fonts Style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* ===== Global Settings ===== */
+html {
+    font-size: 62.5%;/*1rem = 10px*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+/* ===== Navbar Styling ===== */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem;
+    background: crimson;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.max-width {
+    max-width: 130rem;
+    padding: 0 8rem;
+    margin: auto;
+}
+
+
+.navbar .logo a, .navbar .logo a span {
+    color: #FFF;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+/* ===== Home Section ===== */
