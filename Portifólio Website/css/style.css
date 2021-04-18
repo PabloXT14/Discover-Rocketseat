@@ -53,7 +53,44 @@ html {
     margin-left: 2.5rem;
 }
 
-/* ===== Home Section ===== */
+/* ===== Home Section Styling ===== */
+.home {
+    display: flex;
+    background: url("../images/banner.jpg");
+    background-size: cover;
+    background-attachment: fixed; 
+    height: 100vh;
+    color: #FFF;
+    min-height: 50rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 4rem;
+}
+
+.home .home-content .text-1 {
+    font-size: 2.7rem;
+}
+
+.home .home-content .text-2 {
+    font-size: 7.5rem;
+    font-weight: 600;
+    margin-left: -0.3rem;
+}
+
+.home .home-content .text-3, .home .home-content .text-3 span{
+    font-size: 4rem;
+    margin: 0.5rem 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+
+
 
 /* ===== About Section ===== */
 
