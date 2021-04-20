@@ -20,6 +20,7 @@ html {
     padding: 3rem;
     /* background: crimson; */
     font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
 }
 
 .navbar.sticky {
@@ -48,6 +49,12 @@ html {
 
 .navbar .logo a span {
     color: crimson;
+    transition: all 0.3s ease;
+}
+
+/*cor no span ao scrollY maior que 20*/
+.navbar.sticky .logo a span {
+    color: #FFF;
 }
 
 .navbar .menu li {
@@ -65,6 +72,10 @@ html {
 
 .navbar .menu li a:hover {
     color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #FFF;
 }
 
 /* ===== Home Section Styling ===== */
