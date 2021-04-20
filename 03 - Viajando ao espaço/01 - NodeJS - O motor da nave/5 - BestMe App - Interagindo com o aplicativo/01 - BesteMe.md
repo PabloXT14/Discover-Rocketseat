@@ -11,7 +11,7 @@ A se comunicar com o processo enquanto ele estiver rodando
 * process.stdout
     - `process.stdout.write` imprime (no terminal) continuamente as informações como os dados sendo recuperados e não adiciona uma nova linha/quebra de linha, diferente do console.log() que coloca um `\n`(quebra de linha) automaticamente.
     - O console.log() é basicamente um `process.stdout.write` + `\n`
-    - teste:
+    - Teste:
 
     ```js
     process.stdout.write("conteúdo sem quebra de linha ")
@@ -31,4 +31,12 @@ A se comunicar com o processo enquanto ele estiver rodando
 * process.exit
     - `process.exit()` comando que serve para encerrar um processo.
     - Veja seu uso na demonstração anterior
+* process.on
+    - `process.on()` é uma função que serve para ouvir/perceber determinados eventos do processo e retornar uma outra função `callback`(função de retorno)
+    - Ex:
+    ```js
+    process.on('exit', () => {
+        console.log("Você encerrou o processo!!!")
+    })
 
+    ```
