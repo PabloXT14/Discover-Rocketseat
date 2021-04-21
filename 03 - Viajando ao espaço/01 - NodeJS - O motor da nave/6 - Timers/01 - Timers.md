@@ -9,7 +9,7 @@
     - `clearTimeout(timeOut a ser excluido)`
 * __setInterval__: irá rodar uma função N vezes a cada X milissegundos, recebe como parâmetro
     - `setInterval(functionCallback(), tempo de saída/timeOut)`
-* __clearInterval_: irá cancelar um setInterval registrado, recebe como parâmetro
+* __clearInterval__: irá cancelar um setInterval registrado, recebe como parâmetro
     - `clearInterval(setInterval a ser excluído)`
 
 ## Iremos praticar um pouco mais de 
