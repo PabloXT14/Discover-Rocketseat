@@ -24,7 +24,7 @@ process.stdin.on("data", data => {
         ask(answers.length)
     } else {
         // Encerrando Aplicação e Mostrando todas as respostas
-        console.log(answers)
+        // console.log(answers)
         process.exit()
     }
     
