@@ -78,6 +78,18 @@ html {
     color: #FFF;
 }
 
+/* Menu Btn Styling */
+.menu-btn {
+    color: #FFF;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-btn i {
+    font-size: 2.3rem;
+}
+
+
 /* ===== Home Section Styling ===== */
 .home {
     display: flex;
@@ -131,3 +143,44 @@ html {
 
 
 /* ========== Responsivity ========== */
+
+@media screen and (max-width: 947px) {
+    .max-width {
+        padding: 0 5rem;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 8rem; 
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 2rem 0;
+        font-size: 2.5rem;
+    }
+}
