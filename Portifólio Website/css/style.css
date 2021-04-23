@@ -126,7 +126,22 @@ html {
     font-weight: 500;
 }
 
+.home .home-content a {
+    display: inline-block;
+    background: crimson;
+    color: #FFF;
+    font-size: 2.5rem;
+    padding: 1.2rem 3.6rem;
+    margin-top: 2rem;
+    border: 2px solid crimson;
+    border-radius: 0.6rem;
+    transition: all 0.3s ease;
+}
 
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
 
 
 /* ===== About Section ===== */
@@ -143,11 +158,20 @@ html {
 
 
 /* ========== Responsivity ========== */
+@media screen and (max-width: 1104px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
 
-@media screen and (max-width: 947px) {
+@media screen and (max-width: 991px) {
     .max-width {
         padding: 0 5rem;
     }
+}
+
+
+@media screen and (max-width: 947px) {
 
     .menu-btn {
         display: block;
@@ -182,5 +206,47 @@ html {
         display: inline-block;
         margin: 2rem 0;
         font-size: 2.5rem;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 7rem;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 3.5rem;
+    }
+
+    .home .home-content a {
+        font-size: 2.3rem;
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .max-width {
+        padding: 0 2.3rem;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 6rem;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 3.2rem;
+    }
+
+    .home .home-content a {
+        font-size: 2rem;
+        padding: 0.9rem 2.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 5rem;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 2.7rem;
     }
 }
