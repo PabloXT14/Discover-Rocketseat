@@ -69,6 +69,7 @@ __Instalando Dependências Globais & Mudando Versão do Pacote__
     * Como voltar pacote para a ultima versão que foi instalada: `npm i `+`nome do pacote`+`@latest`
         * ex: `npm i moment@latest`
     * Obs: ao realizar alterações nas versões, caso a alteração não conste no arquivo `package.json` e talvez esteja no `package-lock.json`
+
 __Como Remover Pacotes__
--[ ] Desistalar pacotes
+- [ ] Desistalar pacotes
     * Execute no terminal: `npm uninstall`+`nome do pacote a ser desistalado`

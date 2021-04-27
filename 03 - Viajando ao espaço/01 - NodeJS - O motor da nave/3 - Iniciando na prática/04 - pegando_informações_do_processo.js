@@ -13,4 +13,5 @@ const firstName = process.argv[2]
 const lastName = process.argv[3]
 
 // console.log(`Localização do arquivo executado: ${process.argv[1]}`)
+// console.log(process.argv) // => array com a lista de argumentos
 console.log(`Seu nome é ${firstName} ${lastName}`)
