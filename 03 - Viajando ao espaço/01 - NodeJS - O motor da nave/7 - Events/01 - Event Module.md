@@ -57,3 +57,27 @@
 * [ ] Execultar ações para determinados eventos
     - Isto é relizado pelo funçãoCallBack que é passada como parâmetro dentro das funções `on()` ou `once()`
 * [ ] Entender como ele é a base para outros módulos
+    - As funcionalidades(`EventEmitter`) do módulo `events` podem ser herdadas por outros módulos do NodeJS, da seguinte forma:
+    ```js
+    const { inherits } = require('util') 
+    // util => outro módulo nativo do NodeJS
+    // inherits => função que ajuda a passar como herança o EventEmitter para outras funções/módulos
+    const { EventEmitter } = require('events')
+
+    // Função que herdara o EventEmitter
+    function Character(name) {
+        this.name = name
+    }
+
+    // Passando EventEmitter como herança do Character
+    inherits(Character, EventEmitter)
+
+    // Acessando as propriedades de Eventos através do Character
+    const chapolin = new Character('Chapolin');
+    chapolin.on('help', () => console.log(`Eu o ${chapolin.name} colorado!`))
+
+    console.log('Oh! E agora, quem poderá me defender?')
+    chapolin.emit('help')
+
+    ```
+    - Obs: muitos outros módulos também heradam o `events`, como: http, stream, file system, etc..., utilizando o mesmo conceito do `inherits`
