@@ -150,6 +150,20 @@ section {
     padding: 10rem 0;
 }
 
+.about, .services, .skills {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content, 
+.services .serv-content,
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 section .title {
     text-align: center;
     font-size: 4rem;
@@ -186,19 +200,8 @@ section .title::after {
 
 /* ===== About Section ===== */
 
-.about, .services {
-    font-family: 'Poppins', sans-serif;
-}
-
 .about .title::after {
     content: "who i am";
-}
-
-.about .about-content, .services .serv-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .about .about-content .left {
@@ -310,6 +313,95 @@ section .title::after {
 
 
 /* ===== Skills Section ===== */
+.skills .title::after {
+    content: "what i know";
+}
+
+.skills .skills-content .column {
+    width: calc(50% - 3rem);
+}
+
+.skills .skills-content .left .text {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+.skills .skills-content .left a {
+    display: inline-block;
+    background: crimson;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.8rem 1.6rem;
+    margin-top: 2rem;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover {
+    color: crimson;
+    background: none;
+}
+
+.skills .skills-content .right .bars {
+    margin-bottom: 1.5rem;
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.skills .skills-content .right .line {
+    height: 0.5rem;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    /* width: 80%; => cada barra tem o seu, pode altomatizar pelo js */
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.skills .skills-content .right .html::before {
+    width: 90%;
+}
+
+.skills .skills-content .right .css::before {
+    width: 60%;
+}
+
+.skills .skills-content .right .js::before {
+    width: 80%;
+}
+
+.skills .skills-content .right .php::before {
+    width: 50%;
+}
+
+.skills .skills-content .right .node::before {
+    width: 70%;
+}
+
 
 /* ===== Teams Section ===== */
 
@@ -417,6 +509,11 @@ section .title::after {
         margin-bottom: 2rem;
     }
 
+    /* Responsividade do Skills */
+    .skills .skills-content .column {
+        width: 100%;
+        margin-bottom: 3.5rem;
+    }
 
 }
 
