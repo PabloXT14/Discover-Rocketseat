@@ -150,7 +150,7 @@ section {
     padding: 10rem 0;
 }
 
-.about, .services, .skills {
+.about, .services, .skills, .teams {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -213,7 +213,9 @@ section .title::after {
     width: 40rem;
     object-fit: cover;
     /*
-    object-fit: especifica como o conteúdo de um elemento substituído deve ser ajustado à caixa estabelecida pela altura e largura usadas.*/ 
+    object-fit: especifica como o conteúdo de um elemento substituído deve ser ajustado à caixa estabelecida pela altura e largura usadas.
+    Basicamente vai tentar manter a proporção da imagem
+    */ 
     border-radius: 6px;
 }
 
@@ -257,16 +259,18 @@ section .title::after {
 
 
 /* ===== Services Section ===== */
-.services {
+.services, .teams {
     color: #FFF;
     background: #111;
 }
 
-.services .title::before {
+.services .title::before,
+.teams .title::before {
     background: #FFF;
 }
 
-.services .title::after {
+.services .title::after,
+.teams .title::after {
     background: #111;
     content: "what i provide"
 }
@@ -404,6 +408,83 @@ section .title::after {
 
 
 /* ===== Teams Section ===== */
+
+.teams .title::after {
+    content: "who with me";
+}
+
+.teams .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 2.5rem 3.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+    background: crimson;
+}
+
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 1rem 0 0.7rem 0; 
+}
+
+.teams .carousel .card img {
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover img {
+    border-color: #FFF;
+}
+
+/*botões embaixo do carrossel*/ 
+.owl-dots {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.owl-dot {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin: 0 0.5rem;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active{
+    width: 3.5rem;
+    border-radius: 1.4rem;
+}
+
+.owl-dot-active,
+.owl-dot:hover {
+    background: crimson!important;
+}
+
+
+
+
 
 /* ===== Contact Section ===== */
 
