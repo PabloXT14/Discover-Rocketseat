@@ -542,6 +542,11 @@ section .title::after {
     margin-bottom: 1.5rem;
 }
 
+.contact .right form .textarea {
+    height: 8rem;
+    width: 100%;
+}
+
 .contact .right form .name {
     margin-right: 1rem;
 }
@@ -550,7 +555,8 @@ section .title::after {
     margin-left: 1rem;
 }
 
-.contact .right form .field input {
+.contact .right form .field input,
+.contact .right form .textarea textarea {
     height: 100%;
     width: 100%;
     border: 1px solid lightgray;
@@ -560,6 +566,38 @@ section .title::after {
     font-size: 1.7rem;
     font-family: 'Poppins', sans-serif;
 }
+
+.contact .right form .textarea textarea {
+    padding: 1rem;
+    resize: none;
+}
+
+
+.contact .right form .button {
+    height: 4.7rem;
+    width: 17rem;
+}
+
+.contact .right form .button button {
+    height: 100%;
+    width: 100%;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    background: crimson;
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} 
+
+.contact .right form .button button:hover {
+    color: crimson;
+    background: none;
+}
+
+
+
 
 
 
@@ -660,11 +698,13 @@ section .title::after {
         margin-bottom: 2rem;
     }
 
-    /* Responsividade do Skills */
-    .skills .skills-content .column {
+    /* Responsividade do Skills & Contact*/
+    .skills .skills-content .column,
+    .contact .contact-content .column {
         width: 100%;
         margin-bottom: 3.5rem;
     }
+
 
 }
 
