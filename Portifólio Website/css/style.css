@@ -4,6 +4,7 @@
 /* ===== Global Settings ===== */
 html {
     font-size: 62.5%;/*1rem = 10px*/
+    scroll-behavior: smooth;/*para fazer uma decida/direcionamento suave para outras partes da pagina */ 
 }
 * {
     margin: 0;
@@ -150,7 +151,7 @@ section {
     padding: 10rem 0;
 }
 
-.about, .services, .skills, .teams, .contact{
+.about, .services, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -596,6 +597,23 @@ section .title::after {
     background: none;
 }
 
+
+/* =========== Footer Styling =========== */
+footer {
+    background: #111;
+    padding: 2rem 2.3rem;
+    color: #FFF;
+    text-align: center;
+}
+
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
 
 
 
