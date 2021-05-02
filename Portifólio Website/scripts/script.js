@@ -23,7 +23,20 @@ $(document).ready(function() {
         } else {
             $('.navbar').removeClass("sticky")
         }
+
+        // Para aparecer o Button Back Up
+        if(this.scrollY > 500) {
+            $('.scroll-up-btn').addClass("show")
+        } else {
+            $('.scroll-up-btn').removeClass("show")
+        }
+
     });
+
+    /* Slide-up script */
+    $('.scroll-up-btn').click(function() {
+        $('html').animate({scrollTop: 0})
+    })
 
     /* Toggle Menu/Navbar Script */
     $('.menu-btn').click(function() {
@@ -31,6 +44,20 @@ $(document).ready(function() {
         $('.menu-btn i').toggleClass('active')
     })
 
+    /* Typing animation script (Escrita animada) */
+    var typed = new Typed(".typing", {
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    })
+
+    var typed = new Typed(".typing-2", {
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    })
 
     /* Owl carousel script */
     $('.carousel').owlCarousel({
