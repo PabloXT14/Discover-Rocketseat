@@ -1,0 +1,65 @@
+/* ========== Global Styling ========== */
+html {
+    font-size: 62.5%;
+}
+
+* {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5256ad;
+}
+
+.drag-area {
+    border: 2px dashed #FFF;
+    height: 50rem;
+    width: 70rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid #FFF;
+}
+
+.drag-area .icon i {
+    font-size: 10rem;
+    color: #FFF;
+}
+
+.drag-area header {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.drag-area span {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #FFF;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.drag-area button {
+    padding: 1rem 2.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #FFF;
+    color: #5256ad;
+    cursor: pointer;
+}
