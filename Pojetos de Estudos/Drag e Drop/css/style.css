@@ -11,6 +11,8 @@ html {
     font-family: "Poppins", sans-serif;
 }
 
+/* ========== Drag and Body Styling ========== */
+
 body {
     display: flex;
     align-items: center;
