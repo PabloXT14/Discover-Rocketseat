@@ -69,6 +69,6 @@ body {
 .drag-area img {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* fazendo img manter a proporção no espaço delimitado */ 
+    object-fit: cover; /* fazendo img manter a proporção no espaço delimitado  */ 
     border-radius: 5px;;
 }
