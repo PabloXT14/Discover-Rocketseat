@@ -1,3 +1,4 @@
+/* ========== Global Sytiling ========== */
 html {
     font-size: 62.5%;
 }
@@ -12,4 +13,64 @@ html {
 body {
     background: #644bff;
     padding: 0 2rem;
+}
+
+/* ========== Box-Search Styling ========== */
+
+.wrapper {
+    max-width: 45rem;
+    margin: 15rem auto;
+}
+
+.wrapper .search-input {
+    position: relative;
+    background: #FFF;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.wrapper .search-input input {
+    height: 5.5rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 6rem 0 2rem;
+    font-size: 1.8rem;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input .icon {
+    height: 5.5rem;
+    width: 5.5rem;
+    line-height: 5.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #644bff;
+    cursor: pointer;
+}
+
+.search-input .autocom-box {
+    /* padding: 1rem 0.8rem; */
+    max-height: 28rem;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.autocom-box li {
+    list-style: none;
+    padding: 0.8rem 1.2rem;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+.autocom-box li:hover {
+    background: #EFEFEF;
 }
