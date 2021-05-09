@@ -6,7 +6,7 @@ const suggBox = searchWrapper.querySelector(".autocom-box")
 // If user press any key and release
 inputBox.onkeyup = (e) => {
     // console.log(e.target.value) // pegando é digitado pelo teclado
-    let userData = e.target.value;// user enetered data
+    let userData = e.target.value;// user enetered data (dados inseridos pelo usuário)
     let emptyArray = []
     if(userData) {
         emptyArray = suggestion.filter( (data) => {
