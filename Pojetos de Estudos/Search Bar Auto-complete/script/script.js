@@ -10,9 +10,28 @@ inputBox.onkeyup = (e) => {
     let emptyArray = []
     if(userData) {
         emptyArray = suggestion.filter( (data) => {
-            return data.toLocaleLowerCase()
+            // filtering array value and user char to lowercase and return only those word/sentc which are starts with user entered word
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase())
             
         })
+        emptyArray = emptyArray.map((data) => {
+            return data = '<li>'+ data +'</li>'
+        })
         console.log(emptyArray)
+        searchWrapper.classList.add("active")// ativando caixa de sugestão caso o usuário digite algo
+    } else {
+
     }
+    showSuggestions(emptyArray);
+}
+
+
+function showSuggestions(list) {
+    let listData
+    if(!list.lenght) {
+
+    } else {
+        listData = list.join('')
+    }
+    suggBox.innerHTML = listData
 }

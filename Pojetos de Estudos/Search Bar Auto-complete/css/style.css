@@ -55,11 +55,17 @@ body {
 }
 
 .search-input .autocom-box {
-    /* padding: 1rem 0.8rem; */
+    padding: 0;
     max-height: 28rem;
     overflow-y: auto;
     opacity: 0;
     pointer-events: none;
+}
+
+.search-input.active .autocom-box {
+    padding: 1rem 0.8rem;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .autocom-box li {
@@ -69,6 +75,10 @@ body {
     cursor: default;
     border-radius: 3px;
     display: none;
+}
+
+.search-input.active .autocom-box li {
+    display: block;
 }
 
 .autocom-box li:hover {
