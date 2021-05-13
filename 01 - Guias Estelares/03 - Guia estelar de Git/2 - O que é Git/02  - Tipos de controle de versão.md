@@ -14,7 +14,7 @@ Para superar os possíveis erros, existe o app _RCS-Revision Control System_
 - [ ] Formato especial no disco
 - [ ] Re-criar como qualquer arquivo se precisar em qualquer ponto no tempo, adicionando-se todas as alterações ao arquivo
 
-**E se você precisar colaborar com desenvolvedore em outro sistema?(o Sistema Local não conseguirá fazer isso)**
+**E se você precisar colaborar com desenvolvedores em outro sistema?(o Sistema Local não conseguirá fazer isso)**
 
 ## Sistemas Centralizados
 exemplo: CVS, Subversion e Perforce
