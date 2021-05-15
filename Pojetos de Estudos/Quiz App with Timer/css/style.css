@@ -1,0 +1,62 @@
+/* importing google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ========== Global Styling ========== */
+html {
+    font-size: 62.5%;
+}
+
+* {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Start Button Styling ========== */
+body {
+    background: #007bFF;
+}
+
+.start_btn, .info_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ========== Start Quiz Button Styling ========== */
+.start_btn button {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #007bFF;
+    padding: 1.5rem 3rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #FFF;
+    cursor: pointer; 
+}
+
+.info_box {
+    width: 54rem;
+    background: #FFF;
+    border-radius: 5px;
+}
+
+.info_box .info_title {
+    height: 6rem;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 3.5rem;
+    /* font-size: 10rem;
+    font-weight: 600; */
+}
+
+.info_box .info_title span {
+    font-size: 2rem;
+    font-weight: 600;
+}
