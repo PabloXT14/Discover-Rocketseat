@@ -44,6 +44,8 @@ body {
     cursor: pointer; 
 }
 
+/* ========== Info Box Styling ========== */
+
 .info_box {
     width: 54rem;
     background: #FFF;
