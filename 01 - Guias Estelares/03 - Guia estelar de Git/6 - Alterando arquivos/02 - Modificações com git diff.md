@@ -1,6 +1,6 @@
 # Modificações com git diff
 
-* O `git diff` é um comando que serve para verificarmos com mais detalhes as modificações que realizamos em nosso projeto, de arquivos que já foram commitados/estão no repositório local.
+* O `git diff` é um comando que serve para verificarmos com mais detalhes as modificações que realizamos em nosso projeto, de _arquivos que já foram commitados/estão no repositório local_.
 
 * A diferença em relação ao `git status`, é que o `git status` mostra qualquer tipo de alteração que ocorra no projeto(working directory) sem muitos detalhes.
 
