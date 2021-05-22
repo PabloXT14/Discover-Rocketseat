@@ -29,7 +29,18 @@ body {
     transform: translate(-50%, -50%);
     box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
                 0px 6px 20px 0 rgba(0,0,0,0.19);
+    transition: all 0.3s ease;
 }
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
 
 /* ========== Start Quiz Button Styling ========== */
 .start_btn button {
@@ -100,6 +111,7 @@ body {
     margin: 0 0.5rem;
     height: 4rem;
     width: 10rem;
+    outline: none;
     border: 1px solid #007bFF;
     border-radius: 5px;
     color: #FFF;
