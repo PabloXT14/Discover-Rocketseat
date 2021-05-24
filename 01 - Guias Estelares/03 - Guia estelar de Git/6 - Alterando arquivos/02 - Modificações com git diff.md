@@ -4,6 +4,7 @@
 
 * A diferença em relação ao `git status`, é que o `git status` mostra qualquer tipo de alteração que ocorra no projeto(working directory) sem muitos detalhes.
 
+
 * Demonstração: 
 ```
 $ git diff
