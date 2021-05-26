@@ -284,6 +284,10 @@ section .option_list .option:hover {
     border-color: #f5c6cb;
 }
 
+/* Disabled all options afetr selected option*/
+.option_list .option.disabled {
+    pointer-events: none;
+}
 
 .quiz_box footer {
     height: 6rem;
