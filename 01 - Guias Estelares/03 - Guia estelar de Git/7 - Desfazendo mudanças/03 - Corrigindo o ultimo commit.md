@@ -5,3 +5,5 @@
 $ git commit -m "remove README.md"
 $ git commit --amend -m "delete README.md"
 ```
+
+**OBS**: os padrões do git não recomendam ficar mexendo nas ultimas alterações que já fizemos, pois pode acabar gerando problemas para outros arquivos que foram commitados junto. O mais recomendado e fazer um novo commit.
