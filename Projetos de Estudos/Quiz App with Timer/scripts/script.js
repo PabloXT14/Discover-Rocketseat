@@ -4,6 +4,8 @@ const info_box = document.querySelector(".info_box")
 const exit_btn = info_box.querySelector(".buttons .quit")
 const continue_btn = info_box.querySelector(".buttons .restart")
 const quiz_box = document.querySelector(".quiz_box")
+const timeCount = quiz_box.querySelector(".timer .timer_sec")
+const timeLine = quiz_box.querySelector("header .time_line")
 
 const option_list = document.querySelector(".option_list")
 
@@ -24,12 +26,23 @@ continue_btn.onclick = ()=> {
     quiz_box.classList.add("activeQuiz")    // show the quiz box
     showQuestions(0);
     queCounter(1);
+    startTimer(15);
+    startTimerLine(0)
 }
 
 let que_count = 0
 let que_numb = 1
+let counter
+let timeValue = 15
+let widthValue = 0
 
 const next_btn = quiz_box.querySelector(".next_btn")
+
+// Result_box elements
+const result_box = document.querySelector(".result_box")
+const restart_quiz = result_box.querySelector(".buttons .restart")
+const quit_quiz = result_box.querySelector(".buttons .quit")
+
 
 // If Next Button Clicked
 next_btn.onclick = ()=> {
@@ -38,6 +51,13 @@ next_btn.onclick = ()=> {
         que_numb++;
         showQuestions(que_count)
         queCounter(que_numb)
+
+        clearInterval(counter)
+        startTimer(timeValue)
+
+        clearInterval(counterLine)
+        startTimerLine(widthValue)
+        next_btn.style.display = "none" // desativating button after clicked
     } else {
         console.log("Questions Completed")
     }
@@ -79,6 +99,9 @@ let crossIcon = `<div class="icon cross"><i class="fas fa-times"></i></div>`
 
 // Function check selected option
 function optionSelected(answer) {
+    clearInterval(counter)// parando temporizador
+    clearInterval(counterLine)// parando time line
+
     let userAns = answer.querySelector("span").textContent
     let correctAns = questions[que_count].answer
     let allOptions = option_list.children.length
@@ -106,7 +129,44 @@ function optionSelected(answer) {
     for(let i=0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled")
     }
+
+    // activate button for the next question
+    next_btn.style.display = "block"
 }
+
+// Timer Settings for question
+function startTimer(time) {
+    counter = setInterval(timer, 1000)// execute function timer each 1s
+
+    function timer() {
+        timeCount.textContent = time
+        time--;
+
+        // Adding zero at the numbers that  not have
+        if(time < 9) {
+            let addZero = timeCount.textContent
+            timeCount.textContent = "0" + addZero
+        }
+        if(time < 0) {
+            clearInterval(counter)
+            timeCount.textContent = "00"
+        }
+    }
+}
+
+// Time line loading
+function startTimerLine(time) {
+    counterLine = setInterval(timer, 29)
+    function timer() {
+        time += 1
+        timeLine.style.width = time + "px"
+        if(time > 549) {
+            // 550 = width da quiz_box
+            clearInterval(counterLine)
+        }
+    }
+}
+
 
 
 

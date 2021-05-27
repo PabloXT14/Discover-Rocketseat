@@ -200,6 +200,15 @@ body {
     user-select: none;
 }
 
+.quiz_box header .time_line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.3rem;
+    /* width: 50%; */
+    background: #007bFF;
+}
+
 .quiz_box section {
     padding: 2.5rem 3rem 2rem 3rem;
     background: #FFF;
@@ -313,6 +322,7 @@ footer .total_que span p {
 }
 
 footer .next_btn {
+    display: none;
     height: 4rem;
     padding: 0 1.3rem;
     font-size: 1.8rem;
