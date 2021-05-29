@@ -33,7 +33,8 @@ body {
 }
 
 .info_box.activeInfo,
-.quiz_box.activeQuiz{
+.quiz_box.activeQuiz,
+.result_box.activeResult{
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
@@ -373,6 +374,8 @@ footer .next_btn:hover {
 
 .result_box .score_text span {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 1rem 0;
     font-size: 1.8rem;
     font-weight: 500;
