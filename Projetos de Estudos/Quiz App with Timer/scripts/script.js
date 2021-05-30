@@ -183,7 +183,7 @@ function showResultBox() {
     if(userScore > 3) {
         scoreTag = `<span>and congrants 🎉! You got <p>${userScore}</p> out of <p>${questions.length}</p></span>`
     }
-    else if(userScore > 1) {
+    else if(userScore > 2) {
         scoreTag = `<span>and nice 😎, You got <p>${userScore}</p> out of <p>${questions.length}</p></span>`
     }
     else {
