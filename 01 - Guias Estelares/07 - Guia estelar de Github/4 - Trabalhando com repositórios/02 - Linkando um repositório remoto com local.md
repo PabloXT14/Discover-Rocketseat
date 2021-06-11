@@ -32,3 +32,5 @@
     $ git branch -M main
     $ git push -u origin main
     ```
+
+**OBS**: todo esse processo é realizado apenas uma vez para linkar/ligar um repositório remoto com um local, para salvar as alterações seguintes é feito de outra forma mais fácil.
