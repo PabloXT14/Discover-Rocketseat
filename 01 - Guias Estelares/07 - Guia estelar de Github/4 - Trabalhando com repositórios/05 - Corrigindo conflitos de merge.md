@@ -1,6 +1,6 @@
 # Corrigindo conflitos de merge
 
-* Primeiro execute o seguinte comando para deixar o seu `git pull`(merge) para deixar com o padrão de merge.
+* Primeiro execute o comando a seguir para deixar o seu `git pull`(merge) para deixar com o padrão de merge. Comando: 
 ```
 git config --global pull.rebase false
 ```
