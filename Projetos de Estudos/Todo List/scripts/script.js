@@ -1,4 +1,4 @@
-// Getting al required elements
+// Getting all required elements
 const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
@@ -6,7 +6,6 @@ const deleteAllBtn = document.querySelector(".footer button")
 
 inputBox.onkeyup = ()=> {
     let userData = inputBox.value;// getting user entered value
-    userDataValue = userData
 
     if(userData.trim() != 0) { //if user values aren't only spaces 
         addBtn.classList.add("active") //active the add button 
