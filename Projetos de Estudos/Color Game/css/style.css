@@ -1,0 +1,102 @@
+/* ========== Global Settings ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-size: 62.5%;/*1rem = 10px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Color Game Styling ========== */
+
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #62F0DF 0%, #32706F 90%);
+}
+
+h1 {
+    color: #FFF;
+    background: #2C8E99;
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+h1 #color-display {
+    display: block;
+    font-size: 7rem;
+    margin: -2rem 0;
+}
+
+#stripe {
+    background: #FFF;
+    height: 3rem;
+    text-align: center;
+    color: #000;
+}
+
+#stripe button {
+    height: 100%;
+    outline: none;
+    border: none;
+    margin-left: 1rem;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#stripe button:hover {
+    background: #757F8A;
+    color: #FFF;
+}
+
+#stripe button.selected {
+    background: #757F8A;
+    color: #FFF;
+}
+
+.message-result {
+    margin: 1rem auto;
+    max-width: 60rem;
+    height: 3rem;
+    background-color: rgb(214, 206, 206);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color:rgb(100, 12, 141);
+    text-transform: uppercase;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #232323;
+    border-radius: 3px;
+}
+
+#container .square {
+    width: 30%;
+    border-radius: 20%;
+    background: purple;
+    padding-bottom: 30%;
+    /* float: left; */
+    margin: 1.66%;
+    cursor: pointer;
+}
