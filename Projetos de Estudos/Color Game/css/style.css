@@ -16,9 +16,10 @@ html {
 /* ========== Color Game Styling ========== */
 
 body {
-    height: 100%;
+    /* height: 100vh; */
     width: 100%;
     background: linear-gradient(to bottom, #62F0DF 0%, #32706F 90%);
+    padding-bottom: 11%;
 }
 
 h1 {
@@ -99,4 +100,35 @@ h1 #color-display {
     /* float: left; */
     margin: 1.66%;
     cursor: pointer;
+}
+
+
+/* ========== Responsivirity ========== */
+
+@media screen and (max-width: 700px){
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h1 #color-display {
+        font-size: 4rem;
+        margin: -1rem 0;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    #stripe button {
+       padding: 0 1rem;
+       font-size: 1.5rem; 
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h1 #color-display {
+        font-size: 3rem;
+        margin: -0.5rem 0;
+    }
 }
