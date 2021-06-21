@@ -1,0 +1,87 @@
+/* ========== Global Settings ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-size: 62.5%;/*1rem = 10px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* ========== Block Wifi Styling ========== */
+body {
+    background: #f2f2f2;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .toast {
+    background: #fff;
+    padding: 2rem 1.5rem 2rem 2rem;
+    border-radius: 10px;
+    width: 43rem;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid #2ecc71;
+    justify-content: space-between;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+}
+
+.toast .content {
+    display: flex;
+    align-items: center;
+}
+
+.toast .content .icon {
+    /* font-size: 2.5rem; */
+    background: #2ecc71;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #FFF;
+}
+
+.toast .content .icon i {
+    font-size: 2.5rem;
+}
+
+.toast .content .details {
+    margin-left: 1.5rem;
+}
+
+.content .details span {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.content .details p {
+    color: #878787;
+}
+
+.toast .close-icon {
+    background: #f2f2f2;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    /* font-size: 2.3rem; */
+    cursor: pointer;
+    color: #878787;
+    border-radius: 50%;
+}
+
+.toast .close-icon i {
+    font-size: 2.3rem;
+}
