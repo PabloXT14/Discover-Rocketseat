@@ -34,7 +34,7 @@ window.onload = ()=> {//once window loaded
 
                 setTimeout(()=> {
                     wrapper.classList.add("hide")
-                }, 5000);//after 5 seconds toast will be hidden automatically
+                }, 7000);//after 5 seconds toast will be hidden automatically
 
             } else { //user isn't online or may getting something other error
                 offline();//calling offline function on both conditions
