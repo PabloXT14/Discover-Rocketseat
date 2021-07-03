@@ -59,6 +59,10 @@ nav {
 }
 
 nav ul {
+    position: relative;
+}
+
+nav ul .items {
     width: 100%;
     display: flex;
     align-items: center;
@@ -80,6 +84,20 @@ nav ul li a {
     text-decoration: none;
     font-weight: 600;
 }
+/* ======= Icone Menu ======= */
+nav ul li.btn {
+ display: none;
+}
+
+nav ul li.btn i {
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+nav ul li.btn i.show::before {
+    content: '\f00d';/*icone de X */
+}
+
 
 /* ========== Main Styling ========== */
 main {
@@ -215,4 +233,45 @@ footer p a {
     text-decoration: none;
     color: #FFF;
     font-weight: bold;
+}
+
+
+/* ========== Responsivirity ========== */
+@media screen and (max-width: 650px) {
+    .articles h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li.btn {
+        display: block;
+        text-align: right; 
+        right: 0;
+    }
+
+    nav {
+        z-index: 1;
+    }
+
+    nav ul .items {
+        z-index: 1;
+        position: fixed;
+        background: var(--cor4);
+        top: -30rem;
+        left: 0;
+        width: 100%;
+        display: inline-block;
+        transition: top 0.3s ease;
+    }
+
+    nav ul .items.show {
+        top: 6.6rem;
+    }
+
+    nav ul .items li {
+        text-align: center;
+        margin: 1rem 1.5rem;
+    }
+
 }
