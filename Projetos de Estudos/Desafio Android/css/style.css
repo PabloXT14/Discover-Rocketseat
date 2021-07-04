@@ -70,12 +70,12 @@ nav ul .items {
     background: var(--cor4);
 }
 
-nav ul li {
+nav ul .items li {
     padding: 1rem 2rem;
     transition: all 0.3s ease;
 }
 
-nav ul li:hover {
+nav ul .items li:hover {
     background: var(--cor3);
 }
 
@@ -92,9 +92,17 @@ nav ul li.btn {
 nav ul li.btn i {
     font-size: 2.4rem;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    border: 1px solid #FFF;
+    border-radius: 5px;
 }
 
-nav ul li.btn i.show::before {
+nav ul li.btn i:hover {
+    background: var(--cor3);
+}
+
+nav ul li.btn i.show:before {
     content: '\f00d';/*icone de X */
 }
 
@@ -244,18 +252,32 @@ footer p a {
 }
 
 @media screen and (max-width: 600px) {
-    nav ul li.btn {
-        display: block;
-        text-align: right; 
-        right: 0;
+
+    header .title {
+        margin-top: 4.8rem;
+    }
+
+    header .title p {
+        margin-bottom: 0;
+        padding-bottom: 2rem; 
     }
 
     nav {
         z-index: 1;
+        background: var(--cor4);
+        border-bottom: 1.5px solid var(--cor2);
+        position: fixed;
+        top: 0;
+    }
+
+    nav ul li.btn {
+        display: block;
+        text-align: right; 
+        transition: all 0.3s ease;
     }
 
     nav ul .items {
-        z-index: 1;
+        z-index: -2;
         position: fixed;
         background: var(--cor4);
         top: -30rem;
@@ -266,7 +288,7 @@ footer p a {
     }
 
     nav ul .items.show {
-        top: 6.6rem;
+        top: 4.75rem;
     }
 
     nav ul .items li {
@@ -274,4 +296,32 @@ footer p a {
         margin: 1rem 1.5rem;
     }
 
+    nav ul .items li a {
+        z-index: -2;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    header .title h1 {
+        font-size: 4rem;
+    }
+
+    header .title p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header .title h1 {
+        font-size: 3.5rem;
+    }
+
+    header .title p {
+        font-size: 1.4rem;
+    }
+
+    .articles h2 {
+        font-size: 2.5rem;
+    }
 }

@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="title">
+        <div class="title" id="home">
             <h1>Curiosidades de Tecnologia</h1>
             <p>
                 Tudo aquilo que você sempre quis saber sobre o mundo<br>
@@ -25,17 +25,17 @@
                     <i class="fas fa-bars"></i>
                 </li>
                 <div class="items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Notícias</a></li>
-                    <li><a href="#">Curiosidades</a></li>
-                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#contact">Fale Conosco</a></li>
                 </div>      
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="articles">
+        <div class="articles" id="noticias">
             <h2>História do Mascote do Android</h2>
             <p>Provavelmente você sabe que o sistema operacional <strong>Android</strong>, mantido pelo <strong>Google</strong> é um dos mais utilizados para dispositivos móveis em todo o mundo. Mas talvez você não saiba que o seu simpático mascote tem um nome e uma história muito curiosa? Pois acompanhe este artigo para aprender muita coisa sobre esse robozinho.</p>
 
@@ -75,7 +75,7 @@
                 
             </div>
 
-            <div class="article">
+            <div class="article" id="curiosidades">
                 <div class="block-content">
                     <h4>Quer aprender mais?</h4>
                     <p>Outro assunto curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um doce, em ordem alfabética a partir da versão 1.5 até a 9.0</p>
@@ -138,10 +138,11 @@
     </main>
 
     <footer>
-        <p>
-            Site criado por <a href="#">Pablo Alan</a> para <a href="#">CursoemVideo</a>
+        <p id="contact">
+            Site criado por <a href="mailto:pabloxt14@gmail.com">Pablo Alan</a> para <a href="https://www.youtube.com/user/cursosemvideo" target="_blank">CursoemVideo</a>
         </p>
     </footer>
 
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
