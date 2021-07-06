@@ -1,0 +1,88 @@
+/* ========== Global Styling ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* ============ Parallax Styling ============ */
+
+.section-1 .background,  
+.section-2 .background, 
+.section-3 .background, 
+.final-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* The shorthand CSS Background property order: 
+    background-image: url()
+    background-position(top, top right) / background-size(200px, contain, cover)
+    background-repeat: no-repeat
+    background-attachment: fixed, scroll(standard)
+    background-origin
+    background-clip 
+    background-color 
+    ----------------------------------------------------------------
+    filter: (permite aplicar fitros no background, ex: blur)
+    */
+    background: url(../images/section1-background.jpg) center/cover no-repeat fixed;
+    /* filter: opacity(70%); */
+    /* filter: grayscale(70%); */
+    opacity: 0.70;
+    
+}
+
+.section-2 .background {
+    height: 70vh;
+    background-image: url(../images/section2-background.jpg);
+}
+
+.section-3 .background {
+    height: 70vh;
+    background-image: url(../images/section3-background.jpg);
+}
+
+.text-img {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #FFF;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.text-img.begin,  .text-img.final{
+    background: #111;
+    padding: 2rem;
+}
+
+.section-1 .content, 
+.section-2 .content, 
+.section-3 .content {
+    background: #eee;
+    padding: 7rem 8rem;
+}
+
+.section-2 .content, .section-3 .content {
+    background: #222;
+    color: #DDD;
+}
+
+.section-1 .content h2, .section-2 .content h2, .section-3 .content h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.section-1 .content p, .section-2 .content p, .section-3 .content p {
+    text-align: center;
+}
