@@ -1,0 +1,65 @@
+/* ========== Global Settings ========== */
+html {
+    font-size: 62.5%;/*1rem = 10px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+/* ========== Slider Styling ========== */
+.slider-container {
+    width: 60rem;
+    height: 40rem;
+    margin: 10rem auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slider-container .image-container {
+    display: flex;
+    width: 180rem;
+    height: 40rem;
+    position: relative;
+    transition: left 1s ease;
+}
+
+.image-container img {
+    object-fit: cover;
+    object-position: center;
+    /* object-position: bottom right; */
+    /* background: url(../images/img-1.jpg) center/cover no-repeat scroll; */
+    width: 60rem;
+    height: 40rem;
+}
+
+.button-container {
+    top: -2rem;
+    position: relative;
+}
+
+.slider-button {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #FFF;
+}
+
+/* == Definindo qual serão os alvos de cada link ==*/
+#slider-image-1:target ~ .image-container {
+    left: 0px;
+}
+
+#slider-image-2:target ~ .image-container {
+    left: -60rem;/*600px*/
+}
+
+#slider-image-3:target ~ .image-container {
+    left: -120rem;
+}
+
