@@ -1,0 +1,145 @@
+/* ========== Global Styling ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-size: 62.5%;/*1rem = 10px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Similar Stylizations ========== */
+body {
+    background: #56baed;
+}
+
+.select-box, .play-board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ========== Selection Box Styling ========== */
+
+.select-box {
+    background: #FFF;
+    padding: 2rem 2.5rem 2.5rem;
+    border-radius: 5px;
+    max-width: 33rem;
+    width: 100%; 
+    display: none;
+}
+
+.select-box header {
+    font-size: 2.3rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #CCC;
+}
+
+.select-box .title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.select-box .options {
+    display: flex;
+    width: 100%;
+}
+
+.options button {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.8rem 0;
+    border: none;
+    outline: none;
+    background-color: #56baed;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.options button:hover {
+    transform: scale(0.96);
+}
+
+.options button.playerX {
+    margin-right: 5px;
+}
+
+.options button.playerO {
+    margin-left: 5px;
+}
+
+/* ========== Playerboard Selection ========== */
+.play-board .details {
+    background: #FFF;
+    padding: 0.7rem;
+    border-radius: 5px;
+}
+
+.play-board .details .players {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.play-board .details span {
+    /* background-color: #56baed; */
+    color: #56baed;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.7rem 0;
+    font-size: 1.9rem;
+    font-weight: 500;
+    cursor: default;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.details span:first-child {
+    color: #FFF;
+}
+
+.details .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #56baed;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.play-board .play-area {
+    margin-top: 2rem;
+}
+
+.play-board .play-area section {
+    display: flex;
+}
+
+.play-board .play-area section span {
+    display: block;
+    margin: 0.2rem;
+    height: 8rem;
+    width: 8rem;
+    background: #FFF;
+    border-radius: 5px;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 8rem;
+    color: #56baed;
+}
