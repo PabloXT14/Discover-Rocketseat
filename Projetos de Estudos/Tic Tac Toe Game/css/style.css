@@ -18,11 +18,12 @@ body {
     background: #56baed;
 }
 
-.select-box, .play-board {
+.select-box, .play-board, .result-box{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
 }
 
 /* ========== Selection Box Styling ========== */
@@ -33,7 +34,13 @@ body {
     border-radius: 5px;
     max-width: 33rem;
     width: 100%; 
-    display: none;
+    /* display: none; */
+}
+
+.select-box.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .select-box header {
@@ -81,6 +88,18 @@ body {
 }
 
 /* ========== Playerboard Selection ========== */
+.play-board {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.play-board.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .play-board .details {
     background: #FFF;
     padding: 0.7rem;
@@ -106,6 +125,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 5;
+    transition: all 0.3s ease;
 }
 
 .details span:first-child {
@@ -121,6 +141,19 @@ body {
     background: #56baed;
     border-radius: 5px;
     z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.players.active span:first-child {
+    color: #56baed;
+}
+
+.players.players.active span:nth-child(2) {
+    color: #FFF;
+}
+
+.players.players.active .slider {
+    left: 50%;
 }
 
 .play-board .play-area {
@@ -138,8 +171,60 @@ body {
     width: 8rem;
     background: #FFF;
     border-radius: 5px;
-    font-size: 4rem;
+    /* font-size: 4rem; */
     text-align: center;
-    line-height: 8rem;
+    /* line-height: 8rem; */
     color: #56baed;
+    cursor: pointer;
+}
+
+.play-board .play-area section span i {
+    font-size: 4rem;
+    line-height: 8rem;
+}
+
+/* ========== Result Box Styling ========== */
+.result-box {
+    background: #FFF;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 35rem;
+    width: 100%;
+    display: none;
+}
+
+.result-box .won-text {
+    font-size: 2.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.result-box .won-text p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 3px;
+}
+
+.result-box .btn {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.result-box .btn button {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    border: none;
+    outline: none;
+    background: #56baed;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.result-box .btn button:hover {
+    transform: scale(0.96);
 }
