@@ -30,7 +30,7 @@ window.onload = ()=> {//once window loaded
 
 let playerXIcon = "fas fa-times";//class name of fontawesome cross icon
 let playerOIcon = "far fa-circle";//class name of fontawesome circle icon
-
+let playerSign = "x"; //suppose player will be x
 
 /* ========== User Click Function ========== */
 function clickedBox(element) {
@@ -38,14 +38,24 @@ function clickedBox(element) {
         //adding circle icon tag inside user clicked element
         element.innerHTML = `<i class="${playerOIcon}"></i>`
         players.classList.add("active")
+
+        //if player select O then we'll change the playerSign value to O
+        playerSign = "O"
+        element.setAttribute("id", playerSign)
     } else {
         //adding cross icon tag inside user clicked element
         element.innerHTML = `<i class="${playerXIcon}"></i>`
         players.classList.add("active")
+
+        element.setAttribute("id", playerSign)
     }
 
     element.style.pointerEvents = "none"//once user select any box then that box can't be selected again
-    bot();
+    let randmDelayTime = ((Math.random() * 1000) + 200).toFixed();//generating random time delay so bot will delay randomly to select box
+
+    setTimeout(()=> {
+        bot();// calling bot function 
+    }, randmDelayTime);//passing random delay time
 }
 
 /* ========== Bot click function ========== */
@@ -55,8 +65,23 @@ function bot() {
     for(let i = 0; i < allBox.length; i++) {
         if(allBox[i].childElementCount == 0) {//if span has no any child element
             array.push(i);//inserting unclicked or unselected boxes inside array means that span has no children
-            console.log(`${i} has no children`);
+            // console.log(`${i} has no children`);
         }
     }
-    console.log(array);
+
+    //getting random index from array so bot will select random unselected box
+    let randomBox = array[Math.floor(Math.random() * array.length)]
+    //console.log(randomBox)
+    if(array.length > 0) {
+        if(players.classList.contains("player")) {
+            allBox[randomBox].innerHTML = `<i class="${playerXIcon}" ></i>`
+            players.classList.remove("active");
+        } else {
+            allBox[randomBox].innerHTML = `<i class="${playerOIcon}" ></i>`
+            players.classList.remove("active");
+        }
+    }
+    //once bot select any box then user can't select or click on that box
+    allBox[randomBox].style.pointerEvents = "none";
+
 }
