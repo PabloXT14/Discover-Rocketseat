@@ -38,5 +38,6 @@ let docRef = db.collection("turmaA").doc("o6BDJrymTBcwCxvuGhGw")
 docRef.get().then((doc)=> {
     let aluno = doc.data();
     console.log(aluno.nome)
+    console.log(aluno.notas)
 })
 
