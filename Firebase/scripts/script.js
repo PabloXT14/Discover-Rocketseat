@@ -16,28 +16,72 @@ firebase.analytics();
 
 
 /* ======= Acessando coleção do nosso firestore ========= */
-let db = firebase.firestore();
+let db = firebase.firestore();//acessando banco de dados no firestore
 
 
 // Lendo os dados de todos documentos de uma coleção
-db.collection("turmaA").get().then((snapshot)=>{
-    //snapshot: é uma "foto"/estado da nossa coleção no bando de dados no momento em tentamos acessá-lo
+// db.collection("turmaA").get().then((snapshot)=>{
+//     //snapshot: é uma "foto"/estado da nossa coleção no bando de dados no momento em tentamos acessá-lo
 
-    snapshot.forEach((doc) => {
-        //doc: é cada um dos documentos que temos na nossa coleção
-        //doc.data(): função para acessar os dados de um documento
-        let aluno = doc.data();
+//     snapshot.forEach((doc) => {
+//         //doc: é cada um dos documentos que temos na nossa coleção
+//         //doc.data(): função para acessar os dados de um documento
 
-        console.log(aluno.nome)
-    })
-});
+//         let aluno = doc.data();
+//         console.log(aluno.nome)
+//     })
+// });
 
 // Lendo os dados de um documento expecífico da coleção
-let docRef = db.collection("turmaA").doc("o6BDJrymTBcwCxvuGhGw")
+// let docRef = db.collection("turmaA").doc("o6BDJrymTBcwCxvuGhGw")
 
-docRef.get().then((doc)=> {
-    let aluno = doc.data();
-    console.log(aluno.nome)
-    console.log(aluno.notas)
-})
+// docRef.get().then((doc)=> {
+//     let aluno = doc.data();
+//     console.log(aluno.nome)
+//     console.log(aluno.notas)
+// })
 
+/* ======= Selecionando um documento de acordo com o valor do campo ======= */
+/*
+    where(campo, comparador, value): função que seleciona um documento específico segundo os parâmetros
+        - campo: nome do campo de um documento a ser comparado
+        - comparador: podendo ser somente: "==", "<=", ">=" (para strings funciona na ordem alfabética os <= e >=)
+        - value: valor a ser comparado
+
+*/
+
+// db.collection("turmaA").where("nome", ">=", "José").get().then((snapshot)=> {
+//     snapshot.forEach((doc)=> {
+//         let aluno = doc.data();
+
+//         console.log(`aluno: ${aluno.nome} \n nota1: ${aluno.notas.nota1}`)
+//     })
+
+// });
+
+// Pode usar mais de um where() nas mesma busca se você estiver fazendo buscas em um único campo, os where() juntos funcionarão como um AND/&&
+// db.collection("turmaA").where("nome", ">", "Alessandro")
+//                        .where("nome", "<", "Lucas").get().then((snapshot)=> {
+//     snapshot.forEach((doc)=> {
+//         let aluno = doc.data();
+
+//         console.log(`Aluno: ${aluno.nome}`)
+//     });
+// });
+
+
+// Simulando funções where() funcionando como OR/||
+db.collection("turmaA").where("nome", "<", "José").get().then((snapshot)=> {
+    snapshot.forEach((doc)=> {
+        let aluno = doc.data();
+
+        console.log(`Aluno: ${aluno.nome}`)
+    });
+});
+db.collection("turmaA").where("nome", ">", "José").get().then((snapshot)=> {
+    snapshot.forEach((doc)=> {
+        let aluno = doc.data();
+
+        console.log(`Aluno: ${aluno.nome}`)
+    });
+});
