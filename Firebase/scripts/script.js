@@ -71,17 +71,112 @@ let db = firebase.firestore();//acessando banco de dados no firestore
 
 
 // Simulando funções where() funcionando como OR/||
-db.collection("turmaA").where("nome", "<", "José").get().then((snapshot)=> {
-    snapshot.forEach((doc)=> {
-        let aluno = doc.data();
+// db.collection("turmaA").where("nome", "<", "José").get().then((snapshot)=> {
+//     snapshot.forEach((doc)=> {
+//         let aluno = doc.data();
 
-        console.log(`Aluno: ${aluno.nome}`)
-    });
-});
-db.collection("turmaA").where("nome", ">", "José").get().then((snapshot)=> {
-    snapshot.forEach((doc)=> {
-        let aluno = doc.data();
+//         console.log(`Aluno: ${aluno.nome}`)
+//     });
+// });
+// db.collection("turmaA").where("nome", ">", "José").get().then((snapshot)=> {
+//     snapshot.forEach((doc)=> {
+//         let aluno = doc.data();
 
-        console.log(`Aluno: ${aluno.nome}`)
-    });
-});
+//         console.log(`Aluno: ${aluno.nome}`)
+//     });
+// });
+
+/* ======= Criando e alterando documentos ======= */
+
+const turma = "turmaA"
+
+//Adicionando documento a uma coleção (com id automatico)
+// add(object): metodo que recebe um objeto para adicionar como "doc" de uma collection
+// db.collection(turma).add({
+//     nome: "Paulinho",
+//     notas: {nota1: 5.5, nota2: 4.5, nota3: 6.0},
+// }).then((doc)=> {
+//     console.log("Documento inserido com sucesso:", doc)
+// }).catch((err)=> {
+//     //catch(): método que capturas os erros que ocorrerem
+//     console.log(err)
+// });
+
+
+//Adicionando documento a uma coleção (especificando o id)
+// db.collection(turma).doc("AlunoNovo").set({
+//     nome: "Mariana",
+//     notas: {nota1: 7.0, nota2: 6.5, nota3: 10.0},
+// }).then(()=> {
+//     console.log("Documento inserido com sucesso!")
+// }).catch((err)=> {
+//     console.log(err)
+// });
+
+//Também utiliza-se o método set() para alterar os dados de um "doc" específico
+//ATENÇÃO: o set() sobrescreve tudo que tinha no "doc" determinado, sendo assim, se vc não alterar somento um campo com set(), todos os outros campos vão desaparecer
+// db.collection(turma).doc("AlunoNovo").set({
+//     nome: "Mariana",
+//     notas: {nota1: 7.0, nota2: 6.5, nota3: 9.5},
+// }).then(()=> {
+//     console.log("Documento alterado com sucesso!")
+// }).catch((err)=> {
+//     console.log(err)
+// })
+
+//alterando dados de um "doc" com set() sem sobrescrever os antigos dados
+// db.collection(turma).doc("9cRGnrNUktZCXT1Xwakf").set({
+//     nome: "Alexandro"
+// }, {merge: true}).then(()=> {
+
+//     console.log("Documento alterado com sucesso!")
+
+// }).catch((err)=> {
+//     console.log(err)
+// })
+
+//Alterando/atualizando dados de um "doc" com update(), funciona semelhante ao set({}, {merge: true})
+// db.collection(turma).doc("AlunoNovo").update({
+//     nome: "Mariana Santos",
+//     "notas.nota1": 9.0,
+//     //"notas.nota1": essa é nota para alterar um campo do tipo "map"
+// }).then(()=> {
+//     console.log("Documento atualizado com sucesso!")
+// }).catch((err)=> {
+//     console.log(err)
+// })
+//podemos também adicionar novos campos com o update()
+db.collection(turma).doc("AlunoNovo").update({
+    tarefasConcluidas: ["Ex. de Multiplicação", "Ex. de Divisão"],
+    faltas: 5,
+}).then(()=> {
+    console.log("Documento atualizado com sucesso!")
+}).catch((err)=> {
+    console.log(err)
+})
+
+//como adicionar mais um elemento a um campo array com update()
+db.collection(turma).doc("AlunoNovo").update({
+
+    tarefasConcluidas: firebase.firestore.FieldValue.arrayUnion("Ex. de Português", "Ex. de Geografia")
+    //para excluir um elemento de um campo array
+    // tarefasConcluidas: firebase.firestore.FieldValue.arrayRemove("Ex. de Português", "Ex. de Geografia")
+
+}).then(()=> {
+
+    console.log("Documento alterado com sucesso!")
+
+}).catch((err)=> {
+    console.log(err)
+})
+
+//Incrementando o valor de um campo com update()
+db.collection(turma).doc("AlunoNovo").update({
+    //increment(valor a ser incrementado)
+    //decrement(valor a ser decrementado)
+    faltas: firebase.firestore.FieldValue.increment(2)
+}).then(()=> {
+    console.log("Documento atualizado com sucesso!")
+}).catch((err)=> {
+    console.log(err)
+})
