@@ -41,6 +41,9 @@ let db = firebase.firestore();//acessando banco de dados no firestore
 //     console.log(aluno.notas)
 // })
 
+
+
+
 /* ======= Selecionando um documento de acordo com o valor do campo ======= */
 /*
     where(campo, comparador, value): função que seleciona um documento específico segundo os parâmetros
@@ -86,6 +89,9 @@ let db = firebase.firestore();//acessando banco de dados no firestore
 //     });
 // });
 
+
+
+
 /* ======= Criando e alterando documentos ======= */
 
 const turma = "turmaA"
@@ -114,7 +120,7 @@ const turma = "turmaA"
 // });
 
 //Também utiliza-se o método set() para alterar os dados de um "doc" específico
-//ATENÇÃO: o set() sobrescreve tudo que tinha no "doc" determinado, sendo assim, se vc não alterar somento um campo com set(), todos os outros campos vão desaparecer
+//ATENÇÃO: o set() sobrescreve tudo que tinha no "doc" determinado, sendo assim, se vc alterar somento um campo com set(), todos os outros campos que não foram alterados, irão desaparecer
 // db.collection(turma).doc("AlunoNovo").set({
 //     nome: "Mariana",
 //     notas: {nota1: 7.0, nota2: 6.5, nota3: 9.5},
@@ -145,38 +151,68 @@ const turma = "turmaA"
 // }).catch((err)=> {
 //     console.log(err)
 // })
-//podemos também adicionar novos campos com o update()
-db.collection(turma).doc("AlunoNovo").update({
-    tarefasConcluidas: ["Ex. de Multiplicação", "Ex. de Divisão"],
-    faltas: 5,
-}).then(()=> {
-    console.log("Documento atualizado com sucesso!")
-}).catch((err)=> {
-    console.log(err)
-})
+
+//Podemos também adicionar novos campos com o update()
+// db.collection(turma).doc("AlunoNovo").update({
+//     tarefasConcluidas: ["Ex. de Multiplicação", "Ex. de Divisão"],
+//     faltas: 5,
+// }).then(()=> {
+//     console.log("Documento atualizado com sucesso!")
+// }).catch((err)=> {
+//     console.log(err)
+// })
 
 //como adicionar mais um elemento a um campo array com update()
-db.collection(turma).doc("AlunoNovo").update({
+// db.collection(turma).doc("AlunoNovo").update({
 
-    tarefasConcluidas: firebase.firestore.FieldValue.arrayUnion("Ex. de Português", "Ex. de Geografia")
-    //para excluir um elemento de um campo array
-    // tarefasConcluidas: firebase.firestore.FieldValue.arrayRemove("Ex. de Português", "Ex. de Geografia")
+//     tarefasConcluidas: firebase.firestore.FieldValue.arrayUnion("Ex. de Português", "Ex. de Geografia")
+//     //para excluir um elemento de um campo array
+//     // tarefasConcluidas: firebase.firestore.FieldValue.arrayRemove("Ex. de Português", "Ex. de Geografia")
 
-}).then(()=> {
+// }).then(()=> {
 
-    console.log("Documento alterado com sucesso!")
+//     console.log("Documento alterado com sucesso!")
 
-}).catch((err)=> {
-    console.log(err)
-})
+// }).catch((err)=> {
+//     console.log(err)
+// })
 
 //Incrementando o valor de um campo com update()
-db.collection(turma).doc("AlunoNovo").update({
-    //increment(valor a ser incrementado)
-    //decrement(valor a ser decrementado)
-    faltas: firebase.firestore.FieldValue.increment(2)
-}).then(()=> {
-    console.log("Documento atualizado com sucesso!")
-}).catch((err)=> {
-    console.log(err)
+// db.collection(turma).doc("AlunoNovo").update({
+//     //increment(valor a ser incrementado)
+//     //decrement(valor a ser decrementado)
+//     faltas: firebase.firestore.FieldValue.increment(2)
+// }).then(()=> {
+//     console.log("Documento atualizado com sucesso!")
+// }).catch((err)=> {
+//     console.log(err)
+// })
+
+
+
+
+/* ======= OnSnapshot(atualização em tempo real) ======= */
+
+//onSnapshot(): método semelhante ao get(), só que é executado em tempo real, ou seja, mostra qualquer alteração em tempo real que tivermos no banco de dados
+// db.collection(turma).onSnapshot((snapshot)=> {
+//     snapshot.forEach((doc)=> {
+//         let aluno = doc.data()
+//         console.log(aluno)
+//     })
+// });
+
+//Utilizando onSnapshot() em um "doc" específico
+// let docRef = db.collection(turma).doc("AlunoNovo")
+// docRef.onSnapshot((doc)=> {
+//     // let aluno = doc.data();
+//     console.log(doc.data().faltas)
+// })
+
+//Utilizando onSnapshot() e where()
+let notaMinima = 6
+db.collection(turma).where("notas.nota1", ">=", notaMinima).onSnapshot(     (snapshot)=> {
+    snapshot.forEach((doc)=> {
+        let aluno = doc.data();
+        console.log(`O aluno(a) ${aluno.nome} atingiu/superol a nota mínima (${notaMinima})`)
+    })
 })
