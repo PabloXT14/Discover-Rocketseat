@@ -209,10 +209,31 @@ const turma = "turmaA"
 // })
 
 //Utilizando onSnapshot() e where()
-let notaMinima = 6
-db.collection(turma).where("notas.nota1", ">=", notaMinima).onSnapshot(     (snapshot)=> {
-    snapshot.forEach((doc)=> {
-        let aluno = doc.data();
-        console.log(`O aluno(a) ${aluno.nome} atingiu/superol a nota mínima (${notaMinima})`)
-    })
+// let notaMinima = 6
+// db.collection(turma).where("notas.nota1", ">=", notaMinima).onSnapshot(     (snapshot)=> {
+//     snapshot.forEach((doc)=> {
+//         let aluno = doc.data();
+//         console.log(`O aluno(a) ${aluno.nome} atingiu/superol a nota mínima (${notaMinima})`)
+//     })
+// })
+
+
+
+
+/* ========== Apagando Campos e Documentos ========== */
+
+//Apagando um campo de um "doc" (realizado através do update())
+// db.collection(turma).doc("9cRGnrNUktZCXT1Xwakf").update({
+//     sobrenome: firebase.firestore.FieldValue.delete(),
+// }).then(()=> {
+//     console.log("Campo excluido com sucesso!")
+// }).catch((err)=> {
+//     console.log(err)
+// })
+
+//Apagando um "doc" inteiro
+db.collection(turma).doc("ZrD1Dll8NlmH5brfyuUu").delete().then(()=> {
+    console.log("Documento excluido com sucesso!")
+}).catch((err)=> {
+    console.log(err)
 })

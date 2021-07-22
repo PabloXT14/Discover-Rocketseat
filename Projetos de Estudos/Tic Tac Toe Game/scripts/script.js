@@ -4,7 +4,10 @@ selectXBtn = selectBox.querySelector(".playerX"),
 selectOBtn = selectBox.querySelector(".playerO"),
 playBoard = document.querySelector(".play-board"),
 allBox = document.querySelectorAll("section span"),
-players = document.querySelector(".players");
+players = document.querySelector(".players"),
+resultBox = document.querySelector(".result-box"),
+wonText = resultBox.querySelector(".won-text"),
+replayBtn = resultBox.querySelector("button");
 
 window.onload = ()=> {//once window loaded
 
@@ -127,5 +130,40 @@ function selectWinner() {
         //once match won by someone then stop the bot
         runBot = false;
         bot(runBot)
+
+        //let show the result box with winner sign
+        setTimeout(()=> {//we'll delay to show result box
+            playBoard.classList.remove("show")
+            resultBox.classList.add("show")
+        }, 700)
+        
+        wonText.innerHTML = `Player <p>${playerSign}</p> won the game!`
+    } else {
+        // if match has drawn
+        // first we'll check all id... if all span has id and no one won the game then we'll drawn the game
+        if(getClass(1) != "" &&
+           getClass(2) != "" &&
+           getClass(3) != "" &&
+           getClass(4) != "" &&
+           getClass(5) != "" &&
+           getClass(6) != "" &&
+           getClass(7) != "" &&
+           getClass(8) != "" &&
+           getClass(9) != "") {
+
+            runBot = false;
+            bot(runBot)
+            //let show the result box with winner sign
+            setTimeout(()=> {//we'll delay to show result box
+                playBoard.classList.remove("show")
+                resultBox.classList.add("show")
+            }, 700)
+            wonText.textContent = `Match has been drawn!`
+        }
     }
+}
+
+//Reload Game
+replayBtn.onclick = ()=> {
+    window.location.reload();//reload the current page
 }
