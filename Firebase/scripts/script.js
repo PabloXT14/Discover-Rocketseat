@@ -232,8 +232,8 @@ const turma = "turmaA"
 // })
 
 //Apagando um "doc" inteiro
-db.collection(turma).doc("ZrD1Dll8NlmH5brfyuUu").delete().then(()=> {
-    console.log("Documento excluido com sucesso!")
-}).catch((err)=> {
-    console.log(err)
-})
+// db.collection(turma).doc("ZrD1Dll8NlmH5brfyuUu").delete().then(()=> {
+//     console.log("Documento excluido com sucesso!")
+// }).catch((err)=> {
+//     console.log(err)
+// })
