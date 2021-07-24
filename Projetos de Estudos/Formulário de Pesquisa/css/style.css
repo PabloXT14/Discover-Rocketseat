@@ -1,0 +1,21 @@
+/* ========== Global Styling ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-size: 62.5%;/*1rem = 10px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* ========== Search Form Styling ========== */
+
+body {
+    background: linear-gradient(to bottom, #52D9D2 0%, #3A9994 100%);
+    min-height: 100vh;
+}
