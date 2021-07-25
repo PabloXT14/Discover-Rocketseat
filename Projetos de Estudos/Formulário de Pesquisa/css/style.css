@@ -16,6 +16,63 @@ html {
 /* ========== Search Form Styling ========== */
 
 body {
-    background: linear-gradient(to bottom, #52D9D2 0%, #3A9994 100%);
+    background: linear-gradient(to bottom, #52D9D2, #3A9994);
     min-height: 100vh;
+}
+
+/* ========== Header Styling ========== */
+header {
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #FFF;
+    /* text-shadow: -1px -1px #000; */
+    -webkit-text-stroke: 1px #000; /*contorno no text*/
+}
+
+header p {
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+    text-shadow: 1px 1px #000;
+}
+
+/* ========== Form Styling ========== */
+
+.search-form {
+    max-width: 75rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    background: rgba(54, 110, 161, 0.9);
+    padding: 4rem 3rem;
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.search-form .form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label, .form-group p {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.form-group label {
+    cursor: pointer;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: #333;
 }
