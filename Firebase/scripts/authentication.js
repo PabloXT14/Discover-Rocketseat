@@ -18,11 +18,61 @@ var auth = firebase.auth();// acessando area de autenticação do firebase
 let newUserEmail = "novousuario@gmail.com"
 let newUserPassword = "123abc"
 
-//OBS: vc pode sobre esse método de criação de usuário e muitos outros através da documentação do Firebase
-auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword)
-    .then((user)=> {
-        console.log(user);//retornando user caso ele criado com sucesso
+
+// function createUser() {
+//     //OBS: vc pode sobre esse método de criação de usuário e muitos outros através da documentação do Firebase
+// auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword)
+// .then((user)=> {
+//     console.log(user);//retornando user caso ele criado com sucesso
+// })
+// .catch((err)=> {
+//     console.log(err);//retornando algum erro que ocorrer
+// })
+// }
+// createUser();
+
+/* ========== Gerenciando Logins ========== */
+
+// function login() {
+//     let userEmail = newUserEmail
+//     let userPassword = newUserPassword
+
+//     //método para logar um usuário existente no authentication do firebase
+//     auth.signInWithEmailAndPassword(userEmail, userPassword)
+//     .then((loggedUser)=> {
+//         console.log(loggedUser);//detalhes do usuário que logou/entro
+//     })
+//     .catch((error)=> {
+//         console.log(error);//retornando algum erro que ocorrer
+//     })
+
+//     //currentUser: retorna o usuário que está logado no atual momento
+//     let userLogged = auth.currentUser;
+//     console.log(userLogged)
+
+// }
+// login();
+
+
+// função do authentication que retorna em tempo real o estado de usuários, se algum usuário está logado 
+auth.onAuthStateChanged((user)=> {
+    if(user) {
+        console.log('o(s) seguinte(s) usuário(s) está(ão) logado(s):')
+        console.log(user)
+    } else {
+        console.log(`Ninguém logado`)
+    }
+})
+
+
+function logout() {
+    //signOut(): método para deslogar o(s) usuário(s)
+    auth.signOut()
+    .then(()=> {
+        console.log("Usuário foi deslogado")
     })
-    .catch((err)=> {
-        console.log(err);//retornando algum erro que ocorrer
+    .catch((error)=> {
+        console.log(error)
     })
+}
+setTimeout(logout, 3000);

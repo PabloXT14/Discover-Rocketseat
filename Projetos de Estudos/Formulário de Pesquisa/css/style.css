@@ -64,15 +64,67 @@ header p {
 }
 
 .form-group label {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
-.form-group input {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
     display: block;
     width: 100%;
-    border: none;
+    border: 1px solid #ced4da;
     outline: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
     color: #333;
+    transition: all 0.15s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus {
+    border: 1px solid #02968f;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.521);
+}
+
+.form-group select {
+    display: block;
+    width: 100%;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: #333;
+    transition: all 0.15s ease;
+}
+
+.form-group select:focus {
+    border: 1px solid #02968f;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.521);
+}
+
+.form-group input[type="radio"],
+.form-group .input-checkbox {
+    display: inline-block;
+    margin-right: 0.6rem;
+    min-width: 2rem;
+    min-height: 2rem;
+}
+
+.form-group textarea {
+    min-height: 12rem;
+    width: 100%;
+    padding: 0.6rem;
+    resize: vertical;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.15s ease;
+}
+
+.form-group textarea:focus {
+    border: 1px solid #02968f;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.521);
 }
