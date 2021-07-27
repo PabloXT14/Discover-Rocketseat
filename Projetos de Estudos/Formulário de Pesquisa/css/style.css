@@ -128,3 +128,23 @@ header p {
     border: 1px solid #02968f;
     box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.521);
 }
+
+.form-group .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1.2rem 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #FFF;
+    background:#37af65;
+    transition: all 0.2s ease;
+    transform: scale(1);
+}
+
+.form-group .submit-btn:hover {
+    box-shadow: 2px 2px 3px 1px rgba(10, 10, 10, 0.7);
+    transform: scale(1.01);
+}

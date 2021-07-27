@@ -65,14 +65,43 @@ auth.onAuthStateChanged((user)=> {
 })
 
 
-function logout() {
-    //signOut(): método para deslogar o(s) usuário(s)
-    auth.signOut()
-    .then(()=> {
-        console.log("Usuário foi deslogado")
+// function logout() {
+//     //signOut(): método para deslogar o(s) usuário(s)
+//     auth.signOut()
+//     .then(()=> {
+//         console.log("Usuário foi deslogado")
+//     })
+//     .catch((error)=> {
+//         console.log(error)
+//     })
+// }
+// setTimeout(logout, 3000);
+
+
+
+/* ========== Sessão do Usuário ========== */
+
+function checkPersistence() {
+    /* 
+    setPersistence(): método para determinar qual será o estado de persistência de um usuário logado na página, podendo receber as seguintes as opções como atributo:
+    - LOCAL(padrão): nesta em qualquer janela/aba que abrirmos do navegador o usuário vai aparecer logado em todas estas janelas/abas. 
+    - SESSION: nesta o usuário só vai aparcer logado na janela/aba atual em que foi feito o login, em outras abas/janelas não aparecerá como logado.
+    - NONE: nesta, caso a janela/aba atual seja atualizada o usuário vai ser deslogado.
+    */
+
+    auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
+    .then(()=> {//checando persistência antes de realizar o login 
+        auth.signInWithEmailAndPassword(newUserEmail, newUserPassword)
+        .then((logged)=> {
+            console.log(logged)//detalhes do usuário que logou/entro
+        })
+        .catch((error)=> {
+            console.log(error)
+        })
+        //poderia ser chamado a função login() aqui  
     })
-    .catch((error)=> {
-        console.log(error)
+    .catch((err)=> {
+        console.log(err)
     })
 }
-setTimeout(logout, 3000);
+// setTimeout(checkPersistence, 2000)
