@@ -105,3 +105,46 @@ function checkPersistence() {
     })
 }
 // setTimeout(checkPersistence, 2000)
+
+
+
+/* ========== O Que São Permissões ========== */
+/*
+- As permissões ao seu banco de dados podem ser alteradas através da guia "Firestore Database" > Aba "Regras", e você verá um documento semelhante ao seguinte:
+
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if
+          request.time < timestamp.date(2021, 8, 15);
+    }
+  }
+}
+
+- Depois do "if" consta a condição para que alguem tenha acesso ao seu banco de dados, você mudar por exemplo para "if false", desta forma ninguêm conseguira ter acesso ao seu banco de dados (obs: você pode colocar outras condições), veja o exemplo:
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+
+
+*/
+
+
+// Caso a permissão esteja como "if false", acontecera um erro de "permissão insuficiente ao banco de dados"
+db.collection("turmaA").get()
+   .then((snapshot)=> {
+        snapshot.forEach((doc)=> {
+            console.log(doc.data());
+        })
+   })
+   .catch((err)=> {
+        console.log(err)
+   })
