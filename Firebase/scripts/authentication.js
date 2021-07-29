@@ -14,16 +14,18 @@ firebase.initializeApp(firebaseConfig);//firebase => variavel que vem da importa
 var db = firebase.firestore();// acessando banco de dados firestore
 var auth = firebase.auth();// acessando area de autenticação do firebase
 
+
+
 /* ========== Criando Usuário no Firebase Authentication ========== */
 let newUserEmail = "novousuario@gmail.com"
 let newUserPassword = "123abc"
 
 
 // function createUser() {
-//     //OBS: vc pode sobre esse método de criação de usuário e muitos outros através da documentação do Firebase
+//     //OBS: vc pode saber mais sobre esse método de criação de usuário e muitos outros através da documentação do Firebase
 // auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword)
 // .then((user)=> {
-//     console.log(user);//retornando user caso ele criado com sucesso
+//     console.log(user);//retornando user caso ele tenha criado com sucesso
 // })
 // .catch((err)=> {
 //     console.log(err);//retornando algum erro que ocorrer
@@ -33,24 +35,24 @@ let newUserPassword = "123abc"
 
 /* ========== Gerenciando Logins ========== */
 
-// function login() {
-//     let userEmail = newUserEmail
-//     let userPassword = newUserPassword
+function login() {
+    let userEmail = newUserEmail
+    let userPassword = newUserPassword
 
-//     //método para logar um usuário existente no authentication do firebase
-//     auth.signInWithEmailAndPassword(userEmail, userPassword)
-//     .then((loggedUser)=> {
-//         console.log(loggedUser);//detalhes do usuário que logou/entro
-//     })
-//     .catch((error)=> {
-//         console.log(error);//retornando algum erro que ocorrer
-//     })
+    //método para logar um usuário existente no authentication do firebase
+    auth.signInWithEmailAndPassword(userEmail, userPassword)
+    .then((loggedUser)=> {
+        console.log(loggedUser);//detalhes do usuário que logou/entro
+    })
+    .catch((error)=> {
+        console.log(error);//retornando algum erro que ocorrer
+    })
 
-//     //currentUser: retorna o usuário que está logado no atual momento
-//     let userLogged = auth.currentUser;
-//     console.log(userLogged)
+    //currentUser: retorna o usuário que está logado no atual momento
+    let userLogged = auth.currentUser;
+    console.log(userLogged)
 
-// }
+}
 // login();
 
 
@@ -59,6 +61,7 @@ auth.onAuthStateChanged((user)=> {
     if(user) {
         console.log('o(s) seguinte(s) usuário(s) está(ão) logado(s):')
         console.log(user)
+        write();
     } else {
         console.log(`Ninguém logado`)
     }
@@ -139,12 +142,94 @@ service cloud.firestore {
 
 
 // Caso a permissão esteja como "if false", acontecera um erro de "permissão insuficiente ao banco de dados"
-db.collection("turmaA").get()
-   .then((snapshot)=> {
-        snapshot.forEach((doc)=> {
-            console.log(doc.data());
-        })
-   })
-   .catch((err)=> {
-        console.log(err)
-   })
+// db.collection("turmaA").get()
+//    .then((snapshot)=> {
+//         snapshot.forEach((doc)=> {
+//             console.log(doc.data());
+//         })
+//    })
+//    .catch((err)=> {
+//         console.log(err)
+//    })
+
+
+
+/* ========== Permissões e Regras ========== */
+
+// Execute estas funções conforme for alterando as Regras do Banco de Dados Firestore
+function read() {
+  db.collection("turmaA").get()
+  .then((snapshot)=> {
+    snapshot.forEach((doc)=> {
+      console.log(doc.data())
+    })
+  })
+  .catch((error)=> {
+    console.log(error)
+  })
+}
+
+function write() {
+  db.collection("turmaA").add({
+    nome: `Dom Pedro`,
+    sobrenome: `${Math.random()}`,
+  })
+  .then((doc)=> {
+    console.log(doc)
+  })
+  .catch((error)=> {
+    console.log(error)
+  })
+}
+
+// read();
+// write();
+
+
+
+// Caso você queira permitir que um usuário só possa ler e não escrever no banco de dados Firestore, ou vice-versa, siga a seguinte lógica de comando na aba Regras: 
+/*
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read: if true ;
+      allow write: if false;
+    }
+  }
+}
+*/
+
+
+// Agora para permitir um usuário de ler/escrever apenas depois que estiver logado, siga a seguinte lógica de comando na aba Regras:
+/*
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read: if true;
+      allow write: if request.auth.uid != null;
+      
+    }
+  }
+}
+
+*/
+//descomente a função login() ou checkPersitence(), e execute função write() dentro do onAuthStateChanged() para testar a logica acima
+
+
+// Para permitir apenas um usuário especifico (através de seu uid no authenticantion) de escrever, basta seguir a mesma lógica anterior apenas alterando a regra do write, veja:
+/*
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read: if true;
+      allow write: if request.auth.uid == "HoK1zB1GBFNZX61Pui9XEnmEl4G3";
+      
+    }
+  }
+}
+
+*/
