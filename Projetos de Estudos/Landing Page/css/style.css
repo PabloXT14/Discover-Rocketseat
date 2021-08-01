@@ -69,3 +69,34 @@ header .content-wrap {
     background: #EEE;
     color: #333;
 }
+
+/* ========== Main Styling ========== */
+
+/* Section A */
+#section-a {
+    padding: 3.5rem 0;
+    background: #EEE;
+}
+
+#section-a .content-wrap {
+    color: #333;
+}
+
+#section-a .content-wrap .content-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#section-a .content-wrap .content-text {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 2.5rem;
+    columns: 2;
+    column-gap: 2rem;
+    column-width: auto;
+}
+
+.content-wrap .content-text p {
+    padding-top: 0;
+}
