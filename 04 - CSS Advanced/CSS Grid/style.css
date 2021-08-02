@@ -50,15 +50,17 @@
     outline: 8px solid #4834D4;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))/* especifica o tamanho de cada coluna e o nº de colunas*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* especifica o tamanho de cada coluna e o nº de colunas*/
     /* auto: faz com que o espaço extra não preenchido pelas colunas seja preenchido por algum item*/
     /* fr: unidade de fração da grid, divide a grid em frações iguais de acordo com valor adicionado ao fr(1fr 1fr = 50% 50%)*/
     /* repeat(nº de columns/rows, unidade): ex: repeat(3, 1fr)*/
     /* minmax(value min, value max): especifica o tamanho máximo e mínimo que uma certa column ou row terá. ex: minmax(300px, 1fr)*/
     /* repeat(auto-fill, 300px): o "auto-fill" especifica que irá tentar preencher todo o espaço da grid, criando o máximo possível de columns com 300px(neste caso), "MESMO SE NÃO HOUVER ITENS PARA PREENCER TODA A GRID"(deixando colunas em branco na grid) */
     /* repeat(auto-fit, 300px): o "auto-fit" especifica que irá tentar preencher todo o espaço da grid, criando o máximo possível de columns com 300px(neste caso), "SÓ CRIA AS COLUNAS SE TIVERMOS ITENS PARA PREECHÊ-LAS" (não deixando colunas em branco na grid)*/
+    /*nomes das linhas das columns: ex: grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end]*/
 
     /* grid-template-rows: 200px;especifica o tamanho de cada linha e o nº de linhas */
+    grid-template-rows: 0.5fr 1fr;
 
 }
 
