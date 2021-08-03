@@ -50,7 +50,7 @@
     outline: 8px solid #4834D4;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* especifica o tamanho de cada coluna e o nº de colunas*/
+    grid-template-columns: repeat(3, 1fr);/* especifica o tamanho de cada coluna e o nº de colunas*/
     /* auto: faz com que o espaço extra não preenchido pelas colunas seja preenchido por algum item*/
     /* fr: unidade de fração da grid, divide a grid em frações iguais de acordo com valor adicionado ao fr(1fr 1fr = 50% 50%)*/
     /* repeat(nº de columns/rows, unidade): ex: repeat(3, 1fr)*/
@@ -60,8 +60,31 @@
     /*nomes das linhas das columns: ex: grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end]*/
 
     /* grid-template-rows: 200px;especifica o tamanho de cada linha e o nº de linhas */
-    grid-template-rows: 0.5fr 1fr;
+    /* grid-template-rows: 50px 100px; */
 
+    /* grid-auto-columns and grid-auto-rows: server para definir o tamanho de linhas ou colunas que temos a mais no container, onde não foi definido o tamanho. ex: grid-auto-rows: 200px;
+    */
+    /* grid-auto-rows: 20px; */
+
+    /*grid-auto-flow: controla como o algoritmo de arrumação automática funciona, especificando exatamente como os itens fluirão no grid, se um novo item adicionado vai ser colocado na sequencia da linha ou da coluna
+        - row: arrumação automática em linha
+        - column: arrumação automática em coluna
+        - dense: determina que o algoritmo de arrumação automática use um formato de compactação "denso", que tenta preencher os espaços anteriores do grid caso receba itens menores após. Isto talvez deixe os itens fora de ordem, preenchendo espaços deixados por itens maiores.*/
+    /* grid-auto-flow: dense; */
+
+    /*grid-gap: define os espaços entre linhas e colunas.
+        - grid-column-gap: espaçamento entre colunas
+        - grid-row-gap: espaçamento entre linhas
+        - grid-gap(shorthand): <all gras> OR <grid-row-gap> <grid-column-gap>
+    */
+    /* grid-row-gap: 10px;
+    grid-column-gap: 30px;
+    */ 
+    grid-gap: 10px 20px;
+}
+
+.a {
+    grid-column: 10;
 }
 
 
