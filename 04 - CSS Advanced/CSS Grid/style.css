@@ -81,6 +81,57 @@
     grid-column-gap: 30px;
     */ 
     grid-gap: 10px 20px;
+
+    /*align-items: propriedade que serve para alinhar verticalmente(y-axis) os itens em suas cells na grid, veja alguns values:
+        - stretch<default>: deixa os itens esticados o máximo possível dentro da cell, de acordo com os valores do <grid-template-row> e <grid-template-column>
+        - start: alinha os itens no começo de sua cell, não ocupando todo o espaço.
+        - end: linha os itens no final de sua cell, não ocupando todo o espaço.
+        - center: linha os itens no centro de sua cell, não ocupando todo o espaço
+    */
+    align-items: stretch;
+    
+    /*justify-items: propriedade que serve para alinhar horizontalmente(x-axis) os itens em suas cells na grid, veja alguns values:
+        - stretch<default>: deixa os itens esticados o máximo possível dentro da cell, de acordo com os valores do <grid-template-row> e <grid-template-column>
+        - start: alinha todas as cells no começo da grid, não ocupando todo o espaço.
+        - end: linha os itens no final de sua cell, não ocupando todo o espaço.
+        - center: linha os itens no centro de sua cell, não ocupando todo o espaço
+    */
+    justify-items: stretch;
+
+    /*place-items: é o "shorthand" do <align-items> e <justify-items>, seguindo a seguinte ordem:
+        place-items: <align-items> <justify-items>
+        place-items: center;
+        place-items: stretch;
+    */
+    place-items: stretch;
+
+    /* Antes de Ver os "contents" coloque o tamanho de cada column com 50px*/
+    
+    /*align-content: propriedade que serve para alinhar verticalmente(y-axis) todos as cells ou conteudo da grid, ex. de values:
+        - start: alinha os itens no começo da grid, não ocupando todo o espaço.
+        - end: alinha os itens no final da grid, não ocupando todo o espaço.
+        - center: alinha os itens no centro da grid, não ocupando todo o espaço.
+        - space-between: alinha os itens deixando um espaço entre eles.
+        - space-around: alinha os itens deixando um espaço ao redor deles mesmos.
+        - space-evenly: deixa os itens com o mesma quantidade de espaço ao redor(em cima e embaixo) deles
+    */
+    /* align-content: stretch; */
+
+    /*juntify-content: propriedade que serve para alinhar horizontalmente(y-axis) todos as cells ou conteudo da grid, ex. de values:
+        - start: alinha os itens no começo da grid, não ocupando todo o espaço.
+        - end: alinha os itens no final da grid, não ocupando todo o espaço.
+        - center: alinha os itens no centro da grid, não ocupando todo o espaço.
+        - space-between: alinha os itens deixando um espaço entre eles.
+        - space-around: alinha os itens deixando um espaço ao redor deles mesmos.
+        - space-evenly: deixa os itens com o mesma quantidade de espaço ao redor(em left e right) deles
+    */
+    /* justify-content: start; */
+
+    /*place-content: é o "shorthand" do <align-content> e <justify-content>, seguindo a seguinte ordem:
+        place-items: <align-content> <justify-content>
+        place-items: center;
+    */
+    /* place-content: center; */
 }
 
 .a {
