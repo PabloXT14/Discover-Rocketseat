@@ -44,13 +44,13 @@
 /* CONTAINER */
 #container {
     width: 59vw;
-    height: 60vh;
+    height: 70vh;
     margin: 0 auto;
     background-color: whitesmoke;
     outline: 8px solid #4834D4;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);/* especifica o tamanho de cada coluna e o nº de colunas*/
+    /*grid-template-columns: repeat(3, 1fr);*//* especifica o tamanho de cada coluna e o nº de colunas*/
     /* auto: faz com que o espaço extra não preenchido pelas colunas seja preenchido por algum item*/
     /* fr: unidade de fração da grid, divide a grid em frações iguais de acordo com valor adicionado ao fr(1fr 1fr = 50% 50%)*/
     /* repeat(nº de columns/rows, unidade): ex: repeat(3, 1fr)*/
@@ -80,7 +80,7 @@
     /* grid-row-gap: 10px;
     grid-column-gap: 30px;
     */ 
-    grid-gap: 10px 20px;
+    /* grid-gap: 10px 20px; */
 
     /*align-items: propriedade que serve para alinhar verticalmente(y-axis) os itens em suas cells na grid, veja alguns values:
         - stretch<default>: deixa os itens esticados o máximo possível dentro da cell, de acordo com os valores do <grid-template-row> e <grid-template-column>
@@ -107,7 +107,7 @@
 
     /* Antes de Ver os "contents" coloque o tamanho de cada column com 50px*/
     
-    /*align-content: propriedade que serve para alinhar verticalmente(y-axis) todos as cells ou conteudo da grid, ex. de values:
+    /*align-content: propriedade que serve para alinhar verticalmente(y-axis) todos as cells/conteudo da grid, ex. de values:
         - start: alinha os itens no começo da grid, não ocupando todo o espaço.
         - end: alinha os itens no final da grid, não ocupando todo o espaço.
         - center: alinha os itens no centro da grid, não ocupando todo o espaço.
@@ -117,7 +117,7 @@
     */
     /* align-content: stretch; */
 
-    /*juntify-content: propriedade que serve para alinhar horizontalmente(y-axis) todos as cells ou conteudo da grid, ex. de values:
+    /*juntify-content: propriedade que serve para alinhar horizontalmente(y-axis) todos as cells/conteudo da grid, ex. de values:
         - start: alinha os itens no começo da grid, não ocupando todo o espaço.
         - end: alinha os itens no final da grid, não ocupando todo o espaço.
         - center: alinha os itens no centro da grid, não ocupando todo o espaço.
@@ -132,7 +132,56 @@
         place-items: center;
     */
     /* place-content: center; */
+
+
+    /* Para testar a propriedade <grid-template-area> comente todas as outras configurações e ative as divs especificas no index.html*/
+
+    grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+    grid-auto-rows: 60px auto 100px;
+    /* grid-template-areas: propriedade CSS especifica "áreas de grade"(cells) nomeadas, estabelecendo as células na grade e atribuindo nomes a elas
+        - cada "" representa uma row da grid
+        - cada nome dentro dos "" representa uma coluna
+        - ex:
+        "col-1 col-2 col-3" > row1
+        "col-1 col-2 col-3" > row2
+        - depois você tem que determinar qual vai ser cada item do <grid-template-area> através do <grid-area> dentro de cada item 
+    */
+    /* grid-template-areas:
+    "header header header"
+    "main main slidebar"
+    "footer footer footer"; */
+
+
+    /* <grid-template>: é um "shorthand" das propriedades CSS <grid-template-rows>, <grid-template-columns> e <grid-template-areas>,
+    seguindo a seguinte ordem
+        - grid-template:
+        <grid-template-areas> <grid-template-rows>
+        / <grid-template-columns>
+    */
+    grid-template:
+    "header header header" 60px
+    "main main slidebar" auto
+    "footer footer footer" 100px
+    / [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+
 }
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.slidebar {
+    grid-area: slidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
 
 .a {
     grid-column: 10;
