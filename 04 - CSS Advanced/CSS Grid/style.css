@@ -75,7 +75,7 @@
     /*grid-gap: define os espaços entre linhas e colunas.
         - grid-column-gap: espaçamento entre colunas
         - grid-row-gap: espaçamento entre linhas
-        - grid-gap(shorthand): <all gras> OR <grid-row-gap> <grid-column-gap>
+        - grid-gap(shorthand): <all gap> OR <grid-row-gap> <grid-column-gap>
     */
     /* grid-row-gap: 10px;
     grid-column-gap: 30px;
