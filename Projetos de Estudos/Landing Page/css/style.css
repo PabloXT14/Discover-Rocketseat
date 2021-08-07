@@ -146,7 +146,32 @@ ul li .card .card-content p {
     text-align: center;
 }
 
+/* Section C */
+#section-c {
+    padding: 4rem 0;
+    background: #FFF;
+}
 
+#section-c .content-wrap {
+    color: #333;
+}
+
+#section-c .content-wrap .content-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#section-c .content-wrap p {
+    max-width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+/* Section D */
+#section-d {
+    background: #333;
+}
 
 /* ========== Test Responsivity =========== */
 @media screen and (max-width: 700px) {
