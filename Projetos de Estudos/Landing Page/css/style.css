@@ -170,8 +170,50 @@ ul li .card .card-content p {
 
 /* Section D */
 #section-d {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#section-d .box:first-child {
+    background: #2690d4;
+}
+
+#section-d .box:last-child {
     background: #333;
 }
+
+#section-d .box {
+    color: #FFF;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.box .content-title {
+    font-size: 2.5rem;
+}
+
+.box p {
+    margin-top: 4rem;
+}
+
+.box a {
+    text-decoration: none;
+    color:rgb(21, 73, 133);
+    font-weight: 700;
+    display: block;
+    margin-top: 3rem;
+    transition: all 0.3s ease;
+}
+
+.box a:hover {
+    color:rgb(10, 49, 94);
+}
+
+
+/* ========== Footer Styling ========== */
+
+
+
 
 /* ========== Test Responsivity =========== */
 @media screen and (max-width: 700px) {
@@ -187,6 +229,11 @@ ul li .card .card-content p {
         margin: auto;
         grid-gap: 2rem 0;
         list-style: none;
+    }
+
+    #section-d {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
     
 }
