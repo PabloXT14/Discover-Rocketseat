@@ -161,9 +161,31 @@
     grid-template:
     "header header header" 60px
     "main main slidebar" auto
-    "footer footer footer" 100px
+    "footer footer footer" 50px
     / [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
 
+
+
+    /*===== Grid (Shorthand) =====*/
+    /*
+    - Podemos utiilizar apenas a palavra-chave <grid> para determinar algumas das principais propriedades citas anteriormente, seguindo uma ordem lógica:
+
+    grid-template-rows: 50px 200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    grid-auto-flow: row;
+
+    grid: <propriedades rows> / <propriedades columns>
+
+    ex:
+    grid: 50px 200px / repeat(3, 1fr);
+    ==(equal)
+    grid-template-rows: 50px 200px;
+    grid-template-columns: repeat(3, 1fr);
+    
+    ex:
+    grid: auto-flow 1fr / repeat(3, 1fr);// cada linha nova adicionada terá uma fração do height/vertical da div/container
+    */
 }
 
 .header {
