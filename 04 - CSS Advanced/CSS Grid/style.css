@@ -230,19 +230,64 @@
     grid-column-start: col-start;
     grid-column-end: col-3; 
     */
-    grid-column-end: span 1;/*espande o item da grid para mais três linhas (neste caso) de colunas*/
+    grid-column-end: span 1; /*espande o item da grid para mais três linhas (neste caso) de colunas*/
 
+    /* == Shorthand <grid-column-start/end> == */
+    /* grid-column: start / end; */
+    /* grid-column: col-start / span col-3; */
 }
 
 .two {
     /*<grid-row-start> and <grid-row-end>: especifica a posição inicial e final de um item da grid dentro da linha/row da grid, atenção pois o valores são expressados em relação a linha das rows*/
+    /* 
     grid-row-start: 2;
-    grid-row-end: 5;
+    grid-row-end: 5; 
+    */
     /* aceita tambem valores semelhantes ao <grid-column-start/end>*/
+
+    /* == Shorthand <grid-row-start/end> == */
+    /* grid-row: start / end; */
+    /* grid-row: 2 / 4; */
 }
 
+.five {
+    /*
+    <align-self>: propriedade que serve para alinhar o item de forma vertical (y-axis) na cell/celula da grid, exemplo de values:
+        - stretch<default>: estica o item o máximo que dá
+        - start: alinha na parte superior (no y-axis)
+        - end: alinha na parte inferior (no y-axis)
+        - center: alinha na parte central (no y-axis)
+    */
+    align-self: stretch;
 
+    /*
+    <juntify-self>: propriedade que serve para alinhar o item de forma horizontal (x-axis) na cell/celula da grid, exemplo de values:
+        - stretch<default>: estica o item o máximo que dá
+        - start: alinha na parte left (no x-axis)
+        - end: alinha na parte right (no x-axis)
+        - center: alinha na parte central (no x-axis)
+    */
+    justify-self: stretch;
 
+    /*
+    <place-self>: "shorthand" das propriedades <align-self> e <justify-self>, recebendo os mesmos values das propriedades já citadas na seguinte ordem:
+        - place-self: <align-self> <justify-self>
+    */
+    place-self: stretch;
+
+}
+
+.six {
+    /*
+    <grid-area>: pode funcionar de dua maneiras:
+        - "Shorthand" das seguintes propriedades e nas seguinte ordem:
+        grid-area: 
+            <grid-row-start> / <grid-column-start> / 
+            <grid-row-end> / <grid-column-end> 
+        - A segunda maneira nós já vimos como funciona, o <grid-area> irá especificar um item como uma determinada aréa do <grid-template>, basta rever a parte de <grid-template> ou <grid-template-areas> para se lembrar
+    */
+    /* grid-area: 1 / 2 / 3 / 4; */
+}
 
 
 
