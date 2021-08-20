@@ -251,3 +251,46 @@ progress::-webkit-progress-bar {
     background-color: whitesmoke;
     border-radius: 8px;
 }
+
+/*Section Bottom Styling*/
+section.bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    align-items: center;
+}
+
+.bot {
+    height: 100px;
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--borderRadius);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bot > div {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bot .icon-circle {
+    box-shadow: 4px 6px 20px lightgrey;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.1em;
+}
+
+.bot .fa-pencil-alt {
+    color: var(--purple);
+}
+
+.bot .fa-spell-check {
+    color: var(--orange);
+}
+
+
+/* ========== Profile Styling ========== */
