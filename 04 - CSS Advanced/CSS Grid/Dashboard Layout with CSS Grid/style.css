@@ -19,8 +19,8 @@ body, html {
 }
 
 #container {
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 6fr 3fr;
     grid-template-areas:
@@ -30,6 +30,7 @@ body, html {
 /* ========== NAV STYLES ========== */
 #nav {
     background-color: #f1f3f6;
+    height: 100vh;
     display: grid;
     grid-area: nav;
     grid-template-rows: repeat(8, 1fr);
@@ -294,3 +295,94 @@ section.bottom {
 
 
 /* ========== Profile Styling ========== */
+#profile {
+    background-color: #f0fafb;
+    padding: 0 100px;
+    grid-area: profile;
+    display: grid;
+    grid-template-rows: 30% 15% 55%;
+}
+
+.pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic img {
+    width: 110px;
+    border-radius: 50%;
+}
+
+.pic img, .pic .largeTitle, .pic .subTitle {
+    margin: 5px 0px;
+}
+
+.adBox {
+    border: var(--border);
+    border-radius: var(--borderRadius);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.ad i {
+    border-radius: var(--borderRadius);
+    padding: 12px 15px;
+    box-shadow: 1px 1px 2px lightgrey;
+    color: var(--orange);
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.progressBox {
+    height: 100px;
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--borderRadius);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.grammar .percent {
+    color: var(--purple);
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.dictionary .percent {
+    color: var(--orange);
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.reading .percent {
+    color: var(--red);
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.progressBox i {
+    color: #fff;
+    padding: 20px 18px;
+    border-radius: var(--borderRadius);
+}
+
+.grammar i {
+    background-color: var(--purple);
+}
+
+.dictionary i {
+    background-color: var(--orange);
+}
+
+.reading i {
+    background-color: var(--red);
+}
