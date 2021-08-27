@@ -28,3 +28,24 @@ $ npm run build
 }
 ```
 - Depois de todas as alterações necessárias feitas todos os arquivos gerados dentro da pasta *build* podem ser enviados daquele geito para seu servidor na internet que vai rodar sem erro.
+
+## Quais são os arquivos principais que você deve editar ao criar um Projeto React com o comando que baixa/prepara o React e o JSX de forma automática?
+- **App.js**: que cuidara agora do que irá aparecer na parte do HTML através JS.
+- **App.css**: cuidara da estilisação (CSS) da nossa página.
+
+## Componentes e Propriedades
+- **Componentes**: Componentes permitem você dividir a UI em partes independentes, reutilizáveis e pensar em cada parte isoladamente, consiste básicamente em armazenar elementos(ex: <header>,<div>,<ul>) em script qualquer que criarmos, exportar os elementos em uma _função_ desse script (_export deafult funcionName_) e importar o mesmo script no App.js, para conseguirmos acessar de forma mais organizadas os elementos. Ex:
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+- **Propriedades**: Essa _função_ é um componente React válido porque aceita um único argumento de objeto “props” (que significa propriedades) com dados e retorna um elemento React. Nós chamamos esses componentes de “componentes de função” porque são literalmente funções JavaScript
+```js
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
