@@ -13,6 +13,8 @@ header {
   justify-content: space-between;
   background-color: #8E49E8; 
   color: #FFF;
+  position: relative;
+  z-index: 999;
 }
 
 header .title {
@@ -24,6 +26,20 @@ header .menu {
   list-style: none;
 }
 
+header i.fas {
+  font-size: 1.4em;
+  cursor: pointer;
+  padding: 15px 20px;
+  display: none;
+  /* opacity: 0;
+  pointer-events: none; */
+  transition: all 0.3s ease;
+}
+
+header i.fas.show {
+  content: '\f00d';
+}
+
 .menu li {
   padding: 15px 20px;
   font-weight: 500;
@@ -33,4 +49,37 @@ header .menu {
 
 .menu li:hover {
   background-color: #58318b;
+}
+
+@media screen and (max-width: 740px){
+
+  header ul.menu {
+    position: absolute;
+    background-color: #58318b;
+    top: -260px;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+  }
+
+  header ul.menu.show {
+    top: 3.25rem;
+  }
+
+  ul.menu li {
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.menu li:hover {
+    background-color: #8E49E8;
+  }
+
+  header i.fas {
+    display: block;
+  }
 }
