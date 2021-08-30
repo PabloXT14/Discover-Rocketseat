@@ -1,33 +1,17 @@
 import React from "react";
-import "./App.css";
+import "./App.css";//não precisa importar aqui pois o App.js já importa o arquivo App.css nele
+import Menu from "./Menu";
 
 function HeaderComponent(props) {
-     /*Responsividade do menu*/
-    const btnIcon = document.querySelector("header i");
-    const menu = document.querySelector("ul.menu");
-
-    btnIcon.addEventListener("click", ()=> {
-    console.log("OIII");
-    btnIcon.classList.toggle("show");
-    menu.classList.toggle("show");
-    });
 
     return (
-        
         <header>
             <h1 className="title">{props.name}</h1>
             <i className="fas fa-bars"></i>
-            <ul className="menu">
-                
-                <li>{props.links[0]}</li>
-                <li>{props.links[1]}</li>
-                <li>{props.links[2]}</li>
-                <li>{props.links[3]}</li> 
-                
-            </ul>
+            <Menu links={props.links}></Menu>
         </header>
-        
     );
 }
+
 
 export default HeaderComponent;
