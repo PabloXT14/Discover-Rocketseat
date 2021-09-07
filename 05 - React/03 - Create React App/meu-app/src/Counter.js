@@ -31,9 +31,9 @@ class CounterComponent extends React.Component {
     }
 
     componentWillUnmount() {
-        /*
-            o método componentWillUnmount() é executado toda vez que um elemento vai ser excluido da tela, ou seja, toda vez que vc for excluir um elemento da tela utilize este método (ex: limpar um item de uma todo list, parar um cronômetro)
-        */
+    /*
+        o método componentWillUnmount() é executado toda vez que um elemento vai ser excluido da tela, ou seja, toda vez que vc for excluir um elemento da tela utilize este método (ex: limpar um item de uma todo list, parar um cronômetro)
+    */
     }
 
     add() {
