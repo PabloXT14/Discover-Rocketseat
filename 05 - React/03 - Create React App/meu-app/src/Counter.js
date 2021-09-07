@@ -14,6 +14,28 @@ class CounterComponent extends React.Component {
         this.add = this.add.bind(this);
     }
 
+    shouldComponentUpdate() {
+    /*shouldComponentUpdate(): função React, que serve para determinar se o Component deve ou não atualizar a tela (com render) caso ocorra uma alteração de estado<state>
+        - return true: atualiza a tela
+        - return false: não atualiza a tela
+    */
+        return true;
+
+    }
+
+    componentDidMount() {
+    /*
+        O método componentDidMount() é executado após a saída do componente ter sido renderizada para o DOM (ou seja, é executado depois que a tela já foi renderizada pelo <render>). Este é um bom lugar para configurar um cronômetro:
+    */
+        this.setState(JSON.parse(localStorage.getItem("state")))
+    }
+
+    componentWillUnmount() {
+        /*
+            o método componentWillUnmount() é executado toda vez que um elemento vai ser excluido da tela, ou seja, toda vez que vc for excluir um elemento da tela utilize este método (ex: limpar um item de uma todo list, parar um cronômetro)
+        */
+    }
+
     add() {
         //Alterando State: toda vez que for alterar o estado fora do construtor, é preciso utilizar o this.setState()
 
@@ -21,8 +43,9 @@ class CounterComponent extends React.Component {
         //this.setState({count: this.state.count + 1})
 
         //Sintaxe mais segura
-        this.setState((state)=> {
-            return {count: state.count + 1}
+        this.setState((state)=> { return {count: state.count + 1}}, ()=> {
+            console.log(this.state)
+            localStorage.setItem("state", JSON.stringify(this.state))//armazenando valor do <state> no localStorage
         })
     }
 
