@@ -13,6 +13,7 @@ function HeaderComponent(props) {
             <i className="fas fa-bars"></i>
             <Menu links={props.links}></Menu>
         </header>
+        
     );
 }
 
