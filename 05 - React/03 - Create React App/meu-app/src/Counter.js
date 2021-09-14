@@ -12,6 +12,7 @@ class CounterComponent extends React.Component {
 
         //Fazendo com que o <this> do método add() seja o mesmo <this> da classe.
         this.add = this.add.bind(this);
+        this.less = this.less.bind(this);
     }
 
     shouldComponentUpdate() {
@@ -49,11 +50,18 @@ class CounterComponent extends React.Component {
         })
     }
 
+    less() {
+        this.setState((state)=> { return {count: state.count - 1}}, ()=> {
+            localStorage.setItem("state", JSON.stringify(this.state))
+        })
+    }
+
     render() {
         return (
             <div>
                 <h1>Counter {this.state.count}</h1>
                 <button onClick={this.add}>Add</button>
+                <button onClick={this.less}>Less</button>
             </div>
             
         );

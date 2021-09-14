@@ -13,7 +13,7 @@ $ cd meu-app
 
 ## Como otimizar o Projeto React para um ambiente de produção (ex: publicar no seu servidor na internet)
 
-- Observe que a construção do nosso projeto em React no ambiente desenvolvimento não é otimizada. Para criar uma construção de produção (projeto React mais otmizado para ambiente de construção - ex: publicar no seu servidor na internet), use o seguinte comando dentro do diretório do projeto com React.(depois de executado ele vai gerar uma pasta chamada build, com apenas os arquivos necessários dentro dela)
+- Observe que a construção do nosso projeto em React no ambiente desenvolvimento não é otimizada. Para criar uma construção de produção (projeto React mais otmizado para ambiente de construção - ex: publicar no seu servidor na internet), use o seguinte comando dentro do diretório do projeto com React.(depois de executado ele vai gerar uma pasta chamada 'build', com apenas os arquivos necessários dentro dela)
 ```
 $ npm run build
 ```
@@ -34,16 +34,20 @@ $ npm run build
 - **App.css**: cuidara da estilisação (CSS) da nossa página.
 
 ## Componentes e Propriedades
-- **Componentes**: Componentes permitem você dividir a UI em partes independentes, reutilizáveis e pensar em cada parte isoladamente, consiste básicamente em armazenar elementos(ex: <header>,<div>,<ul>) em script qualquer que criarmos, exportar os elementos em uma _função_ desse script (_export deafult funcionName_) e importar o mesmo script no App.js, para conseguirmos acessar de forma mais organizadas os elementos. Ex:
+- **Componentes**: Componentes permitem você dividir a UI em partes independentes, reutilizáveis e pensar em cada parte isoladamente, consiste básicamente em armazenar elementos(ex: <header>,<div>,<ul>) em script qualquer que criarmos, exportar os elementos em uma _função_ desse script (_export deafult funcionName_)/ou em uma _classe_ e importar o mesmo script no App.js, para conseguirmos acessar de forma mais organizadas os elementos. Ex:
 ```js
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
 
-- **Propriedades**: Essa _função_ é um componente React válido porque aceita um único argumento de objeto “props” (que significa propriedades) com dados e retorna um elemento React. Nós chamamos esses componentes de “componentes de função” porque são literalmente funções JavaScript
+- **Propriedades**: _props_ é uma abreviação de properties, ou propriedades, são informações que podem ser passadas para um componente(como argumento). Pode ser uma string, um número, até mesmo uma função. Este valor pode então ser utilizado pelo componente que a recebe
 ```js
 class Welcome extends React.Component {
+  constructor(props) {
+    super(props)//enviando as <props> para a classe pai, para poderem ser renderizadas depois
+  }
+
   render() {
     return <h1>Hello, {this.props.name}</h1>;
   }

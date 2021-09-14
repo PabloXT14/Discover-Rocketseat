@@ -11,7 +11,7 @@ const element = React.createElement("h1", {id:"Título principal"}, "Hellow Worl
 const subTitulo = React.createElement("h2", {id:"subtitulo"}, "I'm everybody!");
 
 //testes
-const button = React.createElement("div", {class: "btn"}, "Button");
+const button = React.createElement("div", {className: "btn"}, "Button");//declare a classe de uma tag com <className> pois <class> tem outra função em React
 
 const headline = React.createElement("div", null, element, subTitulo, button);
 
