@@ -61,3 +61,4 @@ function print() {
 print()
 console.log(x)
 console.log(window)
+

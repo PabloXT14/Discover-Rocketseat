@@ -51,6 +51,59 @@ header i.fas.show {
   background-color: #58318b;
 }
 
+/* ===== Styling Counter ===== */
+.counter {
+  max-width: 300px;
+  border-radius: 5px;
+  box-shadow: -2px -2px 3px #eee,
+              2px 2px 3px #aaa;
+  margin: auto;
+  margin-top: 70px;
+  text-align: center;
+  padding: 20px;
+}
+
+.counter h1 {
+  margin-bottom: 20px;
+}
+
+.counter h1 span {
+  display: inline-block;
+  background: #58318b;
+  color: #FFF;
+  line-height: 45px;
+  width: 45px;
+  border-radius: 3px;
+}
+
+.counter button {
+  height: 40px;
+  width: 100px;
+  font-size: 1.1em;
+  color: #FFF;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px #999;
+  transition: all 0.15s ease;
+}
+
+.counter button:active {
+  box-shadow: none;
+  transform: scale(0.97);
+}
+
+.counter button:nth-child(3) {
+  margin-left: 10px;
+  background-color: rgb(219, 70, 70);
+}
+
+.counter button:nth-child(2) {
+  margin-left: 10px;
+  background-color: rgb(42, 180, 42);
+}
+
 @media screen and (max-width: 740px){
 
   header ul.menu {
