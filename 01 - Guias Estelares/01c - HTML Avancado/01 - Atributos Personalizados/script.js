@@ -63,9 +63,20 @@ btnDelete.addEventListener("click", ()=> {
     image.removeAttribute("src")
 })
 
+/* ===== Utilizando atribute inventado/criado =====
+- Recomenda-se nomear este atributo invetado da seguinte maneira no HTML (colcando <data-> antes do nome atributo inventado):
+    <ul data-num="5"> </ul>
 
-//utilizando atribute inventado/criado
-let num = parseInt(list.getAttribute("amountNumb"))
+- Com isso consegue-se acessar o o value deste atributo sem precisar utilizar o getAttribute():
+    lista = document.querySelector("ul");
+    console.log(lista.dataset.num);//retorna 5
+- Também consegue-se setar um novo valor para esse atributo sem utilizar o setAttribute():
+    lista.dataset.num = 7
+    console.log(lista.dataset.num);//retorna 7
+*/
+
+//let num = parseInt(list.getAttribute("amoun"))
+let num = parseInt(list.dataset.amount)
 
 let conteudo = ""
 for(let i=1; i <= num; i++) {
