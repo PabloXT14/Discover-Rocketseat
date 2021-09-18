@@ -3,8 +3,14 @@ import Header from "./Header";
 import Counter from "./Counter";
 import './App.css';
 import { useEffect, useState } from 'react';
+import qualquerNome, { obj1 } from "./Coisas";
+
 
 function App() {
+
+  /* ===== Test Import ===== */
+  console.log(qualquerNome)
+  console.log(obj1)
 
   const [show, setShow] = useState(true);
 
