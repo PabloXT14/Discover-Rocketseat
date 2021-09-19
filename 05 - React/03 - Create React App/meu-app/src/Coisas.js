@@ -36,4 +36,5 @@ let obj2 = "objeto2"
 
 export default objPrincipal;
 export { obj1, obj2 };
+export let obj3 = "objeto3"
 
