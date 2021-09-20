@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Advanced - Video</title>
+</head>
+<body>
+    <!-- ===== Video =====
+    - Para colocar video na sua página utilize a tag <video src=""> 
+    - Atribute da tag:
+        * src: local do vídeo.
+        * width (largura) & height (altura)
+            * OBS: Se você colar um tamanho(dimensão) desproporcional com css no vídeo ele não irá destorcer o vídeo, mas sim colocar um espaço extra envolta.
+        * controls: faz com que os controles do vídeo apareçam (ex: play)
+        * autoplay: da o autoplay no vídeo ao carregar a pagina
+        * muted: deixa o vídeo mudo ao carregar a pagina.
+        * loop (dependendo do browser, ao chegar no final o video roda de novo)
+        * poster (imagem de fundo no video antes dele começar)
+        * preload (carrega ou não pre dados do video), values:
+            * auto: O navegador deve carregar o vídeo inteiro quando a página é carregada
+            * metadata: O navegador deve carregar apenas metadados(tam., autor, duração, ..., NÃO O CONTEÚDO DO VÍDEO) quando a página é carregada.
+            * none: O navegador NÃO deve carregar o vídeo quando a página carrega
+        
+
+
+    * Saiba mais a respeito em: https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Multimedia_and_embedding/Video_and_audio_content
+
+    
+    -->
+    <video src="./assets/mov_bbb.mp4" width="400px"
+           controls loop poster="./assets/bunny-rabbit.jpg"
+           preload="none">
+    </video>
+</body>
+</html>
