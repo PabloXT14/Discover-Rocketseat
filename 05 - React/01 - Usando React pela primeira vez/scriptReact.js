@@ -17,7 +17,7 @@ const headline = React.createElement("div", null, element, subTitulo, button);
 
 
 /* 
-ReactDom.render(elem, local): serve para mostram na tela/DOM(ducument object model = HTML) algum elemento que tenhamos criado no React, seus parâmetros indicam:
+ReactDom.render(elem, local): objeto global do React-Dom que, serve para mostram na tela/DOM(ducument object model = HTML) algum elemento que tenhamos criado no React, seus parâmetros indicam:
     - elem: elemento(s) criado com React
     - local: local onde o elemento irá aparecer
 */

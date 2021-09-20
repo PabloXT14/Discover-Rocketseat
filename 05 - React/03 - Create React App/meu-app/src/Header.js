@@ -6,6 +6,7 @@ import Menu from "./Menu";
 //Maneira mais atual de criar Components no React (com Functions)
 function HeaderComponent(props) {
 
+
     return (
         <header>
             <h1 className="title">{props.name}</h1>

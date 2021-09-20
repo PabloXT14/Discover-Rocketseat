@@ -5,14 +5,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#root div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+} 
+
 .btn {
     color: #FFF;
     background-color: #08c079; 
     font-size: 15px;
+    max-width: 200px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    margin: auto;
     cursor: pointer;
     transition: all 0.3s ease;
 }
