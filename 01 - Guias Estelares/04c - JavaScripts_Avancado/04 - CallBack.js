@@ -19,7 +19,7 @@
 
 - Quando usar o CallBack:
     * O exemplo acima foi apenas utilizado para ensinar a sintaxe da <callback>
-    * Onde as <callback> realmente brilham são em funções asincronas, onde uma função tem que esperar por outra função (como esperar por arquivo carregar)
+    * Onde as <callback> realmente brilham são em funções asíncronas, onde uma função tem que esperar por outra função (como esperar por arquivo carregar)
 */
 
 function displayResult(result) {
