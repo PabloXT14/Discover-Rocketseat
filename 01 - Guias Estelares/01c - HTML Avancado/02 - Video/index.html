@@ -5,6 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Advanced - Video</title>
+    <!-- Icons from Font Awesome -->
+    <script src="https://kit.fontawesome.com/32697e770a.js" crossorigin="anonymous"></script>
+    <style>
+        .container {
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        .controls {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: red; */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .controls:hover .btn {
+            transform: translateY(-100%);
+        }
+
+        .btn {
+            position: relative;
+            width: 60px;
+            padding: 15px;
+            top: 100%;
+            /* transform: translateY(-100%); */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play.show i {
+            content: '\f04c';
+        }
+
+    </style>
 </head>
 <body>
     <!-- ===== Video =====
@@ -52,5 +94,30 @@
         <source src="./assets/mov_bbb.mp4" type="video/mp4">
     </video>
 
+    <br>
+    <h2>Controlando Video com JS</h2>
+
+    <!-- Controlando Video Com JS -->
+    <div class="container">
+        <video class="video" src="./assets/mov_bbb.mp4"></video>
+
+        <div class="controls">
+            <!-- <img class="btn" onclick="retroceder()" src="./assets/control-icons/rewind.png" alt="">
+            <img class="btn" onclick="avancar()" src="./assets/control-icons/fast-forward.png" alt="">
+            <img class="btn" onclick="diminuir_vel()" src="./assets/control-icons/decrease.png" alt="">
+            <img class="btn" onclick="aumentar_vel()" src="./assets/control-icons/increase.png" alt="">
+            <img class="btn" onclick="play()" src="./assets/control-icons/play.png" alt="">
+            <img class="btn" onclick="stop()" src="./assets/control-icons/stop.png" alt=""> -->
+
+            <!-- Icons from Font Awesome -->
+            <!-- play -->
+            <div class="play"><i class="fas fa-play"></i></div>
+            <!-- stop -->
+            <div class="stop"><i class="fas fa-stop"></i></div>
+            
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
