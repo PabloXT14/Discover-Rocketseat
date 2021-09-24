@@ -16,6 +16,7 @@
 
         .video {
             width: 100%;
+            position: relative;
         }
 
         .controls {
@@ -28,8 +29,9 @@
             overflow: hidden;
         }
 
-        .controls:hover .btn {
-            transform: translateY(-100%);
+        .controls:hover .btn, .controls:hover .icons {
+            /* transform: translateY(-100%); *//*para as imgs*/
+            transform: translateY(-100%);/*para os icones*/
         }
 
         .btn {
@@ -42,7 +44,30 @@
             transition: all 0.3s ease;
         }
 
-        .play.show i {
+        .icons {
+            position: relative;
+            top: 100%;
+            display: flex;
+            padding: 10px 20px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(44, 44, 44);
+            color: #FFF;
+            transition: all 0.3s ease;
+        }
+
+        .icons i {
+            transition: all 0.15s ease;
+        }
+
+        .icons i:hover {
+            cursor: pointer;
+            transform: scale(1.5);
+            color: rgb(135, 240, 182)
+        }
+
+
+        .play.show i::before {
             content: '\f04c';
         }
 
@@ -51,15 +76,15 @@
 <body>
     <!-- ===== Video =====
     - Para colocar video na sua página utilize a tag <video src=""> 
-    - Atribute da tag:
+    - Atributos da tag:
         * src: local do vídeo.
         * width (largura) & height (altura)
             * OBS: Se você colar um tamanho(dimensão) desproporcional com css no vídeo ele não irá destorcer o vídeo, mas sim colocar um espaço extra envolta.
         * controls: faz com que os controles do vídeo apareçam (ex: play)
         * autoplay: da o autoplay no vídeo ao carregar a pagina
         * muted: deixa o vídeo mudo ao carregar a pagina.
-        * loop (dependendo do browser, ao chegar no final o video roda de novo)
-        * poster (imagem de fundo no video antes dele começar)
+        * loop: dependendo do browser, ao chegar no final o video roda de novo
+        * poster: imagem de fundo no video antes dele começar
         * preload (carrega ou não pre dados do video), values:
             * auto: O navegador deve carregar o vídeo inteiro quando a página é carregada
             * metadata: O navegador deve carregar apenas metadados(tam., autor, duração, ..., NÃO O CONTEÚDO DO VÍDEO) quando a página é carregada.
@@ -92,6 +117,7 @@
     <!-- 2st way to use (mais recomendada)-->
     <video width="400px" controls>
         <source src="./assets/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
 
     <br>
@@ -110,10 +136,21 @@
             <img class="btn" onclick="stop()" src="./assets/control-icons/stop.png" alt=""> -->
 
             <!-- Icons from Font Awesome -->
-            <!-- play -->
-            <div class="play"><i class="fas fa-play"></i></div>
-            <!-- stop -->
-            <div class="stop"><i class="fas fa-stop"></i></div>
+
+            <div class="icons">
+                <!-- play -->
+                <div class="play" onclick="play(this)"><i class="fas fa-play"></i></div>
+                <!-- stop -->
+                <div class="stop" onclick="stop()"><i class="fas fa-stop"></i></div>
+                <!-- backward -->
+                <div class="" onclick="retroceder()"><i class="fas fa-backward"></i></div>
+                <!-- forward -->
+                <div class="" onclick="avancar()"><i class="fas fa-forward"></i></div>
+                <!-- Faster/plus -->
+                <div class="" onclick="aumentar_vel()"><i class="fas fa-plus"></i></div>
+                <!-- Slower/minus -->
+                <div class="" onclick="diminuir_vel()"><i class="fas fa-minus"></i></div>
+            </div>
             
         </div>
     </div>

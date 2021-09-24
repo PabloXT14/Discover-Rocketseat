@@ -18,8 +18,18 @@ function aumentar_vel() {
     video.playbackRate += 0.1;//aumenta em 10% a velocidade do video
 }
 
-function play() {
-    video.play();
+let actived = true;
+function play(elem) {
+    if(actived){
+        video.play();
+        elem.classList.toggle("show")
+        actived = !actived
+    } else {
+        video.pause();
+        elem.classList.toggle("show")
+        actived = !actived
+    }
+    
 }
 
 function stop() {
