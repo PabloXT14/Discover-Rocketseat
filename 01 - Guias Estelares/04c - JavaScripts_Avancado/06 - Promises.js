@@ -9,11 +9,11 @@
     let myPromise = new Promise(function(myResolve, myReject) {
     // "Produzingo Código" (Pode levar algum tempo)
 
-    myResolve(); // when successful (retorna valor do resultado)
-    myReject();  // when error (retorna um objeto de erro)
+    myResolve(); // when successful (retorna um objeto/valor do resultado)
+    myReject();  // when error (retorna um objeto/valor de erro)
     });
 
-    // then: "Código de consumo" (o then executado se resolve() da promise for atendido)
+    // then: "Código de consumo" (o then e executado se resolve() da promise for atendido)
     myPromise.then(
         function(value) { // code if successful // },
         function(error) { // code if some error // }
