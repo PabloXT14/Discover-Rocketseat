@@ -87,7 +87,7 @@ async function addAsync(x) {
     //Tranto algum erro que ocorrer na Promise do await
     try  {
         let a = await dobraEm5Segundos(10)
-        let b = await dobraEm5Segundos(c)
+        let b = await dobraEm5Segundos(20)
         let c = await dobraEm5Segundos(30)
         //Outro teste intereçante
         // let a = await dobraEm5Segundos(x)
