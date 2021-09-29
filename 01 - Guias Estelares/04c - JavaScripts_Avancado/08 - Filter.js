@@ -4,7 +4,13 @@
     * O filter() não executa sua função/teste em arrays sem elementos
     * O filter() não muda o array original
     * O filter() pode ser chamado em qualquer array (que tenha elementos)
-- Sintaxe/Exemplo:
+- Sintaxe:
+array.filter(function(currentValue, index, arr), thisValue)
+    * currentValue(obrigatório): o valor do elementos atual
+    * index(opci0nal): o index do elemento atual do array
+    * arr(opcional): objeto/copia do array ao qual o elemento atual pertence
+
+- Exemplo:
     const ages = [32, 33, 16, 40];
 
     ages.filter(checkAdult)    // Returns [32, 33, 40]
