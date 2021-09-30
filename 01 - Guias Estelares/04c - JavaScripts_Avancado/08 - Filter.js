@@ -33,6 +33,8 @@ let alumns = [
 
 
 // 1ª demonstração/uso
+//let adultAlumns = alumns.filter(checkAge);
+//console.log(adultAlumns);
 console.log(alumns.filter(checkAge))
 
 function checkAge(people) {

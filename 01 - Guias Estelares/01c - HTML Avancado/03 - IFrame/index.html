@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .p2 {
+            width: 40vw;
+            height: 360px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .ytvideo {
+
+        }
+
+        .map {
+            border: 1px solid #ccc;
+            border-radius: 5%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- 
+    ===== IFrame HTML =====
+    - Definição:
+        * Um <iframe> HTML é usado para exibir uma página da web dentro de uma outra página da web.
+    - Sintaxe: 
+    <iframe src="url" title="description"></iframe>
+        * A tag HTML <iframe> especifica um quadro embutido. Um quadro embutido é usado para incorporar outro documento ao documento HTML atua.
+        * Dica: É uma boa prática sempre incluir um titleatributo para o <iframe>. Isso é usado por leitores de tela para ler qual é o conteúdo do iframe
+        * Vode pode editar a estilização do <iframe> através do css (ex: width, height, border, ....), além de poder atribuir ao <iframe> a propriedade <target>
+    - OBS: 
+        * O Google não gosta muito da utilização de <iframe>, exceto quando já um <iframe> mais elaborado, como o de vídeo do YouTube ou do Google Maps
+
+    -->
+
+
+    <h2>IFrame Página Secundária</h2>
+    <iframe class="p2" src="./page2.html"></iframe>
+
+    <h2>IFrame do YouTube</h2>
+    <iframe class="ytvideo"width="560" height="315" src="https://www.youtube.com/embed/OCuKBet6F0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2>IFrame do Google Maps</h2>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59028.58839838173!2d-47.575859200000004!3d-22.380544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7db2d3c25b10d%3A0xf6c1d50b90cd0710!2sAssa%C3%AD%20Atacadista!5e0!3m2!1spt-BR!2sbr!4v1633025764744!5m2!1spt-BR!2sbr" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+
+
+</body>
+</html>
