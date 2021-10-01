@@ -35,9 +35,10 @@ let people = [
     createPerson("Fabio", 17)
 ]
 
+
 //1ª demonstração/uso de map()
 let adultPeople = people.map(checkAge)
-console.log(adultPeople)
+//console.log(adultPeople)
 
 function checkAge(currentPerson) {
     return {
@@ -46,6 +47,7 @@ function checkAge(currentPerson) {
         isAdult: currentPerson.age >= 18
     }
 }
+
 
 //2ª demonstração/uso de map()
 const persons = [
@@ -60,3 +62,32 @@ function getFullName(item) {
     return [item.firstname,item.lastname].join(" ");
 }
 
+
+//3ª demonstração
+let products = [
+    {
+        nome: 'Mac Book',
+        preco: 2000
+    },
+    {
+        nome: 'Notebook',
+        preco: 1800
+    },
+    {
+        nome: 'Smartphone',
+        preco: 1600
+    }
+]
+
+console.log(products)
+console.log(products.map(desconto))
+
+function desconto(product) {
+    let percentageDiscount = 0.2;/*20%*/
+    return (
+        {
+            nome: product.nome,
+            preco: product.preco - (product.preco * percentageDiscount)
+        }
+    );
+}
