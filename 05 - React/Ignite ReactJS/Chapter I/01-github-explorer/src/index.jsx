@@ -1,4 +1,5 @@
 import React from "react";
+import { App } from './App';
 
 /* DEMONSTRAÇÃO */
 // const user = {
@@ -9,6 +10,6 @@ import React from "react";
 
 
 /* CRIANDO COMPONENTE */
-function App() {
+function Wrapper() {
     return <h1>Hellow World!!!</h1>;
 }
