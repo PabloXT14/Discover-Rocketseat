@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Advanced - Audio </title>
+</head>
+<body>
+    <!-- ===== Audio =====
+    - O elemento <audio> é utilizado para embutir conteúdo de som em um documento HTML ou XHTML.O elemento <audio> foi adicionado como parte do HTML5
+    - Você pode utilizar recursos avançados da API de áudio — que são específicas do Gecko — para gerar e manipular diretamente fluxo de áudio a partir do código JavaScript. Veja Introducing the audio API extension para detalhes.
+    - Atributos da tag:
+        * src: A URL do áudio a ser incorporado.
+        * controls: faz com que os controles do audio apareçam (ex: play)
+        * autoplay: da o autoplay no vídeo ao carregar a pagina
+        * muted: deixa o vídeo mudo ao carregar a pagina.
+        * loop: dependendo do browser, ao chegar no final o video roda de novo
+        * preload (carrega ou não pre dados do video), values:
+            * none: indica que o usuário não necessitará consultar o áudio ou que o servidor quer minimizar seu tráfego; em outros termos indica que o áudio não deve ser pré-carregado;
+            * metadata: indica que embora o usuário não necessitará consultar o áudio, pegar os meta-dados (ex: comprimento) é interessante;
+            * auto: indica que o usuário necessita ter prioridade; em outros termos isso significa que, se necessário, o áudio inteiro pode ser baixado, mesmo que não seja esperado a execução;
+            * Uma string vazia: é um sinônimo do valor auto
+        * Mais Atributos em: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/audio
+
+    - elemento <source>: permite que você especifique arquivos de audio/vídeo alternativos que o navegador pode escolher. O navegador usará o primeiro formato reconhecido. 
+    - O texto entre as tags <audio> e </audio> só será exibido em navegadores que não suportam o <audio> elemento
+        * Sintaxe:
+        <audio width="320" height="240" autoplay>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
+    -->
+
+
+    <!-- Demonstração -->
+
+    <audio controls>
+        <source src="./assets/lofi-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 
+        Desafio: crie mais controles para o audio, assim como foi feito para o vídeo  
+    -->
+
+
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

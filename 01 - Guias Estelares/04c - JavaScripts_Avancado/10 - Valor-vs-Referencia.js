@@ -58,7 +58,7 @@ alunoB: ${alunoB.idade}`)
 
 //Exemplo valor/referência <array>
 let turmaA = ["Pedro", "Maria", "João"]
-// let turmaB = turmaA // turmaB vira referência de turmaA
+//let turmaB = turmaA // turmaB vira referência de turmaA
 // let turmaB = turmaA.slice() // turmaB vira uma copia separada de turmaA
 let turmaB = [...turmaA] // turmaB vira uma copia separada de turmaA
 
