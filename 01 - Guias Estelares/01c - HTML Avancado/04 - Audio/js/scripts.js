@@ -1,24 +1,56 @@
-const audio = document.querySelector('.audio')
+const audio = document.querySelector('#audio')
 const timer = document.querySelector('.time')
-
+const playBtn = document.querySelector('.play')
 
 //Funções de controle do audio
 window.onload = ()=> {
-    
+    timer.innerHTML = timeFormat(audio.duration);//converte a duration do audio/video em formato de timer
 }
 
-let actived = true;
+
+
 function play(elem) {
-    if(actived) {
+    if(audio.paused) {
         audio.play();
-        actived = !actived;
+        elem.classList.toggle("show")
     } else {
         audio.pause();
-        actived = !actived;
+        elem.classList.toggle("show")
     }
 }
 
+function stop() {
+    audio.pause();
+    playBtn.classList.remove("show")
+    audio.currentTime = 0; // tempo atual do video
+    audio.playbackRate = 1; //taxa de velocidade do audio/video
+}
 
+function retroceder() {
+    audio.currentTime -= 10;
+}
+
+function avancar() {
+    audio.currentTime += 10;
+}
+
+function aumentar_vel() {
+    audio.playbackRate += 0.1;//aumenta em 10% a velocidade do video
+}
+
+function diminuir_vel() {
+    audio.playbackRate -= 0.1;//diminuir em 10% a velocidade do video
+}
+
+function mutar(elem) {
+    if(audio.muted) {
+        audio.muted = false
+        elem.classList.toggle("show")
+    } else {
+        audio.muted = true;
+        elem.classList.toggle("show")
+    }
+}
 
 
 /*

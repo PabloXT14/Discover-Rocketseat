@@ -37,6 +37,13 @@
             background-color: rgb(173, 104, 236);
         }
 
+        .play.show i::before {
+            content: '\f04c';
+        }
+
+        .mute.show i::before {
+            content: '\f6a9';
+        }
 
 
 
@@ -82,26 +89,26 @@
     -->
 
     <div class="container">
-        <audio class="audio">
-            <source src="./assets/lofi-music.mp3">
-        </audio>
+        <audio id="audio" class="audio" src="./assets/lofi-music.mp3"></audio>
 
         <div class="controls">
             <!-- play -->
-            <div class="play" onclick="play(this)"><i class="fas fa-play"></i></div>
+            <div class="play" onclick="play(this)" title="play"><i class="fas fa-play"></i></div>
             <!-- stop -->
-            <div class="stop" onclick="stop()"><i class="fas fa-stop"></i></div>
+            <div class="stop" onclick="stop()" title="reiniciar"><i class="fas fa-stop"></i></div>
             
             <span class="time">0:00 / 2:03</span>
             
             <!-- backward -->
-            <div class="" onclick="retroceder()"><i class="fas fa-backward"></i></div>
+            <div class="" onclick="retroceder()" title="retroceder 10s"><i class="fas fa-backward"></i></div>
             <!-- forward -->
-            <div class="" onclick="avancar()"><i class="fas fa-forward"></i></div>
+            <div class="" onclick="avancar()" title="avançar 10s"><i class="fas fa-forward"></i></div>
             <!-- Faster/plus -->
-            <div class="" onclick="aumentar_vel()"><i class="fas fa-plus"></i></div>
+            <div class="" onclick="aumentar_vel()" title="aumentar speed em 10%"><i class="fas fa-plus"></i></div>
             <!-- Slower/minus -->
-            <div class="" onclick="diminuir_vel()"><i class="fas fa-minus"></i></div>
+            <div class="" onclick="diminuir_vel()" title="diminuir speed em 10%"><i class="fas fa-minus"></i></div>
+            <!-- Volume/Mute -->
+            <div class="mute" onclick="mutar(this)" title="mute"><i class="fas fa-volume-up"></i></div>
         </div>
 
     </div>
