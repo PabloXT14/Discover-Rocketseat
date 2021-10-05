@@ -25,11 +25,11 @@
     console.log(b); // [2, 3] 
 
 - Desestruturação de objeto (exemplo/demonstração):
-    * ATENÇÃO: o nome das variáveis de atribuição devem ter obrigatóriamente o nome do campo cujo ela vai receber o valor (se for apenas um campo).
+    * ATENÇÃO: em objetos o nome das variáveis de atribuição devem ter obrigatóriamente o nome do campo cujo ela vai receber o valor (se for apenas um campo).
 
     * Atribuição básica:
         var person = {name: 'João', age: 42 }
-        var {name, age } = person;
+        var { name, age } = person;
 
         console.log(name); // 'João'
         console.log(age); // 42
@@ -64,16 +64,19 @@ let aluno = {
     town: 'Rio Claro'
 }
 
-
-const { id, name, ...rest } = aluno;
-
+//const { id, name, ...rest } = aluno;
 // console.log(id)
 // console.log(name)
 // console.log(rest)
 
+const { id: registro , name: nome, ...rest} = aluno;
+console.log(registro)
+console.log(nome)
+console.log(rest)
+
+
 
 //Desestruturação de array
-
 let aluno1 = {
     id: 1235,
     name: 'Pedro',
@@ -102,6 +105,6 @@ let alunos = [aluno1, aluno2, aluno3]
 // console.log(joao)
 // console.log(maria)
 
-const [ pedro, ...others ] = alunos
-console.log(pedro)
-console.log(others)
+// const [ pedro, ...others ] = alunos
+// console.log(pedro)
+// console.log(others)
