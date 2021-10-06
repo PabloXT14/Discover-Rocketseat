@@ -23,6 +23,8 @@ array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 
     console.log(numbers.reduce(getSum, 0)); // returned 21
 
+- NOTE: Se o <valorInicial> não tiver sido passado como argumento, então reduce() executará o callback da função começando a partir do índice 1 (index 1), pulando o primeiro índice (index 0). Se o <valorInicial> for passado como argumento, a função irá começar no index 0.
+
 - Veja mais sobre reduce() e outras function top order em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 */
 
@@ -48,3 +50,10 @@ function fullNames(acumulador, currentAlumn) {
 
 console.log(alunos.reduce(totalAge, 0))
 console.log(alunos.reduce(fullNames, "Alunos da turma:"))
+
+
+//Other exemplo
+let numbers = [1, 2, 3, 4, 5]
+console.log(numbers.reduce((acumulador, currentValue)=> {
+    return acumulador + currentValue
+}))

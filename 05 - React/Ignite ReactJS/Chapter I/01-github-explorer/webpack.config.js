@@ -12,7 +12,12 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     devServer: {
-        contentBase: path.resolve(__dirname, 'public'),
+        open: true,
+        static: {
+            // contentBase: path.resolve(__dirname, 'public')
+            directory: path.resolve(__dirname, 'public'),
+        },
+        port: 1234, 
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -26,6 +31,6 @@ module.exports = {
                 exclude: /node_modules/,
                 use: 'babel-loader',
             }
-        ]
+        ],
     }
 }
