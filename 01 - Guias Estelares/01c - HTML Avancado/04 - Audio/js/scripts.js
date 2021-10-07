@@ -1,13 +1,10 @@
 const audio = document.querySelector('#audio')
-const timer = document.querySelector('.time')
+const barTimer = document.querySelector('.time')
+const progressBarTimer = barTimer.querySelector('.currentTime')
 const playBtn = document.querySelector('.play')
 
 //Funções de controle do audio
-window.onload = ()=> {
-    timer.innerHTML = timeFormat(audio.duration);//converte a duration do audio/video em formato de timer
-}
-
-
+console.log(audio)
 
 function play(elem) {
     if(audio.paused) {
@@ -51,6 +48,39 @@ function mutar(elem) {
         elem.classList.toggle("show")
     }
 }
+
+// Configuração barra de tempo
+function updateProgress(event) {
+    // pegando duração e tempo atual do audio que estiver tocando
+    const { duration, currentTime } = event.srcElement;
+    // porcentagem de tempo que já foi tocado do audio
+    const progressPersent = (currentTime / duration) * 100;
+    // setando barra de currentTime
+    progressBarTimer.style.width = `${progressPersent}%`;
+
+
+    // Checando se video acabou
+    if(audio.currentTime == audio.duration) {
+        document.querySelector('.play').classList.toggle('show');
+    }
+
+}
+
+//poder avançar na musica ao clicar na barra de tempo
+function setProgress(event) {
+    const width = this.clientWidth;//pegando largura da barra de tempo
+    const clickX = event.offsetX;//pegando em qual intervalo de largura da barra foi clicado;
+    const duration = audio.duration;
+
+    //(clickX / width): retorna porcentagem da barra onde foi clicado
+    audio.currentTime = (clickX / width) * duration;// setando no tempo no audio 
+
+}
+
+audio.addEventListener('timeupdate', updateProgress);
+barTimer.addEventListener('click', setProgress);
+
+
 
 
 /*

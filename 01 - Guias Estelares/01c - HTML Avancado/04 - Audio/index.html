@@ -45,7 +45,25 @@
             content: '\f6a9';
         }
 
+        .time {
+            width: 200px;
+            height: 5px;
+            background-color: #CCC;
+            border-radius: 2px;
+            position: relative;
+            cursor: pointer;
+        }
 
+        .time .currentTime {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 5px;
+            background-color: #d40cca;
+            border-radius: 2px;
+        }
 
 
     </style>
@@ -97,7 +115,9 @@
             <!-- stop -->
             <div class="stop" onclick="stop()" title="reiniciar"><i class="fas fa-stop"></i></div>
             
-            <span class="time">0:00 / 2:03</span>
+            <span class="time">
+                <span class="currentTime"></span>
+            </span>
             
             <!-- backward -->
             <div class="" onclick="retroceder()" title="retroceder 10s"><i class="fas fa-backward"></i></div>
