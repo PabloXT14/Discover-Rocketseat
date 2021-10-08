@@ -1,7 +1,7 @@
 export function App() {
 
     // Teste de Erro 
-    throw new Error('Eita Giovana, o forninho caiu!')
+    throw new Error('Eita Giovana, o forninho caiu!');
 
 
     return (<div>

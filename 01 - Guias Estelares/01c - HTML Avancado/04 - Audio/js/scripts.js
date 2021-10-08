@@ -2,9 +2,10 @@ const audio = document.querySelector('#audio')
 const barTimer = document.querySelector('.time')
 const progressBarTimer = barTimer.querySelector('.currentTime')
 const playBtn = document.querySelector('.play')
+const tempo = document.querySelector(".tempo")
+
 
 //Funções de controle do audio
-console.log(audio)
 
 function play(elem) {
     if(audio.paused) {
@@ -64,6 +65,9 @@ function updateProgress(event) {
         document.querySelector('.play').classList.toggle('show');
     }
 
+    //Setando Tempo
+    tempo.innerHTML = `${formateTime(currentTime)} / ${formateTime(duration)}`;
+
 }
 
 //poder avançar na musica ao clicar na barra de tempo
@@ -80,6 +84,22 @@ function setProgress(event) {
 audio.addEventListener('timeupdate', updateProgress);
 barTimer.addEventListener('click', setProgress);
 
+// Função formatar tempo do vídeo
+function formateTime(tempo) {
+    let horas = Math.floor(tempo / 3600);
+    let minutos = Math.floor((tempo - (horas * 3600)) / 60);
+    let seconds = Math.floor(tempo % 60);
+
+    
+    if (horas < 10) horas = '0' + horas;
+    if (minutos < 10) minutos = '0' + minutos;
+    if (seconds < 10) seconds = '0' + seconds;
+
+    if(horas > 0) return `${horas}:${minutos}:${seconds}`
+    
+    return `${minutos}:${seconds}`
+    
+}
 
 
 

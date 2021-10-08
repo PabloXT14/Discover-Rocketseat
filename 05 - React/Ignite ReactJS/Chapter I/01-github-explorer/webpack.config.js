@@ -18,7 +18,7 @@ module.exports = {
             // contentBase: path.resolve(__dirname, 'public')
             directory: path.resolve(__dirname, 'public'),
         },
-        port: 1234, 
+        //port: 8080, 
     },
     plugins: [
         new HtmlWebpackPlugin({
