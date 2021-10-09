@@ -70,16 +70,52 @@
 
 //let name = "" // teste descomentar e alterar o valor de name para ver o que ocorre
 
-try  {
+// try  {
     
-    if(name == "") 
-        throw {name: "NameError", message: "O nome não pode estar vazio."} 
+//     if(name == "") 
+//         throw {name: "NameError", message: "O nome não pode estar vazio."} 
 
-    console.log(name)
+//     console.log(name)
 
-} catch(err) {
-    console.log(`${err.name}: ${err.message}`)
-    // console.log(err); // esse envia todos os detalhes do erro
-} finally {
-    console.log("Good Evening")
+// } catch(err) {
+//     console.log(`${err.name}: ${err.message}`)
+//     // console.log(err); // esse envia todos os detalhes do erro
+// } finally {
+//     console.log("Good Evening")
+// }
+
+
+//Other Exemple try catch in <async> and <await>
+function multiplos(n) {
+    let result = "";
+
+    return new Promise((response, reject)=> {
+        if(n != null || n != undefined) {
+            for(let i=0; i <= 10; i++) {
+                result += `${n} X ${i} = ${n*i} \n` 
+            }
+            response(result)
+        } else {
+
+            // reject("Insirá um valor inteiro válido!")
+            reject({name: "NumberNotDefined", message: 'Insirá um valor inteiro válido!'})
+        }
+
+    })
 }
+
+async function testMultiplos(number) {
+    try {
+       console.log(await multiplos(number));     
+
+    } catch(err) {
+        // console.log(err)
+        console.log(`${err.name}: ${err.message}`)
+
+    } finally {
+        console.log("Teste finalizado!")
+    }
+
+}
+
+testMultiplos();// teste passar ou não um argumento nesta função
