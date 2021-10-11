@@ -1,6 +1,6 @@
 /* ===== Fetch API (fetch:buscar) =====
 - Definição:
-    * A API Fetch fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP(o url que aparece na psrte de cima ao acessar um site), tais como os pedidos e respostas. Ela também fornece o método global fetch() que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede.
+    * A API Fetch fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP(o url que aparece na parte de cima ao acessar um site), tais como os pedidos e respostas. Ela também fornece o método global fetch() que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede.
 
         * API Note: API é qualquer interface entre 2 sistemas(geralmente Front-End e Back-End).
     
@@ -40,6 +40,7 @@ function converter() {
     fetch(url)
     .then((response)=> { 
         //.json(): método que converte um resolve de uma Promise que está em formato JSON para um <objeto> JavaScript 
+        console.log(response)
         return response.json();
     })
     .then((data)=> {
