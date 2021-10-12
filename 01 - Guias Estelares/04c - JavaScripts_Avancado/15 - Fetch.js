@@ -39,7 +39,7 @@ let url = ` https://economia.awesomeapi.com.br/last/${from}-${to}`
 function converter() {
     fetch(url)
     .then((response)=> { 
-        //.json(): método que converte um resolve de uma Promise que está em formato JSON para um <objeto> JavaScript 
+        //.json(): método que converte um resolve de uma Promise que está em formato JSON para um <objeto> JavaScript, mas ele retorna em formato de Promise, então temos que pegar o corpo/body do JSON enviado em outro .then() 
         console.log(response)
         return response.json();
     })

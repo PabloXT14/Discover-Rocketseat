@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;/*obs: importe a fonte de forma mais adequada*/
+        }
+
+        body {
+            background-color: #7b07a8;
+        }
+
+        .screen {
+            margin: auto;
+            margin-top: 70px;
+            background-color: #FFF;
+            width: 400px;
+            height: 400px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #7b07a8;
+            box-shadow: 2px 2px 5px #222;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="screen">
+        <div class="player"></div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
