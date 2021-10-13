@@ -1,5 +1,7 @@
 const player = document.querySelector(".player")
-const screen = document.querySelector(".screen");
+const screen = document.querySelector(".screen")
+const winText = document.querySelector(".winText")
+
 
 /* === Pegando styles computados ===
 - If your styles are written in the CSS file, you need to get the computed style. To do so, you can use getComputedStyle.
@@ -23,6 +25,7 @@ const maxHeight = parseInt(getComputedStyle(screen).height)-playerWidth;//neste 
 
 let xInicial = 0;
 let yInicial = 0;
+const playerWasClicked = false;
 
 
 function movePlayer(x, y) {
@@ -40,6 +43,33 @@ function randomPosition(limit) {
     return resultNumb;
 }
 
-setInterval(()=> {
-    movePlayer(randomPosition(maxWidth), randomPosition(maxHeight))
-}, 500)
+/* Fluxo do Game */
+//Jogo Rodando
+let gameRun;
+function runGame() {
+    gameRun = setInterval(()=> {
+        movePlayer(randomPosition(maxWidth), randomPosition(maxHeight))
+    }, 500)
+}
+runGame();
+
+//Vencendo/terminando Jogo
+player.addEventListener("click", ()=> {
+    clearInterval(gameRun)
+    player.style.pointerEvents = "none";
+    winText.style.display = "block";
+})
+
+//Restart Game
+function restartGame() {
+    if(getComputedStyle(player).pointerEvents == "none") {
+        player.style.pointerEvents = "auto";
+        winText.style.display = "none";
+        runGame();
+    } else {
+        //Não faz nada pois o jogo já está rodando
+    }
+    
+}
+
+
