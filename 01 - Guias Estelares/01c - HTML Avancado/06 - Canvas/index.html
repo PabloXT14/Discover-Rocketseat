@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Advanced - Canvas</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #screenCanvas {
+            border: 1px solid #CCC;
+            background-color: #a1b2f9; 
+        }
+    </style>
+</head>
+<body>
+    <!-- === Canvas === 
+    - Definição:
+        * O elemento HTML<canvas> é usado para desenhar gráficos, em tempo real, por meio de JavaScript
+        * O elemento <canvas> é apenas um contêiner para gráficos. Você deve usar JavaScript para realmente desenhar os gráficos.
+        * O Canvas possui vários métodos para desenhar caminhos, caixas, círculos, texto e adicionar imagens.
+        * É um bom modo de animação em HTML, pois consome menos memória/dados nos dispositívos.
+
+    - Sintaxe/Uso:
+        * Um <canvas> é uma área retangular em uma página HTML. Por padrão, um <canvas> não tem borda nem conteúdo.
+        * A sintaxe/declaração é a seguinte:
+            <canvas id="myCanvas" width="200" height="100"></canvas>
+        * NOTE: Sempre especifique um atributo <id> (a ser referido em um script) e um atributo <width> e <height> para definir o tamanho da tela. Para adicionar uma borda, use o atributo <style>(no css)
+    -->
+    <canvas id="screenCanvas" width="500px" height="500"></canvas>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

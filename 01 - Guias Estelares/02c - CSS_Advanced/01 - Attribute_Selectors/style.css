@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* === ATTRIBUTE SELECTORS === */
+
+input[type] {
+    border: 1px solid orangered;
+    border-radius: 3px;
+}
+
+/* ATTRIBUTE VALUE */
+input[type="text"] {
+    background-color: palegreen;
+}
+
+input[type="email"] {
+    background-color: aqua;
+}
+
+input[type="button"] {
+    border: 1px solid green;
+    background-color: transparent;
+    color: green;
+    font-weight: bold;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ATTRIBUTE STARTS WITH */
+p[title^="I"] {
+    color: dodgerblue; 
+}
+
+/* ATTRIBUTE ENDS WITH */
+p[title$="fox"] {
+    color: red;
+}
+
+/* ATTRIBUTE CONTAINS WORD */
+p[title~="Dreamer"] {
+    text-decoration: underline;
+}
+
+/* mais sobre attibutes selectors em: https://www.w3schools.com/css/css_attribute_selectors.asp */
