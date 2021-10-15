@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* SELECT MULTIPLE ELEMENTS BY SEPARATING THEM WITH A COMMA */
+p, button {
+    /* color: red; */
+}
+
+/* SELECTS ALL ELEMENTS INSIDE OF DESCENDANT */
+#outerDiv p {
+    color: blue;
+}
+
+/* SELECTS ALL ELEMENTS INSIDE PARENT (DIRECT DESCENDANT) */
+#innerDiv > p {
+    color: green;
+}
+
+/* SELECTS ALL ELEMENTS PLACED IMMEDIATELY AFTER AN ELEMENT */
+h3 + p {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* SELECTS ALL ELEMENTS PLACED IMMEDIATELY BEFORE AN ELEMENT */
+p ~ h4 {
+    color: orangered
+}

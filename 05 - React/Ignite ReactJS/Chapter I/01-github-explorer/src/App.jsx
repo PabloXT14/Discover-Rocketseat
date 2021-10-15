@@ -1,7 +1,9 @@
+import './styles/global.css';
+
 export function App() {
 
-    // Teste de Erro 
-    throw new Error('Eita Giovana, o forninho caiu!');
+    // Teste de Erro (Source Maps)
+    //throw new Error('Eita Giovana, o forninho caiu!');
 
 
     return (<div>
