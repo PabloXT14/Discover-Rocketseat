@@ -3,4 +3,23 @@ body {
         font-size: 3rem;
         color: orangered;
     }
+
+    button {
+        height: 40px;
+        width: 100px;
+        margin: 10px;
+        font-size: 1em;
+        font-weight: 600;
+        background-color: transparent;
+        color: orangered;
+        border: 1.5px solid orangered;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+    }
+
+    button:hover {
+        background-color: orangered;
+        color: #000;
+    }
 }
