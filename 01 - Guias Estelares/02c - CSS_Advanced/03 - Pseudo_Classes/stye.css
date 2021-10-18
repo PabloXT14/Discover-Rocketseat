@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+body {
+    padding: 0 20px;
+}
+
+/* UNVISITED LINK */
+a:link {
+    text-decoration: none;
+}
+
+/* HOVERED LINK */
+a:hover {
+    color: orange;
+}
+
+/* ACTIVE LINK */
+a:active {
+    color: lightgreen;
+}
+
+/* VISITED LINK */
+a:visited {
+    color: red;
+}
+
+/* CHEKED */
+input[type="checkbox"]:checked {
+    outline: 2px solid blueviolet;
+}
+
+/* DISABLED */
+input[type="text"]:disabled {
+    background-color: #ccc;
+}
+
+/* FOCUS */
+#cool:focus {
+    background-color: aqua;
+}
+
+/* NTH CHILD */
+div p:nth-child(3) {
+    color: orangered;
+}
+
+
+/* FIRST CHILD */
+div p:first-child {
+    color: cyan;
+}
+
+/* LAST CHILD */
+div p:last-child {
+    color: yellowgreen;
+}
+
+
+/*
+    * Saiba mais Pseudo Classes em: https://www.w3schools.com/css/css_pseudo_classes.asp
+*/

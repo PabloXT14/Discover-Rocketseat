@@ -1,8 +1,6 @@
 body {
-    h2 {
-        font-size: 3rem;
-        color: orangered;
-    }
+    font-size: 16px;
+    color: #121214;
 
     button {
         height: 40px;
@@ -23,3 +21,41 @@ body {
         color: #000;
     }
 }
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    background-color: rgb(94, 192, 209);
+    box-shadow: 2px 2px 5px #333;
+    padding: 20px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.03);
+}
+
+li strong {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+}
+
+li p {
+    width: 100%;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(50, 103, 112);
+}
+
