@@ -33,7 +33,6 @@ ul li {
     padding: 20px 10px;
     margin: 10px;
     border-radius: 5px;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -57,5 +56,10 @@ li a {
     text-decoration: none;
     font-weight: bold;
     color:rgb(50, 103, 112);
+    transition: all 0.15s ease;
+}
+
+li a:hover {
+    color: orangered;
 }
 
