@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* PSEUDO ELEMENTS:
+- Definição:
+    - Um <pseudo-element> CSS é usado para estilizar partes específicas de um elemento.
+    - Por exemplo, pode ser usado para:
+        * Definir o estilo da primeira letra ou linha de um elemento
+        * Insirir conteúdo antes ou depois do conteúdo de um elemento
+- Sintaxe:
+    selector::pseudo-element {
+        property: value;
+    }
+- Mais Pseudo-Elementes em: https://www.w3schools.com/css/css_pseudo_elements.asp
+
+*/
+
+/* EDIT FIRST_LETTER */
+#paragraph::first-letter {
+    color: lightgreen;
+    font-size: 50px;
+    text-shadow: 1px 1px 3px gray;
+}
+
+/* EDIT FIRST_LINE*/
+#paragraph::first-line {
+    color: blue;
+}
+
+/* EDIT O SELECTION DE TODO OS ELEMENTOS DA TELA */
+::selection {
+    background-color: red;
+    color: #FFF;
+}
+
+/* ADD CONTENT AFTER AN ELEMENTE */
+.plus::after {
+    content: "+";
+    background-color: lightskyblue;
+    border-radius: 50%;
+}
+
+/* ADD CONTENT BEFORE AN ELEMENTE */
+.plus::before {
+    content: "-";
+    background-color: orangered;
+    border-radius: 50%;
+}
+
+/* EDIT THE MARKES OF LIST ITEMS */
