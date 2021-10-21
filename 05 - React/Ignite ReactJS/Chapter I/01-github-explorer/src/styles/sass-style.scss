@@ -63,3 +63,32 @@ li a:hover {
     color: orangered;
 }
 
+/* Counter Styling */
+
+.counterBox {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    height: 40px;
+    width: 200px;
+    border: 1.5px solid orangered;
+    border-radius: 5px;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    button {
+        margin: 0;
+        width: 71%;
+        border-left: 1px solid orangered;
+        border-right: none;
+        border-radius: 0 5px 5px 0;
+    }
+}

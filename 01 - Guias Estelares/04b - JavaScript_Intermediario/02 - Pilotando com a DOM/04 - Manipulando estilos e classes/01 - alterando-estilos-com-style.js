@@ -4,6 +4,12 @@
 */
 
 const element = document.querySelector('body')
+const title = document.querySelector('h1')
+
 
 element.style.backgroundColor = "#FF1155"
 console.log(element.style.backgroundColor)
+
+
+title.style.color = '#FFF';
+title.style.cursor = 'pointer';

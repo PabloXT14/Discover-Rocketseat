@@ -5,4 +5,4 @@
 
 const element = document.querySelector('h1')
 
-element.innerHTML = 'Bem-vindo ao meu <em>BLOG</em>'
+element.innerHTML = 'Bem-vindo ao meu <em>BLOG🎯</em>'

@@ -12,8 +12,8 @@ console.log(elem.childNodes)
 console.log(elem.children)
 
 /*
-    - firstChild: semelhante ao 'childNode', no entanto, só retorna o 1º elemento filho
-    - firstElementChild: semelhante ao 'children', no entanto, só retorna o 1º elemento filho
+    - firstChild: semelhante ao 'childNode' (considera os espaços em brancos no HTML), no entanto, só retorna o 1º elemento filho
+    - firstElementChild: semelhante ao 'children'( não considera os espaços em brancos no HTML), no entanto, só retorna o 1º elemento filho
 
 */
 

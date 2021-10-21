@@ -6,7 +6,7 @@
 */
 
 const divContent = document.querySelector('div')
-divContent.setAttribute('id','estilo')
+divContent.setAttribute('id', 'estilo')
 console.log(divContent)
 
 const divContentID = document.querySelector('#estilo')

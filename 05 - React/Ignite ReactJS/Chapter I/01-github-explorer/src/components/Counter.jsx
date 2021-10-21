@@ -9,10 +9,14 @@ export function Counter() {
 
     return (
         <div>
-            <h2>{counter}</h2>
-            <button type="button" onClick={increment}>
-                Increment
-            </button>
+            <h2>Contador</h2>
+            <div className="counterBox">
+                <span>{counter}</span>
+                <button type="button" onClick={increment}>
+                    Increment
+                </button>
+            </div>
+
         </div>
     );
 }

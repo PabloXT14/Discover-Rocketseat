@@ -1,6 +1,6 @@
 /* ========= Selecionando Elementos ========= */
 
-/* getElementById() */ 
+/* getElementById() */
 // document.getElementById('nome-do-id')
 // const element = document.getElementById('blog-title')
 // console.log(element)
@@ -9,7 +9,8 @@
 /* getElementsByClassName() */
 // document.getElementsByClassName('nome-da-classe') => seleciona todos os objetos que possuem tal classe (retorna em formato HTMLCollection)
 // const element = document.getElementsByClassName('paragraph')
-// console.log(element)
+// console.log(element);
+// console.log(element[0]);//selecionando elemento espeficio dentro da coleção/array
 
 
 /* getElementsByTagName() */
@@ -31,6 +32,7 @@
 // busca por seletor, semelhante ao css, é um dos tipos mais versáteis, e diferente do querySelector(), este retorna uma lista de todos os elementos HTML que possuem determinado seletor (em formato NodeList)
 // const elements = document.querySelectorAll('meta')
 // console.log(elements)
+// console.log(elements[2])
 // Também pode-se utilizar o querySelectorAll diretamente em um forEach, para acessar todos os elementos que possui
 // elements.forEach(el => console.log(el))
 

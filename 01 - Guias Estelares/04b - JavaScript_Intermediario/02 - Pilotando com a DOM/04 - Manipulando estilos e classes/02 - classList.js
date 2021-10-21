@@ -6,9 +6,17 @@
         - classList.toggle('classe') => se tiver a classe remove, se não há tiver à adiciona.
 */
 
-const element  = document.querySelector('body')
+const element = document.querySelector('body')
 
 element.classList.add('active', 'green')
 // console.log(element.classList)
 element.classList.remove('active')
 element.classList.toggle('active')
+
+
+const btn = document.querySelector('button')
+btn.addEventListener('click', changePageColor);
+
+function changePageColor() {
+    element.classList.toggle('green');
+}
