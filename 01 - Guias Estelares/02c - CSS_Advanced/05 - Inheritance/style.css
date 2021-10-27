@@ -1,0 +1,60 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* INHERITANCE(HERANÇA)
+- Em css temos algumas maneira de estilizar um elemento através de uma herança específica.
+    * inherit: especifica que uma propriedade de um elmento deve herdar seu valor de seu elemento pai.
+    * initial: é utilizado para definir uma propriedade CSS para o seu valor padrão, ou seja, definido pelo browser. 
+    * unset: se um elemento herda um style o <unset> faz com que não herde, caso contrario o <unset> faz com que o elemento herde o style.
+    * revert: verte o style atual de um elemento para o style anterior.
+
+*/
+
+
+#container {
+    color: red;
+}
+
+p {
+    text-align: center;
+    font-size: 50px;
+    color:green;
+}
+
+/* INHERIT */
+/* Sets value to inherit from container */
+.inherit {
+    color: inherit;
+}
+
+/* INITIAL */
+/* Sets value back to the default browser style */
+.initial {
+    color: initial;
+}
+
+/* UNSET */
+/* If the element is naturally inherited acts like inherit, otherwise acts like
+initial */
+.unset {
+    color: unset;
+}
+
+/* REVERT */
+/* If user has defined style, revert back to it otherwise use default browser
+styles */
+.revert {
+    color: revert;
+}

@@ -1,7 +1,6 @@
 import { Counter } from './components/Counter';
 import { RepositoryList } from './components/RepositoryList';
 import './styles/global.css';
-import './styles/sass-style.scss';
 
 
 export function App() {
@@ -17,7 +16,9 @@ export function App() {
     return (
         <>
             <RepositoryList />
-            <Counter />
+            {/* 
+                <Counter /> => utilizado para estudo de <state>
+             */}
         </>
     );
 }

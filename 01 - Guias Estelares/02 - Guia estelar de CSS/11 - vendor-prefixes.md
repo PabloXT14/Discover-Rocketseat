@@ -1,7 +1,10 @@
 # Vendor Prefixes
 
-Permite que browsers adicionem `features`
-a fim de colocar um uso alguma novidade que vemos no CSS
+Permite que browsers adicionem `features`, a fim de colocar um uso alguma novidade que vemos no CSS.
+
+```
+OBS: dependendo do navegador que utlizamos as estilizações padrões (para elementos que não foram estilizados por nós via css) irá mudar de browser para browser
+```
 
 # Exemplo
 
