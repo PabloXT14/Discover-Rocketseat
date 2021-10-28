@@ -75,7 +75,7 @@ import React, { useEffect, useState } from 'react';
 //                  <button onClick={this.add}>Add</button>
 //                  <button onClick={this.less}>Less</button>
 //              </div>
-            
+
 //          );
 //      }
 //  }
@@ -105,23 +105,23 @@ function CounterComponent(props) {
         * action: ação/função que o useEffect vai realizar.
             OBS: utilize aqui um return() quando quiser que um component suma da tela.
         * stateVerify: estado/variável do estado que o useEffect vai verificar em tempo real para alterar o valor
-            OBS: use [] para o useEffect verificar somento uma vez/setar o valor inicial de um state (igual ao componentDidMount), mas lembre-se de declarar antes o useEffect == componentDidUpdate .
+            OBS: use [] para o useEffect verificar somento uma vez/setar o valor inicial de um state (igual ao componentDidMount), mas lembre-se de declarar antes do useEffect == componentDidUpdate .
     */
 
     //useEffect == componentDidMount (sentando valor inicial com useEffect)
-    useEffect(()=> {
+    useEffect(() => {
         setCount(JSON.parse(localStorage.getItem("count")))
     }, [])
 
     //useEffect == componentDidUpdate (setando/atualizando valor de um state)
-    useEffect(()=>{
+    useEffect(() => {
         localStorage.setItem("count", count);
     }, [count])
 
     //useEffect == componentWillUnmount (excluindo um elemento da tela)
-    useEffect(()=> {
+    useEffect(() => {
         //Este return só é executado quando o component <Counter> some da tela
-        return ()=> {
+        return () => {
             console.log("Contador Excluido!!!")
         }
 
@@ -137,7 +137,7 @@ function CounterComponent(props) {
         setCount(count - 1)
     }
 
-    return(
+    return (
         <div className="counter">
             <h1>Counter <span>{count}</span></h1>
             <button onClick={add}>Add</button>
