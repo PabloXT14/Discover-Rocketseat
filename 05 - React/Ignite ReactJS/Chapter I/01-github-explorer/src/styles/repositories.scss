@@ -1,5 +1,16 @@
+:root {
+    --color-Background: #121214;
+    --color-Cards: #202024;
+    --color-Light-Gray: #87868B;
+}
+
+body {
+    background-color: var(--color-Background);
+}
+
 section.repository-list {
     margin: 40px;
+    color: #FFF;
 
     h1 {
         margin-bottom: 16px;
@@ -14,13 +25,14 @@ section.repository-list {
                 margin-top: 20px;
             }
 
-            border: 1px solid #ccc;
+            // border: 1px solid #ccc;
             border-radius: 3px;
             padding: 10px;
+            background-color: var(--color-Cards);
 
             p {
                 font-size: 14px;
-                color: #444;
+                color: var(--color-Light-Gray);
                 margin-top: 8px;
             }
 
