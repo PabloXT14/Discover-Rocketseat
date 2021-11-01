@@ -1,0 +1,54 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* BACKGROUND PROPERTIES */
+div {
+    width: 500px;
+    height: 500px;
+    border: 10px dotted grey;
+    margin: 50px auto;
+    background-color: orangered;
+
+    /* background-image: url(assets/sonic.jpg); */
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    /* seta o valor do tamanho do width de uma image do background, valores padrao: contain (largura do container), 
+    cover(preenche toda a area do container com a image, podendo aumentar a scale da image)*/
+
+    background-position: center;
+    /* seta a posicao do backgroun-img em relacao ao container */
+
+    /* background-attachment: fixed; */
+    /* A propriedade background-attachment especifica se a imagem de plano de fundo deve rolar ou ficar fixa(não rola com o resto da página): */
+
+    /* background-clip: padding-box; */
+    /* propriedade define até que ponto o plano de fundo (cor ou imagem) deve se estender em um elemento/container. */
+
+    /* SHORTHAND BACKGROUND */
+    /* The shorthand CSS Background property order: 
+        background-image 
+        background-position / background-size 
+        background-repeat 
+        background-attachment 
+        background-origin
+        background-clip 
+        background-color 
+    */
+    background: url(assets/sonic.jpg) center/cover no-repeat scroll greenyellow;
+
+}
+
