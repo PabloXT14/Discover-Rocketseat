@@ -1,0 +1,33 @@
+/* COMPATIBILIDADE COM BROWSERS
+- Como sabemos as tecnologias (HTML, CSS, JS) constantemente atualizam trazendo novas funcionalidades, no entanto, os browser não atualizam ao mesmo momento para se adaptarem a essas novas funcionalidades (como new features no CSS)
+- Por isso caso você utilize uma nova feature do CSS, HTML ou JS que não enteja funcionando em determinado browser, existem prefixos de cada browser para simular essa nova feature, para saber o prefixo de cada browser basta utilizar o site:
+    * https://caniuse.com/
+*/
+
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* UTILIZANDO PREFIXES */
+div {
+    width: 420px;
+    height: 300px;
+    -webkit-transform: skew(30deg, 30deg) scale(0.7,1);/*for Google*/
+    -moz-transform: skew(30deg, 30deg) scale(0.7,1);/*for Firefox*/
+    -ms-transform: skew(30deg, 30deg) scale(0.7,1);/*for IE*/
+    transform: skew(30deg, 30deg) scale(0.7,1);
+
+    background-color: dodgerblue;
+}

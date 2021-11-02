@@ -21,22 +21,25 @@ div {
     margin: 50px auto;
     background-color: orangered;
 
-    /* background-image: url(assets/sonic.jpg); */
+    background-image: url(assets/sonic.jpg);
 
     background-repeat: no-repeat;
 
-    background-size: cover;
-    /* seta o valor do tamanho do width de uma image do background, valores padrao: contain (largura do container), 
-    cover(preenche toda a area do container com a image, podendo aumentar a scale da image)*/
+    background-size: contain;/*test: 200px*/
+    /* seta o valor do tamanho do width de uma image do background, valores padrao: 
+    contain (largura do container), 
+    cover(preenche toda a area do container com a image, podendo aumentar a scale da image)
+    */
 
-    background-position: center;
+    background-position: center;/*test: center rigth */
     /* seta a posicao do backgroun-img em relacao ao container */
 
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     /* A propriedade background-attachment especifica se a imagem de plano de fundo deve rolar ou ficar fixa(não rola com o resto da página): */
 
-    /* background-clip: padding-box; */
+    background-clip: padding-box;
     /* propriedade define até que ponto o plano de fundo (cor ou imagem) deve se estender em um elemento/container. */
+
 
     /* SHORTHAND BACKGROUND */
     /* The shorthand CSS Background property order: 
@@ -48,7 +51,8 @@ div {
         background-clip 
         background-color 
     */
-    background: url(assets/sonic.jpg) center/cover no-repeat scroll greenyellow;
+    /* background: url(assets/sonic.jpg) center/cover no-repeat scroll greenyellow; */
+    background: url(./assets/sonic.jpg) center/200px no-repeat scroll padding-box dodgerblue;
 
 }
 

@@ -15,4 +15,4 @@ function Wrapper() {
     return <h1>Hellow World!!!</h1>;
 }
 
-render(<App/>, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
