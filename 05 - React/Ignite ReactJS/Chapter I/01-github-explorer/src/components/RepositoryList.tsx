@@ -18,9 +18,16 @@ API do Github (public):
     * api.github.com/users/pabloxt14/repos (retorna os repositorios publicos de um usuario)
 */
 
+//Tipagem do state repositories
+interface Repository {
+    name: string;
+    description: string;
+    html_url: string;
+}
+
 
 export function RepositoryList() {
-    const [repositories, setRepositories] = useState([]);
+    const [repositories, setRepositories] = useState<Repository[]>([]);//<> => serve para determinar a tipagem do estado
 
 
     //Utilizando useEffect

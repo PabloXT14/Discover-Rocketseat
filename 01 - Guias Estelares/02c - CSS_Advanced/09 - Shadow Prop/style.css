@@ -1,0 +1,85 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* SHADOW PROP */
+/*  
+    - Tanto o text-shadow quanto o box-shadow poderam ter as seguintes valores:
+    offset-x | offset-y | blur-radius | spread-radius | color 
+
+    * spread-radius: raio de propagacao da shadow, 
+    * obs: o <blur-radius> e <spread-radius> sao valores opcionais
+
+    - <inset>: aplica sombra na parte interna da box, SOMENTE em BOX
+*/
+
+
+/* Text Shadow */
+#text-shadow {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 5px 2px 5px gray; /* [right] [down] [blur] [color] */
+    /* 
+        OBS: pode colocar mais de uma sombra em um texto/box utilizando a vírgula para separar uma sombra da outra 
+    */
+}
+
+#outline-shadow {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 30px;
+    color: lime;
+    text-shadow: 0px -2px black, /*[top]*/
+                 2px 0px black,  /*[right]*/
+                 0px 2px black,  /*[bottom]*/
+                 -2px 0px black; /*[left]*/
+                 
+    /* -webkit-text-stroke: 1px black; */
+    /* cria um outline envolta do text (seu uso nao e muito recomendado devido a falta de compatibilidade com alguns browsers) */
+}
+
+/* Box Shadow */
+#box-shadow {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 20px auto;
+    box-shadow: 5px 5px 7px gray,/* [right] [down] [blur] [color] */
+          inset 5px 5px 7px gray;/* inset:  aplica sombra na parte interna da box */ 
+
+}
+
+
+button {
+    display: block;
+    margin: 30px auto;
+    width: 140px;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: #FFF;
+    box-shadow: 0 10px 6px -6px #777;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}

@@ -25,7 +25,7 @@ array.map(function(currentValue, index, arr), thisValue)
     }
 */
 function createPerson(name, age) {
-    return {name, age}
+    return { name, age }
 }
 
 let people = [
@@ -51,15 +51,15 @@ function checkAge(currentPerson) {
 
 //2ª demonstração/uso de map()
 const persons = [
-    {firstname : "Malcom", lastname: "Reynolds"},
-    {firstname : "Kaylee", lastname: "Frye"},
-    {firstname : "Jayne", lastname: "Cobb"}
+    { firstname: "Malcom", lastname: "Reynolds" },
+    { firstname: "Kaylee", lastname: "Frye" },
+    { firstname: "Jayne", lastname: "Cobb" }
 ];
 
 //console.log(persons.map(getFullName));
 
 function getFullName(item) {
-    return [item.firstname,item.lastname].join(" ");
+    return [item.firstname, item.lastname].join(" ");
 }
 
 

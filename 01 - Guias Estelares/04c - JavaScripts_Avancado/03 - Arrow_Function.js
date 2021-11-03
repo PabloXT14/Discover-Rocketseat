@@ -41,4 +41,33 @@ let numero = {
     d: dobro
 }
 
-numero.d();
+//numero.d();
+
+function climbingLeaderboard(ranked, player) {
+
+    let positionRanks = player.map((score) => {
+
+        let actualRank = 0;
+
+        for (let i = 0; i < ranked.length; i++) {
+
+            //Check rank
+            if (ranked[i - 1] !== ranked[i]) {
+                actualRank += 1;
+            }
+
+            //Check points
+            if (score >= ranked[i]) {
+                break;
+            }
+
+        }
+
+        //Caso a point do player seja menor que a ultima posicao, cria um novo rank
+        return actualRank = score < ranked[ranked.length - 1] ? actualRank += 1 : actualRank;
+    });
+
+    return positionRanks;
+}
+
+console.log(climbingLeaderboard([100, 90, 90, 80, 75, 60], [50, 65, 77, 90, 102]));
