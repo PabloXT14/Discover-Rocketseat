@@ -14,6 +14,13 @@ h2 {
 }
 
 /* GRADIENTS */
+/*
+    CSS define três tipos de gradientes:
+    * Linear Gradients (goes down/up/left/right/diagonally)
+    * Radial Gradients (defined by their center)
+    * Conic Gradients (rotated around a center point)
+
+*/
 
 div {
     width: 400px;
@@ -23,22 +30,86 @@ div {
     margin: 30px auto;
 
     /* LINEAR-GRADIENT */
-    /* background-image: linear-gradient(234deg, orangered 35%, dodgerblue); */
+    /* 
+    - Sintaxe:
+        background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+    - Using Angles:
+        If you want more control over the direction of the gradient, you can define an angle, instead of the predefined directions (to bottom, to top, to right, to left, to bottom right, etc.). A value of 0deg is equivalent to "to top". A value of 90deg is equivalent to "to right". A value of 180deg is equivalent to "to bottom".
+        * OBS: em CSS o sentido dos angulos é "sentido horário" e o 0deg é no meio do top 
+    - Repeating a linear-gradient:
+        The repeating-linear-gradient() function is used to repeat linear gradients (cria uma repetição do efeito de gradiente, de acordo com as porcentagens)
+     */
+
+     /* background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
+    background-image: linear-gradient(270deg, orangered 35%, dodgerblue);
     /* background-image: repeating-linear-gradient(234deg, orangered 35%, dodgerblue 50%); */
-
-    /* repeat: cria uma repetição do efeito de gradiente, de acordo com as porcentagens */
-
 
 
     /* RADIAL GRADIENT */
-    /* background-image: radial-gradient(closest-side at 100px 100px, darkorange 30%, yellow); */
-    background-image: repeating-radial-gradient(farthest-side at 100px 100px, darkorange 30%, yellow 50%); 
+    /*
+    - Sintaxe: 
+        background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+        * OBS: By default, shape is ellipse, size is farthest-corner, and position is center
+    - Set Shape:
+        O parametro <sharp> no radial-gradient() define a forma. Pode ter o value de <circle> ou <ellipse>(este é o padrão)
+        * OBS: também vai depender do formato do container
+        Ex:
+            background-image: radial-gradient(circle, red, yellow, green);
+    - Use of Different Size Keywords:
+        O parâmetro <size> define o tamanho do gradiente. Pode ter quatro valores:
 
-    /* 
-    closest-side at    (lado mais perto (x, y))
-    farthest-side at   (lado mais longe (x, y))
-    closest-corner at  (canto mais perto (x, y))
-    farthest-corner at (canto mais longe (x, y))
-     */
-    /* repeat: cria uma repetição do efeito de gradiente, de acordo com as porcentagens */
+        * closest-side at    (lado mais perto (x, y))
+        * farthest-side at   (lado mais longe (x, y))
+        * closest-corner at  (canto mais perto (x, y))
+        * farthest-corner at (canto mais longe (x, y))
+        Ex:
+             background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+
+    - Repeating a radial-gradient:
+        Cria uma repetição do efeito de gradiente, de acordo com as porcentagens
+
+    */
+
+    /* background-image: radial-gradient(circle, orangered, yellow, green); */
+    /* background-image: radial-gradient(closest-side at 100px 100px, darkorange 30%, yellow); */
+    /* background-image: repeating-radial-gradient(farthest-side at 100px 100px, darkorange 30%, yellow 50%);  */
+
+    
+    /* CONIC GRADIENTS */
+    /*
+    - Sintaxe:
+        background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+        * By default, angle is 0deg and position is center
+
+    - Conic Gradient: Three Colors and Degrees:
+        Ex:
+            background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+    - Conic Gradient With Specified From Angle:
+        O [from angle] especifica um ângulo pelo qual todo o gradiente cônico é girado
+        Ex: 
+            background-image: conic-gradient(from 90deg, red, yellow, green);
+    - Conic Gradient With Specified Center Position:
+        O [at position] especifica o centro do gradiente cônico (em x, y).
+        Ex:
+            background-image: conic-gradient(at 60% 45%, red, yellow, green);
+    - Repeating a Conic Gradient:
+        A função repeating-conic-gradient() é usada para repetir gradientes cônicos:
+        Ex:
+            background-image: repeating-conic-gradient(red 10%, yellow 20%);
+    */
+
+    /* background-image: conic-gradient(orangered 45deg, greenyellow 90deg, dodgerblue 210deg); */
+    /* Create Pie Charts */
+    /* background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg, blue 360deg); */
+
+    /* Determinando angulo e centro de origem */
+    /* background-image: conic-gradient(from 90deg at 250px 150px,red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg, blue 360deg); */
+
+
+    border-radius: 50%;
+
+
+
+
+
 }
