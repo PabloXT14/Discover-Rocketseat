@@ -1,0 +1,67 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* TRANSFORM PROPERTY */
+/*
+- Definição:
+    A propriedade <transform> aplica uma transformação 2D ou 3D a um elemento. Esta propriedade permite girar, dimensionar, mover, inclinar, etc., elementos
+- Propriedades do Transform:
+    * translate(x, y): define uma movimentação/transição 2D de um elemento, suas variações são:
+        - translate3d(x, y, z)
+        - translateX(x)
+        - translateY(y)
+        - translateZ(z)
+    * scale(x,y): permite redimensional a escala em 2D de um elemento, suas variações são:
+        - scale3d(x, y, z)
+        - scaleX(x)
+        - scaleY(y)
+        - scaleZ(z)
+    * rotate(angle): permite rotacionar em um certo angulo um elem., suas variações são:
+        - rotate3d(x, y, z)
+        - rotateX(x)
+        - rotateY(y)
+        - rotateZ(z)
+    * skew(x-angle, y-angle): permite inclinar um elem. em certo eixo, suas variações são:
+        - skewX(x)
+        - skewY(y)
+    * matrix: é um shorthand das seguintes propriedades:
+        transform: matrix ( [scaleX], [skewY], [skewX], [scaleY], [translateX], [translateY], );
+        
+*/
+
+div {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background-color: dodgerblue;
+    color: #FFF;
+
+    /* Transform Props */
+    /* transform: rotate(45deg);
+    transform: scale(1.5);
+    transform: skewY(20deg);
+    transform: translate(20px, -30px);
+    transform: matrix(2, 1, 0, 2, 10, -10); */
+    
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+div:hover {
+    /* transform: rotate(360deg); */
+    transform: rotateX(360deg);
+    /* transform: rotateY(360deg); */
+}
