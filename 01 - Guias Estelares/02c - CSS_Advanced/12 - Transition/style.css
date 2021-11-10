@@ -1,0 +1,53 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* TRANSITION */
+
+div {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background-color: orangered;
+    cursor: pointer;
+
+    transition-property: width; /*propriedade(s) nas quais aplicaremos transição*/
+    transition-delay: 1s; /* tempo de delay para executar a transição */
+    transition-duration: .5s; /* tempo de duração da transição */
+    transition-timing-function: linear;
+    /*
+    <transition-timing-function>: especifica a curva de velocidade do efeito de transição, seus values são:
+        * <ease> - especifica um efeito de transição com início lento, depois rápido e, a seguir, fim lento (é o padrão)
+        * <linear> - especifica um efeito de transição com a mesma velocidade do início ao fim
+        * <ease-in> - especifica um efeito de transição com um início lento
+        * <ease-out> - especifica um efeito de transição com um final lento
+        * <ease-in-out> - especifica um efeito de transição com início e fim lentos
+        * <cubic-bezier(n,n,n,n)> - permite que você defina seus próprios valores em uma função de Bezier cúbico
+            - sites com efeitos de cubic-bezier: https://cubic-bezier.com/#.17,.67,.83,.67
+    */
+
+    /*
+        SHORTHAND:
+        transition: [property] [duration] [timing-function] [delay: not required]
+    */
+    transition: all .5s linear;
+}
+
+div:hover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    transform: rotate(180deg);
+}
