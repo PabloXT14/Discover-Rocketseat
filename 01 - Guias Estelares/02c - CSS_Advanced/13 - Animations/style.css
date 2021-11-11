@@ -1,0 +1,208 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #FFF;
+}
+
+body {
+    background-color: #121214;
+}
+
+
+
+/* ANIMATION */
+
+div.tutorial {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    margin: auto 35%;
+    position: relative;
+
+    /* ANIMATION PROPS */
+    animation-name: changeForm; /* define o nome da animação */
+    animation-duration: 4s; /* define a duração da animação */
+    animation-timing-function: linear; /* especifica a curva de velocidade do efeito de transição (semelhante ao transition, reveja o transition para ver os values possiveis)*/
+    animation-delay: 2s; /* tempo de delay para executar a animation */
+    animation-iteration-count: infinite; /* define o numero de vezes do ciclo de uma animation (1: default) */
+    animation-direction: alternate; /* define se um animation deve ser reproduzido para frente, para tras ou em ciclos alternados */
+    animation-fill-mode: backwards;/* especifica um estilo para o elemento de destino quando a animação não está sendo reproduzida (antes de começar, depois de terminar ou ambos) */
+    animation-play-state: running;/* define o estado da animation, se está executando ou pausada */
+
+
+    /* SHORTHAND ANIMATION (as 4 ultimas não são required) */
+    /* 
+        animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state] 
+    */
+    animation: changeForm 4s linear 2s infinite alternate backwards running;
+
+
+}
+
+
+/* Declarando uma animação (key-word <@keyframes>) */
+@keyframes changeForm {
+    /*  Maneira de usar Animation (litte old)
+        from {background-color: orangered;}
+        to {background-color: dodgerblue;} 
+    */
+
+    /* Maneira atual (+usada) */
+    0% {
+        background-color: orangered;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background-color: gold;
+        left: 400px;
+        top: 0;
+    }
+    50% {
+        background-color: lime;
+        border-radius: 50%;
+        left: 400px;
+        top: 400px;
+    }
+    75% {
+        background-color: dodgerblue;
+        left: 0;
+        top: 400px;
+    }
+    100% {
+        background-color: purple;
+        border-radius: 0px;
+        left: 0;
+        top: 0;
+    }
+
+}
+
+
+/* LOADING SCREEN ANIMATION */
+div#circle {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid orangered;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+    position: relative;
+
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+    animation: circle 2s infinite forwards;
+}
+
+div#square {
+    width: 75px;
+    height: 75px;
+    border: 5px solid limegreen;
+    position: absolute;
+
+    animation-name: square;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+    animation: square 2s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes circle {
+    0% {border-color: orangered; transform: scale(1);}
+    25% {border-color: gold; transform: scale(1.1);}
+    50% {border-color: lime; transform: scale(1.3);}
+    75% {border-color: dodgerblue; transform: scale(1.1);}
+    100% {border-color: purple; transform: scale(1);}
+}
+
+@keyframes square {
+    0% {transform: rotate(0deg)}
+    25% {border-color: aqua; border-width: 10px;}
+    50% {border-color: coral; border-width: 20px;}
+    75% {border-color: yellow; border-width: 40px;}
+    100% {transform: rotate(360deg); border-width: 5px;}
+}
+
+
+
+/* SUPER MARIO ANIMATION */
+div#container {
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+}
+
+div#blockContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#mario {
+    width: 200px;
+    bottom: 40px;
+    right: 0px;
+    position: absolute;
+    z-index: 1;
+}
+
+#block {
+    width: 100px;
+    z-index: 2;
+    opacity: 1;
+    animation: jump 0.6s linear infinite alternate;
+}
+
+
+#coin {
+    width: 70px;
+    z-index: 1;
+    position: relative;
+    right: 85px;
+    bottom: 90px;
+    animation: coin 0.9s linear infinite forwards;
+}
+
+@keyframes jump {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0px);}
+}
+
+@keyframes coin {
+    0% {
+        transform: translateY(0px) rotateY(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-100px) rotateY(180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-100px) rotateY(360deg);
+        opacity: 0;
+    }
+}
