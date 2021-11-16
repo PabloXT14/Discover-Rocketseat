@@ -19,16 +19,16 @@ body {
     height: 100vh;
 }
 
-img {
-    display: block;
+.containerImg {
+    width: 100%;
     margin: 20px auto;
-    padding: 20px;
+    text-align: center;
 }
 
 
 /* MEDIA QUERIES */
 /*
-
+As Media Queris (consultas de mídia) são úteis quando você deseja modificar seu site ou aplicativo, dependendo do tipo geral de um dispositivo (como impressão vs. tela) ou características e parâmetros específicos (como resolução da tela ou largura da janela de visualização do navegador )
 */
 
 /* Permite editar a estilização da pagina para o print/impressão */

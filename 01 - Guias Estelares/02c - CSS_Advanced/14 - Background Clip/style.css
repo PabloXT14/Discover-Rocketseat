@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', Arial, Helvetica, sans-serif; */
+}
+
+
+/* === BACKGROUND CLIP === */
+/*
+ - A propriedade <background-clip> define até que ponto o fundo (cor ou imagem) deve se estender em um elemento
+ - Sintaxe:
+    background-clip: text|border-box|padding-box|content-box|initial|inherit;
+*/
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 8em;
+    text-align: center;
+
+    background-image: url("./images/space-img.jpg");
+    background-size: cover;
+
+    background-clip: text;/* faz com que o background fique atras do texto */
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 8em;
+    text-align: center;
+
+    background-image: url("https://media.giphy.com/media/l0CLUrZiblFUBMMrC/giphy.gif");
+    background-size: cover;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+p {
+    font-size: 3.9em;
+    padding: 20px;
+    text-align: center;
+
+    background-image: linear-gradient(to right, orangered, yellow);
+    background-size: cover;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
