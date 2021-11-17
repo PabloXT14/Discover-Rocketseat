@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lessons</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+            place-content: center;
+        }
+
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            background-color: dodgerblue;
+            width: 200px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 3px 10px 1px grey;
+        }
+
+        .calculator input,
+        .calculator button {
+            margin-bottom: 5px;
+        }
+
+        .calculator span {
+            display: block;
+            margin: 10px auto;
+            background-color: #FFF;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="number" id="n1" placeholder="Base">
+        <input type="number" id="n2" placeholder="Exponte">
+        <button class="calc">Calcular</button>
+        <span class="result">00</span>
+    </div>
+
+    <script src="./Library-Math.js"></script>
+</body>
+
+</html>

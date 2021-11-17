@@ -1,0 +1,113 @@
+/* ===== Global Styling ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* CSS VARIABLES */
+/* :root => representa a tag/documento <html> */
+:root {
+    /* Exemplos de como utilizar as variaveis em css */
+    --mainColor: #aa4466;
+    --gradientBG: linear-gradient(to bottom right, #4951FF, #0ACFFE);
+    --mainFont: 'Poppins', Arial, sans-serif;
+    --boxShadow: 2px 5px 10px grey;
+    --borderRadius: 8px;
+
+    --newColor: dodgerblue;
+    --newBorder: 2px solid var(--newColor);
+}
+
+
+body {
+    margin: 0 50px;
+}
+
+
+
+/* ===== Styling Restaurant Page ==== */
+
+/* Header */
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Daclarando variaveis para apenas um scope especifico (ex: so para elementos dentro do header) */
+    --colorOrangeRed: orangered;
+
+}
+
+header #logo {
+    font-family: 'Dancing Script';
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--mainColor, dodgerblue);/* o segundo parâmetro funciona caso o primeiro nao seja encontrado */
+
+    /* border: var(--newBorder); */
+}
+
+header nav {
+    font-size: 1.7em;
+    cursor: pointer;
+
+    color: var(--colorOrangeRed);
+}
+
+/* Main */
+
+/* Title */
+.title {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: orangered; */
+}
+
+.title span {
+    font-size: 4em;
+    font-weight: 700;
+}
+
+/* Menu */
+.menu {
+    width: 100%;
+}
+
+.menu .item {
+    width: 100%;
+    margin-bottom: 25px;
+
+    padding: 5px;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+}
+
+.item .mainInformation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainInformation .menuItem {
+    text-transform: uppercase;
+    color: var(--mainColor);
+}
+
+.mainInformation .menuPrice {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.item .description {
+    width: 100%;
+    text-align: justify;
+}

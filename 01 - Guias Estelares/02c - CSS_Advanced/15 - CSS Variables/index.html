@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lessons</title>
+    <!-- CSS link -->
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Fonts Awesome -->
+    <script src="https://kit.fontawesome.com/32697e770a.js" crossorigin="anonymous"></script>
+    <!-- Script Menu Items -->
+    <script>
+        window.onload = () => {
+            const menu = document.querySelector(".menu");
+
+            const items = [
+                {
+                    name: "Soup of the Day",
+                    price: 6,
+                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, ipsam sunt. Sint laudantiumasperiores ab, velit, eum deserunt et consequatur voluptas mollitia labore quam."
+                },
+                {
+                    name: "Corn Chowder",
+                    price: 11,
+                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, ipsam sunt. Sint laudantiumasperiores ab, velit, eum deserunt et consequatur voluptas mollitia labore quam."
+                },
+                {
+                    name: "Steamed Clams",
+                    price: 15,
+                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, ipsam sunt. Sint laudantiumasperiores ab, velit, eum deserunt et consequatur voluptas mollitia labore quam."
+                },
+                {
+                    name: "Potato Wedges",
+                    price: 10,
+                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, ipsam sunt. Sint laudantiumasperiores ab, velit, eum deserunt et consequatur voluptas mollitia labore quam."
+                }
+            ]
+
+            let newItems = ''
+            items.forEach(item => {
+                newItems += `
+                <div class="item">
+                    <div class="mainInformation">
+                        <h2 class="menuItem">${item.name}</h2>
+                        <span class="menuPrice">$${item.price}</span>
+                    </div>
+                    <div class="description">
+                        ${item.description}
+                    </div>
+                </div>`;
+
+            })
+
+            menu.innerHTML = newItems;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- <h2>How to use CSS Variables</h2> -->
+    <header>
+        <h1 id="logo">Cascades</h1>
+        <nav>
+            <i class="fas fa-bars"></i>
+        </nav>
+    </header>
+    <main>
+        <section class="title">
+            <span>
+                <i class="fas fa-utensils"></i> menu
+            </span>
+        </section>
+        <section class="menu">
+            <!-- <div class="item">
+                <div class="mainInformation">
+                    <h2 class="menuItem">Soup of the Day</h2>
+                    <span class="menuPrice">$6</span>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, ipsam sunt. Sint laudantium
+                    asperiores ab, velit, eum deserunt et consequatur voluptas mollitia labore quam. Maxime quisquam
+                    optio labore sequi velit.
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="mainInformation">
+                    <h2 class="menuItem">Soup of the Day</h2>
+                    <span class="menuPrice">$6</span>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, ipsam sunt. Sint laudantium
+                    asperiores ab, velit, eum deserunt et consequatur voluptas mollitia labore quam. Maxime quisquam
+                    optio labore sequi velit.
+                </div>
+            </div> -->
+        </section>
+    </main>
+
+</body>
+
+</html>
