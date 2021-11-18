@@ -1,0 +1,101 @@
+/* === Global Settings Styling === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    /* font-family: 'Roboto'; */
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+h1 span {
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+
+
+/* CONTAINER */
+#container {
+    width: 90%;
+    height: 400px;
+    background-color: #4524FB;
+    margin: 80px auto 0;
+    border-radius: 8px;
+
+    /* ==== Flex Container Props ==== */
+
+    display: flex;
+
+    flex-direction: row;
+    /* fluxo de direção dos itens dentro do container, some values: 
+        - row (default)
+        - column
+        - row-reverse (os itens começão do final da linha)
+        - column-reverse (os itens começão do final da coluna)
+    */
+
+    flex-wrap: nowrap;
+    /* Por padrão, os flex items vão todos tentar se encaixar em uma só linha. Com o <flex-wrap> você pode modificar esse comportamento e permitir que os ítens quebrem para uma linha seguinte conforme for necessário, some values:
+        - nowrap (default): todos os flex items ficarão em uma só linha
+        - wrap: os flex items vão quebrar em múltiplas linhas, de cima para baixo
+        - wrap-reverse: os flex items vão quebrar em múltiplas linhas de baixo para cima
+    */
+
+    flex-flow: row nowrap;
+    /* A propriedade <flex-flow> é uma propriedade shorthand (uma mesma declaração inclui vários valores relacionados a mais de uma propriedade) que inclui <flex-direction> e <flex-wrap>. Determina quais serão os eixos pricipal e transversal do container. O valor padrão é row nowrap
+        Sintaxe:
+            flex-flow: [flex-direction] [flex-wrap]
+        Prosp/Value:
+            - row nowrap (default)
+            - row wrap
+            - column nowrap
+            - column wrap
+    */
+
+    justify-content: flex-start;
+    /* Esta propriedade define o alinhamento dos ítens ao longo do main-axios(eixo principal). Values:
+        - flex-start (default): os ítens são alinhados junto à borda de início (start) de acordo com qual for a <flex-direction> do container
+        - flex-end: os ítens são alinhados junto à borda final (end) de acordo com qual for a <flex-direction> do container
+        - center: os ítens são centralizados na linha
+        - space-between: os ítens são distribuídos de forma igual ao longo do container(com espaços entre si); o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha
+        - space-around: os ítens são distribuídos na linha com o mesmo espaçamento entre eles. No entanto, como todos os itens tem a mesma margem ao redor algumas partes ficam com mais espaçamento que outras
+        - space-evenly: os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha/container (incluindo entre os ítens e as bordas) seja igual.
+    */
+
+}
+
+.item {
+    width: 200px;
+    height: 100px;
+    padding: 20px 30px;
+    background-color: rgb(33, 190, 28);
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #222;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    color: #FFF;
+}
+
+
+
+
+
