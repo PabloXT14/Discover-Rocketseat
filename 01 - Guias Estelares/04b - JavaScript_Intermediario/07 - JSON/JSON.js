@@ -4,7 +4,7 @@
 - JSON significa "J"ava "S"cript "O"bject "N"otation.
 - JSON é um *formato de texto para armazenamento e transporte de dados. 
 - JSON é "autodescritivo" e fácil de entender
-- Resumo: JSON é uma função/forma de converter um Objeto JavaScript para o formato string, para podermos enviar os dados desse objeto para outro lugar (ex: um banco de dados, servidor). Assim sendo, o JSON torna possível armazenar objetos JavaScript como texto.
+- Resumo: JSON é uma função/forma de converter um Objeto JavaScript(ou outro tipo de dado, ex: array) para o formato string, para podermos enviar os dados desse objeto para outro lugar (ex: um banco de dados, servidor). Assim sendo, o JSON torna possível armazenar objetos JavaScript como texto.
 
 ## JSON POSSUI DUAS FUNÇÕES:
 - JSON.parse(): função incorporada para converter strings JSON em objetos JavaScript (JSON => Obj).
@@ -37,10 +37,13 @@ const person = {
     age: 21,
     country: 'USA'
 }
+// const person = [1, 2, 3, 4]
+
 
 const JSONperson = JSON.stringify(person)
 
 
 console.log(`Person em JSON: ${JSONperson}`)
-console.log(`Person em Obj: ${person}`)
+console.log('Person em Obj:')
+console.log(JSON.parse(JSONperson))
 

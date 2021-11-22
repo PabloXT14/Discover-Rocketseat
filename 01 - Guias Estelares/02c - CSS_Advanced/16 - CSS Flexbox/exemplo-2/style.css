@@ -30,7 +30,7 @@ h1 span {
     margin: 80px auto 0;
     border-radius: 8px;
 
-    /* ==== Flex Container Props ==== */
+    /* ==== FLEX CONTAINER PROPS ==== */
 
     display: flex;
 
@@ -82,13 +82,91 @@ h1 span {
                 padding-top: 70px;
             }
     */
+
+    align-content: stretch;/* obs: adicione mais itens no container p/ testar essa prop */
+    /* Esta propriedade é utilizada para alinhas a flex lines (linhas-flexiveis)
+        - stretch (default): estica as linhas flexíveis para ocupar o espaço restante do container
+        - center: alinha as flex-lines no meio do container
+        - flex-start: alinha as flex-lines no início do container
+        - flex-end: alinha as flex-lines no fim do container
+        - space-between: exibe as linhas flexíveis com espaço igual entre elas
+        - space-around: exibe as linhas flexíveis com espaço antes, entre e depois delas (nem todos estes espaços são iguais)
+        - space-evenly: exibe as linhas flexíveis com espaço antes, entre e depois delas (com todos os espaços iguais)
+
+    */
+
+
 }
 
 
+/* ==== FLEX ITEMS PROPS ==== */
+/*
+* order: propriedade que especifica o ordem do flex-item (item flexível)
+    - order: 0 (default)
+    ex: 
+    <div class="flex-container">
+        <div style="order: 3">1</div>
+        <div style="order: 2">2</div>
+        <div style="order: 4">3</div>
+        <div style="order: 1">4</div>
+    </div>
+
+* flex-grow: propriedade que especifica quanto um flex-item irá crescer relativo ao espaço restante/sombrando do container
+    - flex-grow: 0 (default)
+    ex:
+    <div class="flex-container">
+        <div style="flex-grow: 1">1</div>
+        <div style="flex-grow: 1">2</div>
+        <div style="flex-grow: 8">3</div>
+    </div>
+    - obs: flex-grow: 1 em todos os flex-items deixam todos do mesmo tamanho e ocupando todo o espaço da linha ou coluna
+
+* flex-shrink: propriedade que especifica quanto um flex-item diminuirá em relação aos outros items do container
+    - flex-shrink: 1 (default)
+    ex:
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink: 0">3</div> // este item nao irá diminuir
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    - obs: coloque mais itens no container para testar essa propriedade, e flex-wrap: nowrap
+
+* flex-basis: propriedade que especifica a largura (width) dos flex-item, semelhante ao width, mas atenção aos seguintes detalhes:
+    - o <flex-basis> é sobre posto pelo max-width/min-width
+    - o <flex-basis> sobre põe o <flex-shrink>, ou seja, se usar o <flex-basis> os itens não irão diminuir com <flex-shrink>
+    ex:
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px">3</div>
+        <div>4</div>
+    </div>
+
+*/
+
+/* ===== ATENÇÃO =====
+- Para mais detalhes de sobre flexbox:
+    * https://www.w3schools.com/css/css3_flexbox.asp
+    * https://www.alura.com.br/artigos/css-guia-do-flexbox?gclid=Cj0KCQiAkNiMBhCxARIsAIDDKNUXOtf2w8PYr9bVmK-biqvDh2NzFo1BMeD83463LsZGLOc0QrxkunYaAlQ7EALw_wcB
+    * 
+
+
+*/
+
 .item {
-    width: 150px;
+
+    flex-basis: 150px;
+    /* width: 150px; */
     height: 80px;
 
+    /* min-width: 300px; */
 
     padding: 20px;
     background-color: #15f831;
@@ -104,10 +182,36 @@ h1 span {
 
     cursor: pointer;
     transition: all 0.3s ease;
+
 }
 
 .item:hover {
     color: #FFF;
+}
+
+.one {
+    order: 0;/* test: 2 */
+    flex-grow: 0;/* test: 1 */
+    flex-shrink: 1;/* test: 0 */
+    /* flex-basis: 500px; */
+}
+
+.two {
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.three {
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.four {
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
 
 

@@ -44,11 +44,12 @@
     - space-around: space-between com margens verticais
 
 ## Responsividade (flex-flow)
-* Com a propriedade flex-flow podemos adicionar responsividade ao nosso layout de uma forma muito simples
+* Com a propriedade flex-flow podemos adicionar responsividade ao nosso layout de uma forma muito simples (resumind: flex-flow = propriedade shorthand que inclui <flex-direction> e <flex-wrap>)
 * Seus valores:
-    - nowrap: não permite a quebra de linha
-    - wrap: quebra a linha assim que um dos itens não couber nela
-    - wrap-reverse: mesma coisa que o wrap, mas a quebra acontece para a linha acima.
+    - row nowrap (default)
+    - row wrap
+    - column nowrap
+    - column wrap.
 
 ## Algumas propriedades do flex-item (para os itens do container)
 * order: define a ordem do elemento no container 
