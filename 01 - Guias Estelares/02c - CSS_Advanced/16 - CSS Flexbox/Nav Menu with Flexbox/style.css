@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    box-shadow: 0 1px 5px gray;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== Logo ===== */
+
+#logo {
+    /* outline: 1px solid grey; */
+    flex-basis: 60%;
+}
+
+#logo img {
+    width: 75px;
+}
+
+/* ===== Nav Menu ===== */
+nav {
+    /* outline: 1px solid grey; */
+    flex-basis: 40%;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222222;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+nav a.active {
+    font-weight: bold;
+}

@@ -84,7 +84,7 @@ h1 span {
     */
 
     align-content: stretch;/* obs: adicione mais itens no container p/ testar essa prop */
-    /* Esta propriedade é utilizada para alinhas a flex lines (linhas-flexiveis)
+    /* Esta propriedade é utilizada para alinhas flex-lines (linhas-flexiveis)
         - stretch (default): estica as linhas flexíveis para ocupar o espaço restante do container
         - center: alinha as flex-lines no meio do container
         - flex-start: alinha as flex-lines no início do container
@@ -149,20 +149,29 @@ h1 span {
         <div>4</div>
     </div>
 
+* flex: é um shorthand das propriedades <flex-grow>, <flex-shrink> e <flex-basis>
+    ex: 
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex: 0 0 200px">3</div>
+        <div>4</div>
+    </div>
+
+* align-self: propriedade que especifica o alinhamento(no Cross-Axis) de um elemento especifico dentro de um container com display flex. Ou seja, o <align-self> sobre põe o <align-items>
 */
+
 
 /* ===== ATENÇÃO =====
 - Para mais detalhes de sobre flexbox:
     * https://www.w3schools.com/css/css3_flexbox.asp
     * https://www.alura.com.br/artigos/css-guia-do-flexbox?gclid=Cj0KCQiAkNiMBhCxARIsAIDDKNUXOtf2w8PYr9bVmK-biqvDh2NzFo1BMeD83463LsZGLOc0QrxkunYaAlQ7EALw_wcB
-    * 
-
-
 */
 
 .item {
 
-    flex-basis: 150px;
+    flex: 1 0 150px;/* [flex-grow] [flex-shrink] [flex-basis] */
+    /* flex-basis: 150px; */
     /* width: 150px; */
     height: 80px;
 
@@ -194,24 +203,25 @@ h1 span {
     flex-grow: 0;/* test: 1 */
     flex-shrink: 1;/* test: 0 */
     /* flex-basis: 500px; */
+    align-self: flex-end;
 }
 
 .two {
     order: 0;
-    flex-grow: 0;
-    flex-shrink: 1;
+    /* flex-grow: 0; */
+    /* flex-shrink: 1; */
 }
 
 .three {
     order: 0;
-    flex-grow: 0;
-    flex-shrink: 1;
+    /* flex-grow: 0; */
+    /* flex-shrink: 1; */
 }
 
 .four {
     order: 0;
-    flex-grow: 0;
-    flex-shrink: 1;
+    /* flex-grow: 0; */
+    /* flex-shrink: 1; */
 }
 
 
