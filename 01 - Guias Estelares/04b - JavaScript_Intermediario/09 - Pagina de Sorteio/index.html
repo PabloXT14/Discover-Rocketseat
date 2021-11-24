@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Pre loaders -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffle Page</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <!-- Fonst Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Página de Sorteio</h1>
+
+    <div class="sortNumb">
+        <h2>Sortear um número entre</h2>
+        <div class="inputField numb">
+            <input type="number" id="min" placeholder="min"> e
+            <input type="number" id="max" placeholder="max">
+        </div>
+        <button class="btnSort" onclick="checkTypeRaffle(numb)">Sortear</button>
+        <p>Resultado: <span class="resultNumb"></span></p>
+    </div>
+
+    <div class="sortPeople">
+        <h2>Digite os nomes a serem sorteados</h2>
+        <div class="inputField pes">
+            <textarea id="names" placeholder="separe os nomes por vírgulas"></textarea>
+        </div>
+        <button class="btnSort" onclick="checkTypeRaffle(people)">Sortear</button>
+        <p>Resultado: <span class="resultName"></span></p>
+    </div>
+</body>
+
+</html>

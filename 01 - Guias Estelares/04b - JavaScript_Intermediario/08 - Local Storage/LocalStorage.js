@@ -21,9 +21,7 @@
 */
 
 // Previnindo form de carregar a pagina
-document.querySelector("form").addEventListener("click", (event) => {
-    event.preventDefault();
-})
+const form = document.querySelector("form");
 
 
 /* ============ Utilizando LocalStorage no Form ============= */
@@ -35,7 +33,7 @@ const inputName = document.querySelector("#name"),
 
 let userData = {
     name: '',
-    age: 0,
+    age: '',
     email: ''
 }
 
@@ -48,19 +46,23 @@ function setUserInForm(userData) {
 setUserInForm(userData);
 
 // Salvando dados no LocalStorage
-saveBtn.addEventListener("click", () => {
+saveBtn.addEventListener("click", (event) => {
+    //previnindo form de atualizar a pagina
+
     userData.name = inputName.value;
     userData.age = inputAge.value;
     userData.email = inputEmail.value;
 
     localStorage.setItem("userData", JSON.stringify(userData));
-    setUserInForm({ name: '', age: 0, email: '' });
+    setUserInForm({ name: '', age: 18, email: '' });
     setTimeout(() => { alert("Usuário salvo com sucesso!") }, 500);
 
 })
 
 // Carregando dados do LocalStorage
-loadBtn.addEventListener("click", () => {
+loadBtn.addEventListener("click", (event) => {
+    event.preventDefault();//previnindo form de atualizar a pagina
+
     let newUserData = JSON.parse(localStorage.getItem("userData"));
 
     userData = newUserData

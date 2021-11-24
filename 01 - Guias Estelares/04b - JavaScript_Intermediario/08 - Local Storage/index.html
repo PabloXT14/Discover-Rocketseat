@@ -5,35 +5,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons Fonts Awesome -->
+    <script src="https://kit.fontawesome.com/32697e770a.js" crossorigin="anonymous"></script>
+    <!-- Icon Page -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>JS lessons</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         h1 {
             font-family: 'Poppins', sans-serif;
-            /* font-weight: 900; */
             text-align: center;
         }
 
+        h2 {
+            text-align: center;
+            margin: 1rem auto;
+        }
+
         form {
+            max-width: 500px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
 
+            background: #8257e6;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            /*4px*/
         }
 
-        form input {
+        form .inputFields {
+            margin-bottom: 1rem;
+        }
+
+        form .inputFields label {
             display: block;
-            margin: 5px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #FFF;
         }
 
-        button {
+        form .inputFields input {
+            display: block;
+            width: 100%;
+            background: #a68be4;
+            border: none;
+            border-bottom: 2px solid #5c3da3;
+            padding: 0 0.5rem;
+            height: 2rem;
+
+            outline: none;
+            font-size: 15px;
+            color: #FFF;
+
+            transition: all 0.3s ease;
+        }
+
+        .inputFields input:focus {
+            border-bottom: 2px solid #ff008c;
+        }
+
+        form .inputFields input::placeholder {
+            font-size: 14px;
+            font-weight: lighter;
+            color: #DDD;
+        }
+
+        form .buttons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        form .buttons button {
+            flex-grow: 1;
+            min-height: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            background: #684aac;
+            color: #FFF;
+            border: none;
+            border-bottom: 4px solid #2b1c4e;
+            border-radius: 4px;
             cursor: pointer;
-            max-width: 200px;
-            margin: 5px;
+
+            transition: all 0.3s ease;
+        }
+
+        .buttons button:hover {
+            filter: brightness(1.1);
+            /* diminuindo brilho do botão */
+        }
+
+        .buttons button:active {
+            border: none;
+            transform: translateY(5px);
+        }
+
+        .buttons button span {
+            margin-left: 5px;
+        }
+
+        .buttons button i {
+            font-size: 20px;
+        }
+
+        /* ~ : SELECTS ALL ELEMENTS PLACED IMMEDIATELY BEFORE AN ELEMENT */
+        .buttons button+button {
+            margin-left: 15px;
         }
     </style>
 </head>
@@ -43,20 +135,34 @@
 
     <h2>Formulário de Cadastro</h2>
     <form action="">
-        <label>Nome:<input type="text" name="name" id="name" /> </label>
+        <div class="inputFields">
 
-        <label>
-            Idade:
-            <input type="number" name="age" id="age">
-        </label>
+            <label>
+                Nome:
+                <input type="text" id="name" name="name" placeholder="Insira um nome" required />
+            </label>
 
-        <label>
-            E-mail:
-            <input type="email" name="email" id="email">
-        </label>
+            <label>
+                E-mail:
+                <input type="email" name="email" id="email" placeholder="Insira um e-mail" required>
+            </label>
 
-        <button class="saveBtn">Salvar dados</button>
-        <button class="loadBtn">Carregar dados</button>
+            <label>
+                Idade:
+                <input type="number" min="18" name="age" id="age" placeholder="Insira a idade" required>
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button class="saveBtn" type="submit">
+                <i class="fas fa-upload"></i>
+                <span>Salvar dados</span>
+            </button>
+            <button class="loadBtn" type="submit">
+                <i class="fas fa-download"></i>
+                <span>Carregar dados</span>
+            </button>
+        </div>
     </form>
 
 

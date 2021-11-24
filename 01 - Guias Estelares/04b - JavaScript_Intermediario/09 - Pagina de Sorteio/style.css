@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue: #007adf;
+    --green: #00ecbc;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.sortNumb, .sortPeople {
+    background-color: #EEE;
+    max-width: 400px;
+    margin: 1.4rem auto 0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}

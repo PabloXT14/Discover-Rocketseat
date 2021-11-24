@@ -5,7 +5,7 @@
 
 ## Grid vc Flexbox
 - A principal diferença é:
-    - **Flexbox**: gerencia apenas 1 dimensão por ver(elementos na vertical ou horizontal)
+    - **Flexbox**: gerencia apenas 1 dimensão por vez(elementos na vertical ou horizontal)
     - **Grid**: gerenciar 2 dimensões ao mesmo tempo (elementos na vertical e horizontal)
 
 ## Grid Main Concepts
