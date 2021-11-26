@@ -13,30 +13,30 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="./style.css" type="text/css">
     <!-- Fonst Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <h1>Página de Sorteio</h1>
+    <h1 class="title">Página de Sorteio</h1>
 
     <div class="sortNumb">
-        <h2>Sortear um número entre</h2>
+        <h2 class="subTitle">Sortear um número entre</h2>
         <div class="inputField numb">
-            <input type="number" id="min" placeholder="min"> e
-            <input type="number" id="max" placeholder="max">
+            <input type="number" id="min" placeholder="min" title="min"> e
+            <input type="number" id="max" placeholder="max" title="max">
         </div>
         <button class="btnSort" onclick="checkTypeRaffle(numb)">Sortear</button>
-        <p>Resultado: <span class="resultNumb"></span></p>
+        <p>Resultado: <span class="resultNumb">1</span></p>
     </div>
 
     <div class="sortPeople">
-        <h2>Digite os nomes a serem sorteados</h2>
+        <h2 class="subTitle">Digite os nomes a serem sorteados</h2>
         <div class="inputField pes">
-            <textarea id="names" placeholder="separe os nomes por vírgulas"></textarea>
+            <textarea id="names" placeholder="Separe os nomes por vírgulas. ex: João, Felipe, ..."></textarea>
         </div>
         <button class="btnSort" onclick="checkTypeRaffle(people)">Sortear</button>
-        <p>Resultado: <span class="resultName"></span></p>
+        <p>Resultado: <span class="resultName">João</span></p>
     </div>
 </body>
 

@@ -49,10 +49,53 @@ html {
 
 #container {
     width: 95vw;
-    height: 60vh;
+    height: 70vh;
     margin: 0 auto;
     background-color: whitesmoke;
     outline: 8px solid #8256e7;
 
+    /* GRID CONTAINER PROPS */
+
     display: grid;
+    /* Define o elemento como um grid-cotainer (contêiner de grade) e estabelece um novo contexto de formatação de grade para seu conteúdo. Values:
+        - grid: gera uma grid (grade) em nível de bloco.
+        - inline-grid: gera uma grid em nível embutido/linha 
+    */
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    /* Define as colunas e linhas da grid com uma lista de valores separados por espaço. Os valores representam o tamanho da track(trilha) e o espaço entre eles representa  grid-line (linha da grade). Values:
+        - <track-size>(tamanho da trilha): pode ser um comprimento, uma porcentagem ou uma fração do espaço livre na grade (usando a unidade fr)
+        - <line-name>(nome da linha): um nome arbitrário da sua escolha
+        - Demonstração de values:
+            grid-template-columns ou grid-template-row: ... ...;
+                * auto(default) - a column ou row prenche o espaço restante da grid
+                * 1fr 1fr - (unidade de fração da grid, divide a grid em frações iguais de acordo com valor adicionado ao fr(1fr 1fr = 50% 50%))
+                * minmax (10px, 1fr) 3fr - minmax(value min, value max): especifica o tamanho máximo e mínimo que uma certa column ou row terá. ex: minmax(300px, 1fr)
+                * repeat(5, 1fr) - repeat(nº de columns/rows, unidade): ex: repeat(3, 1fr)
+                * repeat(auto-fill, 300px) - o "auto-fill" especifica que irá tentar preencher todo o espaço da grid, criando o máximo possível de columns com 300px(neste caso), "MESMO SE NÃO HOUVER ITENS PARA PREENCER TODA A GRID"(deixando colunas com espaços em branco na grid) 
+                * repeat(auto-fit, 300px) - o "auto-fit" especifica que irá tentar preencher todo o espaço da grid, criando o máximo possível de columns com 300px(neste caso), "SÓ CRIA AS COLUNAS SE TIVERMOS ITENS PARA PREECHÊ-LAS" (não deixando colunas com espaços em branco na grid)
+                * nomes das linhas das columns - ex: grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end]
+        - NOTE: As linhas de grade recebem automaticamente números positivos a partir dessas atribuições (-1 sendo uma alternativa para a última linha) 
+            * img demonstration
+    */
+
+    grid-auto-columns: 1fr;
+    /* grid-auto-rows: 50px; */
+    /* <grid-auto-columns> and <grid-auto-rows>: server para definir o tamanho de linhas ou colunas que temos a mais no container, onde não foi definido o tamanho pelo <grid-template-columns> e/ou <grid-template-rows>, ex:
+        grid-auto-rows: 200px;
+    */
+
+    grid-auto-flow: row;
+    /* controla como o algoritmo de arrumação automática funciona, especificando exatamente como os itens fluirão no grid, se um novo item adicionado vai ser colocado na sequencia da linha ou da coluna, values:
+        - row: arrumação automática em linha
+        - column: arrumação automática em coluna
+        - dense: determina que o algoritmo de arrumação automática use um formato de compactação "denso", onde os novos itens serão adicionados primeiramente nos espaços em branco entre os itens da grid, depois seguira o fluxo normal(em row por padrão, mas você mudar para column). Isto talvez deixe os itens fora de ordem, preenchendo espaços deixados por itens maiores.
+        - row-dense: igual ao dense mas preenche espaços em branco no sentido de linha 
+        - column-dense: igual ao dense mas preenche espaços em branco no sentido de coluna
+    
+    */
+
 }
+
+/* GRID ITEM PROPS */

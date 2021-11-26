@@ -2,28 +2,160 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
-    --blue: #007adf;
-    --green: #00ecbc;
+    --background: #F0F2F5;
+    --red: #E52E4E;
+    --green: #33cc95;
+    --blue: #5429cc;
+    --blue-light: #6933FF;
+
+    --text-title: #363f5f;
+    --text-body: #989CB3;
+
+    --shape: #FFF;
+
 }
 
-body {
-    min-height: 100vh;
-    background-image: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
+/* ===== Deixando tela com uma acessabilidade e reponsividade ===== */
+/* font-size (default): 16px (Desktop) = 1rem(root element) */
+
+@media screen and (max-width: 1080px) {
+    html {
+        font-size: 93.75%; /*15px*/
+    }
 }
 
-h1 {
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%; /*14px*/
+    }
+}
+
+
+
+
+
+
+/* ========== Raffle Page Styling ========== */
+
+h1.title {
+    color: var(--green);
+    /* background-image: linear-gradient(135deg, var(--blue-light) 0%, var(--green) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+
+    font-size: 3rem;
     text-align: center;
-    margin: 1rem auto;
+    /* line-height: 4rem; */
+    margin: 1.5rem auto;
 }
 
 .sortNumb, .sortPeople {
-    background-color: #EEE;
-    max-width: 400px;
+    background: var(--background);
+    color: var(--text-body);
+
+    max-width: 450px;
     margin: 1.4rem auto 0;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+}
+
+.subTitle {
+    color: var(--text-title);
+    font-size: 1.5rem;
+    font-weight: 700; 
+    margin-bottom: 0.5rem;
+}
+
+.inputField.numb {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 7px 0;
+    font-size: 1.3rem;
+}
+
+.inputField.numb input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    max-width: 80px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.inputField.pes textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 7px 10px;
+    margin: 7px 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+textarea::placeholder {
+    color: var(--text-body);
+}
+
+input:focus, textarea:focus {
+    outline: 1.5px solid var(--green);
+}
+
+.sortNumb button, .sortPeople button {
+    width: 100%;
+    padding: 8px 0;
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    background: var(--green);
+    color: #FFF;
+
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 6px 10px -6px #333;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+
+.sortNumb p, .sortPeople p {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.sortNumb p span , .sortPeople p span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 5px;
+    min-width: 100px;
+    min-height: 32px;
+    background: #FFF;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    padding: 2px 4px;
+    font-size: 1rem;
+    text-align: center;
 }
