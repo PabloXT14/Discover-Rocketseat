@@ -59,7 +59,7 @@ h1.title {
     color: var(--text-body);
 
     max-width: 450px;
-    margin: 1.4rem auto 0;
+    margin: 1.4rem auto;
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }

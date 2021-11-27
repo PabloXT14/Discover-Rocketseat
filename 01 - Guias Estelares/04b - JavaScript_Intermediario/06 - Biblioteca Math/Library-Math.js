@@ -39,7 +39,9 @@
 
   ## Dica de Uma Função Aleatória Adequada
   function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   */
 
@@ -50,8 +52,8 @@ const resultBox = document.querySelector(".result");
 
 
 btnCalc.addEventListener("click", () => {
-    let value1 = n1.value;
-    let value2 = n2.value;
+  let value1 = n1.value;
+  let value2 = n2.value;
 
-    resultBox.innerHTML = Math.pow(value1, value2);
+  resultBox.innerHTML = Math.pow(value1, value2);
 });

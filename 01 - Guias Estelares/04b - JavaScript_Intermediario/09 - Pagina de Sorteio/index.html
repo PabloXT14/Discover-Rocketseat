@@ -26,8 +26,8 @@
             <input type="number" id="min" placeholder="min" title="min"> e
             <input type="number" id="max" placeholder="max" title="max">
         </div>
-        <button class="btnSort" onclick="checkTypeRaffle(numb)">Sortear</button>
-        <p>Resultado: <span class="resultNumb">1</span></p>
+        <button class="btnSort" onclick="checkTypeRaffle('numb')">Sortear</button>
+        <p>Resultado: <span class="resultNumb"></span></p>
     </div>
 
     <div class="sortPeople">
@@ -35,9 +35,11 @@
         <div class="inputField pes">
             <textarea id="names" placeholder="Separe os nomes por vírgulas. ex: João, Felipe, ..."></textarea>
         </div>
-        <button class="btnSort" onclick="checkTypeRaffle(people)">Sortear</button>
-        <p>Resultado: <span class="resultName">João</span></p>
+        <button class="btnSort" onclick="checkTypeRaffle('people')">Sortear</button>
+        <p>Resultado: <span class="resultName"></span></p>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
