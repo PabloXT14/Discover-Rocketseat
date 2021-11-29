@@ -26,7 +26,7 @@ html {
 }
 
 .item {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,14 +88,57 @@ html {
 
     grid-auto-flow: row;
     /* controla como o algoritmo de arrumação automática funciona, especificando exatamente como os itens fluirão no grid, se um novo item adicionado vai ser colocado na sequencia da linha ou da coluna, values:
-        - row: arrumação automática em linha
+        - row (default): arrumação automática em linha
         - column: arrumação automática em coluna
         - dense: determina que o algoritmo de arrumação automática use um formato de compactação "denso", onde os novos itens serão adicionados primeiramente nos espaços em branco entre os itens da grid, depois seguira o fluxo normal(em row por padrão, mas você mudar para column). Isto talvez deixe os itens fora de ordem, preenchendo espaços deixados por itens maiores.
         - row-dense: igual ao dense mas preenche espaços em branco no sentido de linha 
         - column-dense: igual ao dense mas preenche espaços em branco no sentido de coluna
-    
     */
 
+    /* grid-row-gap: 10px; */
+    /* grid-column-gap: 20px; */
+    grid-gap: 10px;/* [grid-row-gap] [grid-column-gap] */
+    /*
+        <grid-row-gap> and <grid-column-gap>: server para determinar os tamanho das linhas da grid, basicamente os espações entre as "rows" e "columns". O <grid-gap> é um sorthand do <grid-row-gap> e <grid-column-gap>, que segue a ordem abaixo. Ex:
+            grid-row-gap: 10px;
+            grid-column-gap: 20px;
+            grid-gap: 10px 20px; [grid-row-gap] [grid-column-gap]
+    */
+
+
+
+    /* align-items: stretch;    align items vertically in cell */
+    /* justify-items: stretch;  align items horizontally in cell */
+    place-items: stretch;/* [align-items] [justify-items] */
+    /* <justify-items> and <align-items> servem para alinhar todos os items da grid "dentro de suas celulas" de uma vez só, onde o <justify-items> (alinha os itens na horizontal dentro de suas células) e <align-items> (alinha os itens na vertical dentro de suas células). Values para ambas as propriedades:
+        - stretch(default): esticha/preenche todo o espaço (do eixo especificado) da célula.
+        - start: alinha o item no inicio (do eixo especificado) da célula. 
+        - end: alinha o item no fim (do eixo especificado) da célula.
+        - center:  alinha o item no centro (do eixo especificado) da célula.
+    O <place-items> é o shorthand do <justify-items> e <align-items>, que segue a ordem dada no ex:
+        align-items: center;         // align items vertically in cell 
+        justify-items: start;        // align items horizontally in cell
+        place-items: center start;   // [align-items] [justify-items]
+    */
+
+
+    align-content: center; /* align grid vertically in container */
+    justify-content: center;/* align grid horizontally in container */
+    place-content: stretch;/* [align-content] [justify-content] */
+
+    /* <justify-content> and <align-content> servem para alinhar a grid como um todo no/ em relação ao container, onde o <justify-content> (alinha a grid no eixo horizontal do contêiner) e <align-content> (alinha a grid no eixo vertical do contêiner). Values para ambas as propriedades:
+        - stretch: esticha todos os itens da grid para preencher todo o espaço (do eixo especificado) no container.
+        - start: alinha a grid no inicio (do eixo especificado) no container. 
+        - end: alinha a grid no fim (do eixo especificado) no container.
+        - center: alinha a grid no centro (do eixo especificado) no container.
+        - space-around: coloca uma quantidade uniforme de espaço entre cada item da grade, com espaços de meio tamanho nas extremidades (no eixo especificado)
+        - space-between: coloca uma quantidade uniforme de espaço entre cada item da grade, sem espaço nas extremidades (no eixo especificado)
+        - space-evenly:  coloca uma quantidade uniforme de espaço entre cada item da grade, incluindo as extremidades (no eixo especificado)
+    O <place-content> é o shorthand do <justify-content> e <align-content>, que segue a ordem dada no ex:
+        align-content: center;              // align grid vertically in container
+        justify-content: space-evenly;      // align grid horizontally in container
+        place-content: center space-evenly; // [align-content] [justify-content]
+    */
 }
 
 /* GRID ITEM PROPS */
