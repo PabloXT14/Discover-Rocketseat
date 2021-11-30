@@ -62,8 +62,8 @@ html {
         - inline-grid: gera uma grid em nível embutido/linha 
     */
 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; */
     /* Define as colunas e linhas da grid com uma lista de valores separados por espaço. Os valores representam o tamanho da track(trilha) e o espaço entre eles representa  grid-line (linha da grade). Values:
         - <track-size>(tamanho da trilha): pode ser um comprimento, uma porcentagem ou uma fração do espaço livre na grade (usando a unidade fr)
         - <line-name>(nome da linha): um nome arbitrário da sua escolha
@@ -80,13 +80,13 @@ html {
             * img demonstration
     */
 
-    grid-auto-columns: 1fr;
+    /* grid-auto-columns: 1fr; */
     /* grid-auto-rows: 50px; */
     /* <grid-auto-columns> and <grid-auto-rows>: server para definir o tamanho de linhas ou colunas que temos a mais no container, onde não foi definido o tamanho pelo <grid-template-columns> e/ou <grid-template-rows>, ex:
         grid-auto-rows: 200px;
     */
 
-    grid-auto-flow: row;
+    /* grid-auto-flow: row; */
     /* controla como o algoritmo de arrumação automática funciona, especificando exatamente como os itens fluirão no grid, se um novo item adicionado vai ser colocado na sequencia da linha ou da coluna, values:
         - row (default): arrumação automática em linha
         - column: arrumação automática em coluna
@@ -97,7 +97,7 @@ html {
 
     /* grid-row-gap: 10px; */
     /* grid-column-gap: 20px; */
-    grid-gap: 10px;/* [grid-row-gap] [grid-column-gap] */
+    /* grid-gap: 10px;   [grid-row-gap] [grid-column-gap] */
     /*
         <grid-row-gap> and <grid-column-gap>: server para determinar os tamanho das linhas da grid, basicamente os espações entre as "rows" e "columns". O <grid-gap> é um sorthand do <grid-row-gap> e <grid-column-gap>, que segue a ordem abaixo. Ex:
             grid-row-gap: 10px;
@@ -109,7 +109,8 @@ html {
 
     /* align-items: stretch;    align items vertically in cell */
     /* justify-items: stretch;  align items horizontally in cell */
-    place-items: stretch;/* [align-items] [justify-items] */
+    /* place-items: stretch;[align-items] [justify-items] */
+
     /* <justify-items> and <align-items> servem para alinhar todos os items da grid "dentro de suas celulas" de uma vez só, onde o <justify-items> (alinha os itens na horizontal dentro de suas células) e <align-items> (alinha os itens na vertical dentro de suas células). Values para ambas as propriedades:
         - stretch(default): esticha/preenche todo o espaço (do eixo especificado) da célula.
         - start: alinha o item no inicio (do eixo especificado) da célula. 
@@ -139,6 +140,97 @@ html {
         justify-content: space-evenly;      // align grid horizontally in container
         place-content: center space-evenly; // [align-content] [justify-content]
     */
+
+    /* Comente todas as outras propriedades antes de testar o <grid-template-areas> */
+    /* grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+    grid-auto-rows: 60px auto 100px;
+
+    grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer"; */
+    /* <grid-template-areas>: 
+        Propriedade CSS que especifica "áreas na grid" nomeadas, estabelecendo as células na grade e atribuindo nomes a elas. Repetir o nome de uma área de grade faz com que o conteúdo se espalhe por essas células.
+            - cada "" representa uma area na row
+            - cada nome dentro dos "" representa uma coluna
+            - Um ponto significa uma célula vazia
+        Ex:
+            .item-a {
+                grid-area: header;
+            }
+            .item-b {
+                grid-area: main;
+            }
+            .item-c {
+                grid-area: sidebar;
+            }
+            .item-d {
+                grid-area: footer;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 50px 50px 50px 50px;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                    "header header header header"
+                    "main main . sidebar"
+                    "footer footer footer footer";
+            }
+    
+    */
+
+
+    grid-template: 
+    "header header header" 60px
+    "main main sidebar" auto
+    "footer footer footer" 100px
+    / [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];/*[col-something]: são nomes para as linhas das coluna da grid*/
+
+    /* <grid-template>: é um "shorthand" das propriedades CSS <grid-template-rows>, <grid-template-columns> e <grid-template-areas>, seguindo a seguinte ordem:
+        - grid-template:
+            <grid-template-areas> <grid-template-rows>
+            / <grid-template-columns>;
+        Ex(resulta no mesmo layout do exemplo anterior):
+            .item-a {
+                grid-area: header;
+            }
+            .item-b {
+                grid-area: main;
+            }
+            .item-c {
+                grid-area: sidebar;
+            }
+            .item-d {
+                grid-area: footer;
+            }
+
+            .container {
+                display: grid;
+                grid-template: 
+                    "header header header header" auto
+                    "main main . sidebar" auto
+                    "footer footer footer footer" auto
+                    / 50px 50px 50px 50px;
+            }
+    */
 }
 
+
 /* GRID ITEM PROPS */
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}

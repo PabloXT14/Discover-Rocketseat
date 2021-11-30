@@ -16,10 +16,16 @@ createServer({
           type: 'deposit',
           category: 'Food',
           createdAt: new Date()
+        },
+        {
+          id: 2,
+          title: 'Transaction 2',
+          type: 'deposit',
+          category: 'Development',
+          createdAt: new Date()
         }
       ]
     })
-
 
   }
 });

@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Acessibilidade/Responsividade da Font===== */
+@media screen and (max-width: 1080px) {
+    html {
+        font-size: 93.75%; /*15px*/
+    }
+}
+@media screen and (max-width: 720px) {
+    html {
+        font-size: 87.5%; /*14px*/
+    }
+}
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+
+/* ===== Timer Styling ===== */
+.stopwatch {
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.controls {
+    display: grid;
+    max-width: 500px;
+    margin: auto;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0 1rem;
+}
+
+.controls button {
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    background: transparent;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
+
+    transition: all 0.15s ease;
+}
+
+.controls button:hover {
+    background: dodgerblue;
+    color: #FFF;
+}

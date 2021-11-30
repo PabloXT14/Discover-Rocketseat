@@ -1,16 +1,18 @@
 import { useEffect } from "react";
+import { api } from "../../services/api";
 import { Container } from "./style";
 
 export function TransationsTable() {
 
     // Buscar dados na API fake do MirageJS
     useEffect(() => {
-        fetch("http://localhost:3000/api/transactions")
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-            })
-
+        // fetch("http://localhost:3000/api/transactions")
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log(data)
+        //     })
+        api.get('/transactions')
+            .then(response => { console.log(response.data) })
     }, []);
 
     return (
