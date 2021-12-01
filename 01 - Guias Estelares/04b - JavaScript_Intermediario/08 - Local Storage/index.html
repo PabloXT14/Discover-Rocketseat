@@ -5,136 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina para salvar os dados">
     <!-- Icons Fonts Awesome -->
     <script src="https://kit.fontawesome.com/32697e770a.js" crossorigin="anonymous"></script>
     <!-- Icon Page -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./style.css">
+
     <title>JS lessons</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        h1 {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-        }
-
-        h2 {
-            text-align: center;
-            margin: 1rem auto;
-        }
-
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-
-            background: #8257e6;
-            padding: 1rem;
-            border-radius: 0.25rem;
-            /*4px*/
-        }
-
-        form .inputFields {
-            margin-bottom: 1rem;
-        }
-
-        form .inputFields label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #FFF;
-        }
-
-        form .inputFields input {
-            display: block;
-            width: 100%;
-            background: #a68be4;
-            border: none;
-            border-bottom: 2px solid #5c3da3;
-            padding: 0 0.5rem;
-            height: 2rem;
-
-            outline: none;
-            font-size: 15px;
-            color: #FFF;
-
-            transition: all 0.3s ease;
-        }
-
-        .inputFields input:focus {
-            border-bottom: 2px solid #ff008c;
-        }
-
-        form .inputFields input::placeholder {
-            font-size: 14px;
-            font-weight: lighter;
-            color: #DDD;
-        }
-
-        form .buttons {
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-        form .buttons button {
-            flex-grow: 1;
-            min-height: 50px;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-
-            background: #684aac;
-            color: #FFF;
-            border: none;
-            border-bottom: 4px solid #2b1c4e;
-            border-radius: 4px;
-            cursor: pointer;
-
-            transition: all 0.3s ease;
-        }
-
-        .buttons button:hover {
-            filter: brightness(1.1);
-            /* diminuindo brilho do botão */
-        }
-
-        .buttons button:active {
-            border: none;
-            transform: translateY(5px);
-        }
-
-        .buttons button span {
-            margin-left: 5px;
-        }
-
-        .buttons button i {
-            font-size: 20px;
-        }
-
-        /* ~ : SELECTS ALL ELEMENTS PLACED IMMEDIATELY BEFORE AN ELEMENT */
-        .buttons button+button {
-            margin-left: 15px;
-        }
-    </style>
 </head>
 
 <body>
     <h1>JS Local Storage</h1>
 
     <h2>Formulário de Cadastro</h2>
-    <form action="">
+    <form action="#">
         <div class="inputFields">
 
             <label>

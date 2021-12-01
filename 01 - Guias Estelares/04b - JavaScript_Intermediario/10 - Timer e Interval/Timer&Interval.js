@@ -53,51 +53,52 @@ let milissegundos = 0;
 let seconds = 0;
 let minutes = 0;
 let horas = 0;
-let setStart;
+let Interval;
 
 
 function StartStopwatch() {
 
-    clearInterval(setStart);//caso o usuário de diversos clicks no start
-    setStart = setInterval(() => {
-        milissegundos += 1;
+  clearInterval(Interval);//caso o usuário de diversos clicks no start
 
-        if (milissegundos >= 99) {
-            milissegundos = 0;
-            seconds += 1;
-        }
-        if (seconds >= 60) {
-            seconds = 0;
-            minutes += 1;
-        }
-        if (minutes >= 60) {
-            minutes = 0;
-            horas += 1;
-        }
+  Interval = setInterval(() => {
+    milissegundos++;
+
+    if (milissegundos >= 99) {
+      milissegundos = 0;
+      seconds += 1;
+    }
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes += 1;
+    }
+    if (minutes >= 60) {
+      minutes = 0;
+      horas += 1;
+    }
 
 
 
-        stopwatchElem.innerHTML = `
+    stopwatchElem.innerHTML = `
         ${fomateTime(horas)}:${fomateTime(minutes)}:${fomateTime(seconds)}:${fomateTime(milissegundos)}
         `;
 
-    }, 10)
+  }, 10)
 }
 
 function fomateTime(number) {
-    return number < 10 ? `0${number}` : `${number}`
+  return number < 10 ? `0${number}` : `${number}`
 }
 
 function StopStopwatch() {
-    clearInterval(setStart);
+  clearInterval(Interval);
 }
 
 function ResetStopwatch() {
-    clearInterval(setStart);
-    milissegundos = 0;
-    seconds = 0;
-    minutes = 0;
-    horas = 0;
-    setStart;
-    stopwatchElem.innerHTML = "00:00:00:00"
+  clearInterval(Interval);
+  milissegundos = 0;
+  seconds = 0;
+  minutes = 0;
+  horas = 0;
+  Interval;
+  stopwatchElem.innerHTML = "00:00:00:00"
 }

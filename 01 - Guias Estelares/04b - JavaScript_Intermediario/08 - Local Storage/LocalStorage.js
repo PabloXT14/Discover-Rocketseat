@@ -47,14 +47,21 @@ setUserInForm(userData);
 
 // Salvando dados no LocalStorage
 saveBtn.addEventListener("click", (event) => {
-    //previnindo form de atualizar a pagina
-
+    // Pegando dados do form
     userData.name = inputName.value;
     userData.age = inputAge.value;
     userData.email = inputEmail.value;
 
+    // Checando campos do form (vendo se estão todos preenchido)
+    for (const input in userData) {
+        if (userData[input] === '') return alert("🚨Preencha todos os dados do formulário e de forma correta!")
+    }
+
+    // Guardando dados no localStorage
+
+    event.preventDefault();//previnindo form de atualizar a pagina
     localStorage.setItem("userData", JSON.stringify(userData));
-    setUserInForm({ name: '', age: 18, email: '' });
+    setUserInForm({ name: '', age: '', email: '' });//limpando form
     setTimeout(() => { alert("Usuário salvo com sucesso!") }, 500);
 
 })
