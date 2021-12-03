@@ -214,6 +214,27 @@ html {
                     / 50px 50px 50px 50px;
             }
     */
+
+    grid: 50px 100px / repeat(3, 1fr);
+    /* grid: auto-flow 100px / repeat(3, 1fr); */
+    /* grid: é um "shorthand" das <grid-template-rows>, <grid-template-columns>, <grid-template-areas>, <grid-auto-rows>, <grid-auto-columns> e <grid-auto-flow>, e tudo vai seguir a seguinte ordem:
+        - grid: <propriedades rows> / <propriedades columns>
+        
+        - ex:
+            grid: 50px 200px / repeat(3, 1fr);
+            - equal:
+            grid-template-rows: 50px 200px;
+            grid-template-columns: repeat(3, 1fr);
+    
+        - ex:
+            grid: auto-flow 1fr / repeat(3, 1fr);// cada linha nova adicionada terá uma fração do height/vertical da div/container
+            - equal:
+            grid-auto-flow: row;
+            grid-auto-row: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+    */
+
+
 }
 
 
