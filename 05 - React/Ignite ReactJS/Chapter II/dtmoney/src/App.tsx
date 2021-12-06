@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import styled from 'styled-components';
 import { Dashboard } from './components/Dashboard';
 import { Header } from './components/Header';
+import { NewTransactionModal } from './components/NewTransactionModal';
 import { GlobalStyle } from './styles/global';
 
 
@@ -42,12 +43,11 @@ export function App() {
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
 
-      <Modal
+      {/* Modal de NewTrasaction  */}
+      <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>Cadastrar transação</h2>
-      </Modal>
+      />
 
 
       {/* Estilização global com Styled Comp. */}

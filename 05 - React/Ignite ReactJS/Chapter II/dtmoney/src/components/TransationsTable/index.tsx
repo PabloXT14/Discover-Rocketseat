@@ -4,21 +4,11 @@ import { Container } from "./style";
 
 /* ===== Tipagens ===== */
 interface TransactionType {
-    transaction: {
-        id: number,
-        title: string,
-        type: string,
-        value: number,
-        category: string,
-        createdAt: Date
-    }
+
 }
 
 
-
 export function TransationsTable() {
-
-    const [transactions, setTransactions] = useState<TransactionType[]>([]);
 
     // Buscar dados na API fake do MirageJS
     useEffect(() => {
@@ -28,7 +18,7 @@ export function TransationsTable() {
         //         console.log(data)
         //     })
         api.get('/transactions')
-            .then(response => { console.log(setTransactions(response.data)) })
+            .then(response => { console.log(response.data) })
     }, []);
 
     return (
@@ -44,16 +34,6 @@ export function TransationsTable() {
                 </thead>
 
                 <tbody>
-                    {transactions.map(transaction => {
-                        return (
-                            <tr>
-                                <td>{transaction.transaction.title}</td>
-                                <td className={transaction.transaction.type}>R$ {transaction.transaction.value}</td>
-                                <td>{transaction.transaction.category}</td>
-                                <td>{transaction.transaction.createdAt}</td>
-                            </tr>
-                        );
-                    })}
                     <tr>
                         <td>Desenvolvimento de Website</td>
                         <td className="deposit">R$ 12.000</td>
