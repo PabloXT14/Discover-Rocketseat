@@ -12,10 +12,11 @@ sintaxe:
 app.get("/", (request, response) => {
     return (
         // response.send("Hello World!") // sendo(): response do tipo string
-        response.json({ message: "Hellow World Ignite" }) // json(): response do tipo array, objecto, string 
+        response.json({ message: "Hellow World Ignite 🚀🚀🚀" }) // json(): response do tipo array, objecto, string 
     );
 });
 
-app.listen(3333);
+app.listen(3333);//start servidor da nossa aplicação na porta 3333 (o qlq porta que vc quiser) 
+// na url aparecerá http:localhost:3333
 
 
