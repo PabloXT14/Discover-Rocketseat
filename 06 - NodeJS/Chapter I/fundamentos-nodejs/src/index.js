@@ -9,13 +9,6 @@ sintaxe:
 - response: resposta do servidor ao nosso request/pedido
 */
 
-// app.get("/", (request, response) => {
-//     return (
-//         // response.send("Hello World!") // sendo(): response do tipo string
-//         //response.json({ message: "Hellow World Ignite 🚀🚀🚀" }) // json(): response do tipo array, objecto, string 
-//     );
-// });
-
 
 /* ===== Utilizando os Métodos HTTP ===== */
 app.get("/courses", (request, response) => {
