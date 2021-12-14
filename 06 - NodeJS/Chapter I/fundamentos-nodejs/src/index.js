@@ -20,7 +20,7 @@ app.post("/courses", (request, response) => {
 })
 
 // para atualizar algo no DB(Banco de Dados) é preciso passar um parametro pela rota (neste caso estaremos passando o id do curso)
-app.put("/courses:id", (request, response) => {
+app.put("/courses/:id", (request, response) => {
     return response.json(["Curso 1", "Curso 2", "Curso 2.1", "Curso 2.2"])
 })
 
@@ -28,7 +28,7 @@ app.patch('/courses/:id', (request, response) => {
     return response.json(["Curso 1", "Curso 2.0", "Curso 2.1", "Curso 2.2"])
 })
 
-app.patch("/courses/:id", (request, response) => {
+app.delete("/courses/:id", (request, response) => {
     return response.json(["Curso 1", "Curso 2.0", "Curso 2.1"])
 })
 
