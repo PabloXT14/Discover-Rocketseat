@@ -1,41 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
-import { createServer } from 'miragejs';
+import { createServer, Model } from 'miragejs';
 
-// Criando server/rota ficticia com MirageJS
+// Criando server/rota fictícia com MirageJS
 createServer({
+  // Criando banco de dados fictício no Mirage
+  models: {
+    transaction: Model,//criando tabela
+  },
   routes() {
     this.namespace = 'api';
 
     this.get('/transactions', () => {
-      return [
-        {
-          id: 1,
-          title: 'Transaction 1',
-          type: 'deposit',
-          value: 1000,
-          category: 'Food',
-          createdAt: new Date()
-        },
-        {
-          id: 2,
-          title: 'Transaction 2',
-          type: 'deposit',
-          value: 2000,
-          category: 'Development',
-          createdAt: new Date()
-        },
-        {
-          id: 3,
-          title: 'Transaction 3',
-          type: 'withdraw',
-          value: 1500,
-          category: 'Development',
-          createdAt: new Date()
-        }
-      ]
-    })
+      return this.schema.all('transaction');// retornando todos os dados da table/model criada no banco de dados fake
+    });
+
+    this.post('/transactions', (schema, request) => {
+      // pegando dados enviados no body do request desta rota post
+      const data = JSON.parse(request.requestBody);//convertendo de JSON -> Objeto JS 
+
+      // schema('nameTable', dadosToSave): refere-se ao banco de dados no Mirage
+      return schema.create('transaction', data);
+    });
 
   }
 });
