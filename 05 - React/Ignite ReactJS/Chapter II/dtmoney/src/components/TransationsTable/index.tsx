@@ -9,7 +9,6 @@ interface TransactionType {
 
 
 export function TransationsTable() {
-
     // Buscar dados na API fake do MirageJS
     useEffect(() => {
         // fetch("http://localhost:3000/api/transactions")
