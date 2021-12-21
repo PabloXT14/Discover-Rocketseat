@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { api } from "../../services/api";
+import { TransactionsContext } from "../../TransactionsContext";
 import { Container } from "./style";
 
 /* ===== Tipagens ===== */
@@ -14,6 +15,7 @@ interface Transaction {
 
 
 export function TransationsTable() {
+    const data = useContext(TransactionsContext);//importando Context
     const [transactions, setTransactions] = useState<Transaction[]>([]);
 
     // Buscar dados na API fake do MirageJS
