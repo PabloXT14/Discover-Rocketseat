@@ -1,22 +1,11 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
-import styled from 'styled-components';
 import { Dashboard } from './components/Dashboard';
 import { Header } from './components/Header';
 import { NewTransactionModal } from './components/NewTransactionModal';
-import { TransactionsContext } from './TransactionsContext';
+import { TransactionsProvider } from './TransactionsContext';
 
 import { GlobalStyle } from './styles/global';
-
-
-// const Title = styled.h1`
-//   font-size: 64px;
-//   color: #8257e6;
-
-//   button {
-//     color: dodgerblue;
-//   }
-// `
 
 
 // Setando dentro de qual div o Modal vai estar (é só por questão de acessibilidade pois o Modal pode ser colocado em qualquer lugar no codigo)
@@ -37,11 +26,8 @@ export function App() {
     setIsNewTransactionModalOpen(false);
   }
 
-
-
-
   return (
-    <TransactionsContext.Provider value={[]}>
+    <TransactionsProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
 
@@ -54,7 +40,7 @@ export function App() {
 
       {/* Estilização global com Styled Comp. */}
       <GlobalStyle />
-    </TransactionsContext.Provider>
+    </TransactionsProvider>
   );
 }
 

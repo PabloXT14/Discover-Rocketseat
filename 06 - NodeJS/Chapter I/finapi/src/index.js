@@ -38,10 +38,15 @@ app.post('/account', (request, response) => {
 });
 
 /* Rota para listar extrado de um cliente */
-app.get('/statement/:cpf', (request, response) => {
-    const { cpf } = request.params;//pegando cpf do route params
+app.get('/statement', (request, response) => {
+    const { cpf } = request.headers;//pegando cpf do route params
 
     const customer = customers.find(customer => Number(customer.cpf) === Number(cpf));//check qual customer tem o cpf informado
+
+    /* Check if customer exist */
+    if (!customer) {
+        return response.status(400).json({ error: "Customer not found" });
+    }
 
     return response.json(customer.statement);//retornando extrato do customer
 });

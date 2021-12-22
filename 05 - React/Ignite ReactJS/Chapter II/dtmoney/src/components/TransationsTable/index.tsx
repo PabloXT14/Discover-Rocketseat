@@ -3,31 +3,9 @@ import { api } from "../../services/api";
 import { TransactionsContext } from "../../TransactionsContext";
 import { Container } from "./style";
 
-/* ===== Tipagens ===== */
-interface Transaction {
-    id: number;
-    title: string;
-    amount: number;
-    type: string;
-    category: string;
-    createdAt: string;
-}
-
 
 export function TransationsTable() {
-    const data = useContext(TransactionsContext);//importando Context
-    const [transactions, setTransactions] = useState<Transaction[]>([]);
-
-    // Buscar dados na API fake do MirageJS
-    useEffect(() => {
-        // fetch("http://localhost:3000/api/transactions")
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log(data)
-        //     })
-        api.get('/transactions')
-            .then(response => setTransactions(response.data.transactions))
-    }, []);
+    const transactions = useContext(TransactionsContext);//importando Context
 
     return (
         <Container>
