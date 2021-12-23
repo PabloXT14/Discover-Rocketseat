@@ -5,7 +5,7 @@ import { Container } from "./style";
 
 
 export function TransationsTable() {
-    const transactions = useContext(TransactionsContext);//importando Context
+    const { transactions } = useContext(TransactionsContext);//importando Context
 
     return (
         <Container>
