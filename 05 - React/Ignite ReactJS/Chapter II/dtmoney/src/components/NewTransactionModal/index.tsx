@@ -28,15 +28,25 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
 
 
     // Função para salvar os dados da nova transação
-    function handleCreateNewTransaction(event: FormEvent) {
+    async function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault();//prevenindo form de atualizar a pagina ao dar submit
 
-        createTransaction({
+        // Enviando dados para o context (e o context envia para o MirageJS)
+        await createTransaction({
             title,
             amount,
             category,
             type
         })
+
+        // Limpando formulário
+        setTitle('');
+        setAmount(0);
+        setCategory('');
+        setType('deposit');
+
+        // Fechando Modal
+        onRequestClose();
     }
 
 

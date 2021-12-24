@@ -62,4 +62,26 @@ app.get('/statement', verifyIfExistsAccountCPF, (request, response) => {
     return response.json(customer.statement);//retornando extrato do customer
 });
 
+/* Rota para realizar deposito em conta existente */
+app.post('/deposit', verifyIfExistsAccountCPF, (request, response) => {
+    const { description, amount } = request.body;
+
+    const { customer } = request;//dado vindo da verificação do Middleware (dados da conta do cliente)
+
+    // Criando objeto de deposito
+    const statementOperation = {
+        description,
+        amount,
+        created_at: new Date(),
+        type: 'credit'
+    }
+
+    // Inserindo deposito na conta na customer
+    customer.statement.push(statementOperation);
+
+    return response.status(201).json({ message: "Inserted deposit with sucess" })
+});
+
+
+
 app.listen(3333, () => console.log("API running on port 3333"));

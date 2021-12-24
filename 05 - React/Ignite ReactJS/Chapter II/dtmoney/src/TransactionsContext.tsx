@@ -30,7 +30,7 @@ interface TransactionsProviderProps {
 
 interface TransactionsContextData {
     transactions: Transaction[];
-    createTransaction: (transaction: TransactionInput) => void;
+    createTransaction: (transaction: TransactionInput) => Promise<void>;
 }
 
 
@@ -48,11 +48,21 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
             .then(response => setTransactions(response.data.transactions))
     }, []);
 
-    /* Função para criar nova transação */
-    function createTransaction(transaction: TransactionInput) {
+    /* Função para criar nova transação (async para esperar inserção antes de continuar o fluxo da aplicação) */
+    async function createTransaction(transactionInput: TransactionInput) {
 
         // inserindo dados no back-end fake
-        api.post('/transactions', transaction);
+        const response = await api.post('/transactions', {
+            ...transactionInput,
+            createdAt: new Date(),
+        });
+        const { transaction } = response.data;// pegando dado do response do axios
+
+        // inserindo nova transação no state através da imutabilidade
+        setTransactions([
+            ...transactions,
+            transaction
+        ]);
     }
 
 
