@@ -1,5 +1,2 @@
-# Discover-Rocketseat
-Este é um repositório a respeito de estudos em desenvolvimento Web realizados com base no curso Discover da Rocketseat
-
-## Projeto Dev.Finance
-- acesse em: https://pabloalan.ga
+# Rocketseat Study
+Este é um repositório a respeito de estudos em Desenvolvimento Web através da Rocketseat, Programador BR, entre outros conteúdos.
