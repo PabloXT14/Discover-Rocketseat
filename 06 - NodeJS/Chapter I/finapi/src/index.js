@@ -33,6 +33,21 @@ function verifyIfExistsAccountCPF(resquest, response, next) {
     return next();
 }
 
+/* Funções Customizadas */
+function getBalance(statement) {
+    const balance = statement.reduce((acc, operation) => {
+        if (operation.type === 'credit') {
+            return acc + operation.amount;
+        } else {
+            return acc - operation.amount;
+        }
+    }, 0);
+
+    return balance;
+}
+
+
+/* ROTAS */
 
 /* Rota para criação de conta */
 app.post('/account', (request, response) => {
@@ -82,6 +97,30 @@ app.post('/deposit', verifyIfExistsAccountCPF, (request, response) => {
     return response.status(201).json({ message: "Inserted deposit with sucess" })
 });
 
+
+/* Rota para realizar saque em conta existente */
+app.post('/withdraw', verifyIfExistsAccountCPF, (request, response) => {
+    const { amount } = request.body;// quantia de saque
+    const { customer } = request;// do Middleware
+
+    const balance = getBalance(customer.statement);
+
+    // Checando se pode fazer o saque (sem tem dinheiro sufuciente na conta)
+    if (balance < amount) {
+        return response.status(400).json({ error: "Insufficient founds!" });
+    }
+
+    // Realizando saque na conta
+    const statementOperation = {
+        amount,
+        created_at: new Date(),
+        type: 'debit',
+    }
+    customer.statement.push(statementOperation);
+
+    return response.status(201).json({ mesage: "Withdraw made with sucess!" })
+
+});
 
 
 app.listen(3333, () => console.log("API running on port 3333"));

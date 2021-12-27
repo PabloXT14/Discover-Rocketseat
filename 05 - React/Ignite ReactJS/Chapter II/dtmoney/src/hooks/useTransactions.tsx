@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
-import { api } from './services/api';
+import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import { api } from '../services/api';
 
 
 /* ===== Tipagens ===== */
@@ -34,7 +34,7 @@ interface TransactionsContextData {
 }
 
 
-export const TransactionsContext = createContext<TransactionsContextData>(
+const TransactionsContext = createContext<TransactionsContextData>(
     {} as TransactionsContextData // forçando tipagem no objeto vazio para não dar bug
 );
 
@@ -74,3 +74,9 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     );
 }
 
+/* CRIANDO NOSSO PRÓPRIO HOOK */
+export function useTransactions() {
+    const context = useContext(TransactionsContext);
+
+    return context;
+}

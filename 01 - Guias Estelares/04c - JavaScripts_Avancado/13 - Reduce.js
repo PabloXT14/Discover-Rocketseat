@@ -12,7 +12,7 @@ array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
     * currentValue(obrigatório): o valor do elemento atual do array
     * currentIndex(opcional): o index do elemento atual do array
     * arr(opcional): objeto/copia do array ao qual o elemento atual pertence
-    * initialValue(opcional): valor para ser passado para a função redutora como valor inicial para o <total>
+    * initialValue(opcional): valor para ser passado para a função redutora como valor inicial para o <total>/acumulador
 
 - Exemplo/Demonstração:
     const numbers = [15.5, 2.3, 1.1, 4.7];
@@ -54,6 +54,6 @@ console.log(alunos.reduce(fullNames, "Alunos da turma:"))
 
 //Other exemplo
 let numbers = [1, 2, 3, 4, 5]
-console.log(numbers.reduce((acumulador, currentValue)=> {
+console.log(numbers.reduce((acumulador, currentValue) => {
     return acumulador + currentValue
 }))
