@@ -123,4 +123,20 @@ app.post('/withdraw', verifyIfExistsAccountCPF, (request, response) => {
 });
 
 
+/* Rota para realizar listagem de extrato por data */
+app.get('/statement/date', verifyIfExistsAccountCPF, (request, response) => {
+    const { customer } = request;// vem do Middleware
+    const { date } = request.query;// pegando data do query params
+
+    const dateFormated = new Date(date + " 00:00");// formatando date
+
+    // Filtrando extrato por data
+    const newStatement = customer.statement.filter((statement) =>
+        statement.created_at.toDateString() === new Date(dateFormated).toDateString()
+    );
+
+    return response.status(200).json(newStatement);
+});
+
+
 app.listen(3333, () => console.log("API running on port 3333"));
