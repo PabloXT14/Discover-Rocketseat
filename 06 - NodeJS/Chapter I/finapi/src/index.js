@@ -68,7 +68,7 @@ app.post('/account', (request, response) => {
     });
 
     // 201: status para quando um dado for criado com sucesso no DB
-    return response.status(201).json(customers);
+    return response.status(201).json({ message: "Account created with success" });
 });
 
 /* Rota para listar extrado de um cliente */
@@ -94,9 +94,8 @@ app.post('/deposit', verifyIfExistsAccountCPF, (request, response) => {
     // Inserindo deposito na conta na customer
     customer.statement.push(statementOperation);
 
-    return response.status(201).json({ message: "Inserted deposit with sucess" })
+    return response.status(201).json({ message: "Inserted deposit with success" })
 });
-
 
 /* Rota para realizar saque em conta existente */
 app.post('/withdraw', verifyIfExistsAccountCPF, (request, response) => {
@@ -118,10 +117,9 @@ app.post('/withdraw', verifyIfExistsAccountCPF, (request, response) => {
     }
     customer.statement.push(statementOperation);
 
-    return response.status(201).json({ mesage: "Withdraw made with sucess!" })
+    return response.status(201).json({ mesage: "Withdraw made with success!" })
 
 });
-
 
 /* Rota para realizar listagem de extrato por data */
 app.get('/statement/date', verifyIfExistsAccountCPF, (request, response) => {
@@ -136,6 +134,48 @@ app.get('/statement/date', verifyIfExistsAccountCPF, (request, response) => {
     );
 
     return response.status(200).json(newStatement);
+});
+
+/* Rota para atualizar dados de uma conta */
+app.put('/account', verifyIfExistsAccountCPF, (request, response) => {
+    // Obs: aqui só atualizamos o nome da conta do customer
+    const { name } = request.body;
+    const { customer } = request;//vem do Middleware
+
+    customer.name = name;
+
+    response.status(201).json({ message: "Customer account updated with success" })
+});
+
+/* Rota para buscar dados de uma conta específica */
+app.get('/account', verifyIfExistsAccountCPF, (request, response) => {
+    const { customer } = request;//vem do Middleware
+
+    return response.status(200).json(customer);
+});
+
+
+/* Rota para remover uma conta existente */
+app.delete('/account', verifyIfExistsAccountCPF, (request, response) => {
+    const { customer } = request;//vem do Middleware
+
+    /* Utilizando método splice(indexStart, howmany) para escluir
+        - indexStart(Required): posição/item inicial de remoção. Valores negativos referen-se as posições finais do array.
+        - howmany(Optional): número de itens a serem removidos.
+    */
+    customers.splice(customer, 1);
+
+    return response.status(200).json(customers);
+});
+
+/* Rota para pegar o balance/saldo de uma conta específica */
+app.get('/balance', verifyIfExistsAccountCPF, (request, response) => {
+    const { customer } = request;//vem do Middleware
+
+    // Pegando balance com função getBalance
+    const balance = getBalance(customer.statement);
+
+    return response.status(200).json({ balance_account: balance })
 });
 
 
