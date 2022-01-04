@@ -43,4 +43,4 @@ console.log('> existe y antes do bloco', y);//vai dar erro pois y não pertence 
 console.log('> existe y depois do bloco?', y);//vai dar erro pois y não pertence a este scope
 ```
 
-* Obs: é por conta deste flexibilidade que o var tem, que não se recomenda utilizá-lo, mas sim o let e const, pois este vão pertencer ao escopo de origem. 
+* Obs: é por conta deste flexibilidade que o <var> tem que não se recomenda utilizá-lo, mas sim o <let> e <const>, pois estes vão pertencer ao escopo de origem. 

@@ -19,7 +19,7 @@
             * (multiplicação)
             ** (exponencial)
             / (divisão)
-            % (módulo - restante da divisão -)
+            % (módulo - restante da divisão)
             ++ (incremento)
             -- (decremento)
         # OPERADORES DE ATRIBUIÇÃO (atribuem valores a variáveis JavaScript)
@@ -50,9 +50,9 @@
             var y = "5" + 5;
             var z = "Hello" + 5;
             //Resultado: 
-            10
-            55
-            Hello5
+            10 (number)
+            55 (string)
+            Hello5 (string)
 
         # OPERADORES DE COMPARAÇÃO:
             == (igual a)
