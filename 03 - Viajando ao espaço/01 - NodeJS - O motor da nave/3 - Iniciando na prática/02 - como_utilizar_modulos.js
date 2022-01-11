@@ -3,6 +3,7 @@
         - comando/função utilizada para chamar módulos('arquivos') nativos, instalados(pelo npm) ou criados no NodeJS  
         - não se esqueça de passar um argumento no require, pois se não ocorrerá um erro
         - ex: require('path') => (módulo nativo do NodeJS)
+        
 */
 
 const path = require('path')
