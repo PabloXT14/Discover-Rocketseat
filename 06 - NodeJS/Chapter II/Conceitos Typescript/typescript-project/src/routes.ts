@@ -10,5 +10,10 @@ export function createCourse(request: Request, response: Response) {
         educator: "Dani Leão"
     });
 
+    CreateCourseService.execute({
+        name: "ReactJS",
+        educator: "Diego"
+    });
+
     return response.status(201).json({ message: "Course created with success" });
 }
