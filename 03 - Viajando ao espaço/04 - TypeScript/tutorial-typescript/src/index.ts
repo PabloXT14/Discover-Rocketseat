@@ -14,7 +14,7 @@ let firstName: string = "John Doe";
 let age: number = 30;
 const isAdmin: boolean = true;
 
-// String != string
+// String(texto em si) != string(tipagem)
 console.log(typeof firstName)
 console.log(firstName)
 
@@ -29,7 +29,7 @@ let myTuple: [number, string, string[]];
 // myTuple = [7, "test", [1, 2]];// return error
 myTuple = [7, "test", ["a", "b"]];
 
-// OBJECT LITERAL -> {prop: tipe}
+// OBJECT LITERAL -> {prop: type}
 const user: { name: string, age: number } = {
     name: "John",
     age: 20
@@ -47,7 +47,7 @@ let id: string | number;
 id = 100
 id = "ajcodncjdvndskvnsdknvkdsnvk"
 
-// TYPE ALIAS (customizando uma tipagem)
+// TYPE ALIAS (conjunto de tipagens)
 type myIdType = number | string;
 
 const useId: myIdType = 10;
@@ -120,3 +120,115 @@ const someNumbers: MathFunctionParams = {
 }
 
 console.log(multiplieNumber(someNumbers));
+
+// NARROWING (checagem de tipos)
+function doSomething(info: number | boolean) {
+    if (typeof info === "number") {
+        console.log(`O número é ${info}`);
+        return;
+    }
+    console.log("Não foi passado um número")
+}
+doSomething(7);
+doSomething(true);
+
+
+// GENERICS (passado entre <> representa que uma função pode trabalhar com qualquer tipo de dado)
+// É um pouco melhor que o any, pois ainda declaramos um certa tipagem
+function showArraysItems<T>(arr: T[]) {//obs: você passar o que quiser no <>
+    arr.forEach(item => {
+        console.log(`ITEM: ${item}`);
+    });
+}
+const a1 = [1, 2, 3];
+const a2 = ["A", "B", "C"];
+showArraysItems(a1);
+showArraysItems(a2);
+// showArraysItems('');// return error
+
+// CLASSES
+class User {
+    name
+    role
+    isApproved
+
+    constructor(name: string, role: string, isApproved: boolean) {
+        this.name = name;
+        this.role = role;
+        this.isApproved = isApproved;
+    }
+
+    showUserName() {
+        console.log(`O nome do usuário é: ${this.name}`);
+    }
+
+    showUserRole(canShow: boolean): void {
+        if (canShow) {
+            console.log(`Este usuário é do tipo: ${this.role}`);
+            return;
+        }
+        console.log('Informação restrita');
+    }
+}
+const zeca = new User("Zeca", "Admin", true);
+console.log(zeca);
+zeca.showUserName();
+zeca.showUserRole(false);
+
+
+// INTERFACE EM CLASSES
+interface IVehicle {
+    brand: string;
+    showBrand(): void
+}
+
+class Car implements IVehicle {// na classe é obrigado chamar os tipos da interface
+    brand
+    wheels
+
+    constructor(brand: string, wheels: number) {
+        this.brand = brand;
+        this.wheels = wheels;
+    }
+
+    showBrand(): void {
+        console.log(`A marca do carro é: ${this.brand}`);
+    }
+}
+
+const fusca = new Car("VW", 4);
+fusca.showBrand();
+
+// HERANÇA
+class SuperCar extends Car {
+    engine
+
+    constructor(brand: string, wheels: number, engine: number) {
+        super(brand, wheels);// É obrigatório passar os parrametros da classe pai, para ela saber qual o tipo e valor das propriedades.
+        this.engine = engine;
+    }
+}
+const a4 = new SuperCar("Audi", 4, 4.0);
+a4.showBrand();
+
+// DECORATORS (recurso utilizado para validação de dados atravé de eventos)
+// NOTE: para usar esse recurso decomente a linha "experimentalDecorators": true no <tsconfig.json>
+function BaseParamters() {// gerando "id" e "data" de forma automatica com constructor Decorator
+    return function <T extends { new(...args: any[]): {} }>(constructor: T) {
+        return class extends constructor {
+            id = Math.random();
+            createdAt = new Date();
+        }
+    }
+}
+
+@BaseParamters()// maneira de declarar DECORATOR em uma classe
+class Person {
+    name
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+const sam = new Person("Sam");
+console.log(sam);
