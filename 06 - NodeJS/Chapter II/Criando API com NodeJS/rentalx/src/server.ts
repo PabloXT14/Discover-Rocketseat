@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 // Rotas
-app.use(categoriesRoutes);
+app.use('/categories', categoriesRoutes);
 
 app.listen(3333, () => {
     console.log('Server is running on port 3333!');
