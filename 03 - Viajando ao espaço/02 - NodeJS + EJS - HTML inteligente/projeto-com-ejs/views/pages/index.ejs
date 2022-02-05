@@ -10,27 +10,6 @@
                     <h1>Node com EJS</h1>
                     <p>Vamos aprender a trabalhar com arquivos EJS</p>
                 </div>
-                <ul>
-                    <% users.forEach((user)=> { %>
-                        <li>
-                            <strong>Nome:</strong>
-                            <span>
-                                <%= user.name %>
-                            </span>
-                            <br />
-                            <strong>Idade:</strong>
-                            <span>
-                                <%= user.age %>
-                            </span>
-                            <br />
-                            <strong>Email:</strong>
-                            <span>
-                                <%= user.email %>
-                            </span>
-                        </li>
-
-                        <%});%>
-                </ul>
 
             </main>
             <%- include('../partials/footer'); %>
