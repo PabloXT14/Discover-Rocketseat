@@ -7,14 +7,36 @@ app.set("view engine", "ejs");
 
 /* ROTAS */
 app.get("/", (req, res) => {
-    const users = [
-        { name: 'John Doe', age: 18, email: 'johndoe2022@gmail.com' },
-        { name: 'Diego Fernandes', age: 25, email: 'diego2022@gmail.com' },
-        { name: 'Mayk Brito', age: 32, email: 'maykbrito2022@gmail.com' }
+    const items = [
+        {
+            title: 'D',
+            message: 'esenvolver aplicações/serviços de forma fácil',
+        },
+        {
+            title: 'E',
+            message: 'JS usa JavaScript para renderizar HTML',
+        },
+        {
+            title: 'M',
+            message: 'uito fácil de usar',
+        },
+        {
+            title: 'A',
+            message: 'morzinho',
+        },
+        {
+            title: 'I',
+            message: 'nstall ejs',
+        },
+        {
+            title: 'S',
+            message: 'intaxe simples',
+        }
     ]
 
+    const subtitle = 'Uma linguagem de modelagem para criação de páginas HTML utilizando JS';
 
-    res.render('pages/index', { users: users });
+    res.render('pages/index', { qualitys: items, subtitle: subtitle });
 });
 
 app.get("/about", (req, res) => {
