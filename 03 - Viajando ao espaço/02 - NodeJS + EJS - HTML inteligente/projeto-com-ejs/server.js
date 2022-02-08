@@ -1,8 +1,12 @@
 const express = require('express');
-
 const app = express();
 
+// DEFININDO TEMPLATE ENGINE (MOTOR DE RENDERIZAÇÃO)
 app.set("view engine", "ejs");
+
+
+//DEFININDO ROTA DOS ARQUIVOS STATICS
+app.use(express.static("public"));
 
 
 /* ROTAS */

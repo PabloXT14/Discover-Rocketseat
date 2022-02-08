@@ -12,12 +12,15 @@
 
 @media(max-width: 1080px) {
     html {
-        font-size: 93.75%;/*15px*/
+        font-size: 93.75%;
+        /*15px*/
     }
 }
+
 @media(max-width: 720px) {
     html {
-        font-size: 87.5%;/*14px*/
+        font-size: 87.5%;
+        /*14px*/
     }
 }
 
@@ -26,7 +29,9 @@ body {
     padding-top: 3rem;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     margin: auto;
     max-width: 60vw;
 }
@@ -35,14 +40,37 @@ header nav {
     background-color: var(--gray-100);
     padding: 1rem;
     border-radius: 2px;
+    display: flex;
+    align-items: center;
 }
 
-nav a {
+nav a#logo {
+    margin-right: 2rem;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
     color: #000;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #c4bebe;
+    transition: all .2s ease;
+}
+
+nav ul li a:hover {
+    color: #777;
+}
+
 
 main {
     background-color: var(--gray-300);
@@ -55,6 +83,3 @@ footer {
     padding: 1rem;
     color: #aaa;
 }
-
-
-
