@@ -71,11 +71,37 @@ nav ul li a:hover {
     color: #777;
 }
 
+header .indice-page {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
 
 main {
     background-color: var(--gray-300);
     padding: 4rem 1.5rem;
     border-radius: 5px;
+}
+
+main {
+
+    .list {
+        list-style: none;
+        background: #CCC;
+        border-radius: 4px;
+        padding: 1rem;
+
+        li {
+            transition: all .2s ease;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+    
 }
 
 footer {
