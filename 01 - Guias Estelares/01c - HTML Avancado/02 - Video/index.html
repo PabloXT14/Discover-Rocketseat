@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,9 +30,12 @@
             overflow: hidden;
         }
 
-        .controls:hover .btn, .controls:hover .icons {
-            /* transform: translateY(-100%); *//*para as imgs*/
-            transform: translateY(-100%);/*para os icones*/
+        .controls:hover .btn,
+        .controls:hover .icons {
+            /* transform: translateY(-100%); */
+            /*para as imgs*/
+            transform: translateY(-100%);
+            /*para os icones*/
         }
 
         .btn {
@@ -71,9 +75,9 @@
         .play.show i::before {
             content: '\f04c';
         }
-
     </style>
 </head>
+
 <body>
     <!-- ===== Video =====
     - Para colocar video na sua página utilize a tag <video src=""> 
@@ -109,9 +113,7 @@
     -->
 
     <!-- 1st way to use -->
-    <video src="./assets/mov_bbb.mp4" width="400px"
-           controls loop poster="./assets/bunny-rabbit.jpg"
-           preload="none">
+    <video src="./assets/mov_bbb.mp4" width="400px" controls loop poster="./assets/bunny-rabbit.jpg" preload="none">
         Your browser does not support the video tag.
     </video>
 
@@ -129,15 +131,6 @@
         <video class="video" src="./assets/mov_bbb.mp4"></video>
 
         <div class="controls">
-            <!-- <img class="btn" onclick="retroceder()" src="./assets/control-icons/rewind.png" alt="">
-            <img class="btn" onclick="avancar()" src="./assets/control-icons/fast-forward.png" alt="">
-            <img class="btn" onclick="diminuir_vel()" src="./assets/control-icons/decrease.png" alt="">
-            <img class="btn" onclick="aumentar_vel()" src="./assets/control-icons/increase.png" alt="">
-            <img class="btn" onclick="play()" src="./assets/control-icons/play.png" alt="">
-            <img class="btn" onclick="stop()" src="./assets/control-icons/stop.png" alt=""> -->
-
-            <!-- Icons from Font Awesome -->
-
             <div class="icons">
                 <!-- play -->
                 <div class="play" onclick="play(this)"><i class="fas fa-play"></i></div>
@@ -152,10 +145,11 @@
                 <!-- Slower/minus -->
                 <div class="" onclick="diminuir_vel()"><i class="fas fa-minus"></i></div>
             </div>
-            
+
         </div>
     </div>
 
     <script src="js/scripts.js"></script>
 </body>
+
 </html>
